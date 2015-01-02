@@ -50,7 +50,10 @@
 
 		function crear() { dpi.postItEdit = PostItService.crear( $scope.mazo) }
 
-		function editar( ) { dpi.postItEdit = PostItService.editar( $scope.mazo, $scope.post) }
+		function editar( ) { 
+			dpi.postItEdit = PostItService.editar( $scope.mazo, $scope.post);
+			console.log("this", this)
+		}
 
 		function mostrarEliminar() {
 			if( $scope.eliminar == false) return false;

@@ -1,9 +1,12 @@
 <!-- TEXTO DE LA NOTA -->
-<textarea class="PostIt-texto u-transparent" name="nota" rows="4" readonly desabled ng-model="post.nota" 
+<div class="PostIt-texto u-transparent" ng-click="dpi.editar()">
+	{{post.nota}} 
+</div>
+<div class="PostIt-texto" name="nota" rows="4" focus="{{dpi.estaSeleccionado()}}" ng-model="dpi.postItEdit.nota" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()">
+</div>
+<!--textarea class="PostIt-texto u-transparent" name="nota" rows="4" readonly desabled ng-model="post.nota" 
 ng-hide="dpi.estaSeleccionado()" ng-click="dpi.editar()">
-</textarea>
-<textarea class="PostIt-texto" name="nota" rows="4" autofocus={"{{dpi.estaSeleccionado()}}" ng-model="dpi.postItEdit.nota" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()">
-</textarea>
+</textarea-->
 
 <div class="PostIt-botonera">
 	<!-- BTN DESHACER -->

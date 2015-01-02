@@ -4,9 +4,9 @@
 		.module('lkCanvas')
 		.controller('ComponentesController' , componentesController);
 
-	componentesController.$inject = ['Cartas'];
-	function componentesController( Cartas) { 
+	componentesController.$inject = ['Mazo'];
+	function componentesController( Mazo) { 
 		var coms = this;
-		coms.cartasComponentes = Cartas.componentes;
+		coms.cartasComponentes = Mazo.componentes;
 	}
 })()

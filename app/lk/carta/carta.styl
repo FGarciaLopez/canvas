@@ -1,22 +1,33 @@
 //cartas.styl
-
+ancho = 250px
 .Carta-contenedor
 	text-align left
 	.Carta
+		border-radius 2em
 		display inline-block
-		height 250px
+		height ancho
 		margin 0.5em 0.5em 32px 0
 		padding 0 !important
 		position relative
-		width 250px
+		box-shadow sombra
+		width ancho
+		.Carta-interior
+			left 0
+			margin 1em
+			position absolute
+			top 0
+			border-radius 2em
+			width (ancho - 32px)
+			height (ancho - 32px)
+			z-index 1
 		p
 			display block
 			font-family "Muli", "Helvetica Neue"
 			left 5%
-			text-align center
 			position absolute
+			text-align center
 			width 90%
-			z-index 1
+			z-index 3
 			&.Carta-nombre
 				top 10%
 				height 10%
@@ -30,27 +41,27 @@
 			position absolute
 			top 0
 			width 100%
+			z-index 2
 			img
-				border-radius 2em
 				width 100%
-				box-shadow sombra
 				transition .3s all
 		.Carta-botonera
 			position absolute
 			top 90%
 			right 10%
 			margin 2px 2px 0 0
-			z-index 2
+			z-index 3
 			.Carta-btn
 				width 48px
 				height 48px
 		&.u-deactivated
+			background #666666 !important
+			.Carta-interior
+				background #E0E0E0 !important
 			p
-				color black !important
-			figure
-				img
-					background #666666 !important
-				
+				color black !important	
+			img
+				display none	
 		.u-bubble
 			position absolute
 			top 40%

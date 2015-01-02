@@ -1,0 +1,48 @@
+//cartas.styl
+.Carta
+	font-family "Muli", "Helvetica Neue"
+	height 250px
+	padding 0 !important
+	position relative
+	text-align center
+	width 250px
+	.Carta-titulo
+		background rgba(255,255,255,0.5)
+		height 20px
+		left 0
+		overflow hidden
+		position absolute
+		text-overflow ellipsis !important
+		text-weigth bold
+		top 0
+		width 100%
+	.Carta-img
+		height 250px
+		left 0
+		position absolute
+		top 0
+		width 250px
+		z-index 0
+.Carta.u-seleccionado
+	background red
+
+@media screen and (max-width: 2000px)
+	.Carta-titulo
+		width 250px
+
+@media screen and (max-width: 1250px)
+	.Carta-titulo
+		width 125px
+
+
+/*
+z-index: 9;
+position: absolute;
+left: 0;
+top: .5em;
+font-size: 1.5em;
+font-weight: bold;
+width: 100%;
+color: #8a542d;
+text-shadow: 2px 2px #F9A95E;
+*/

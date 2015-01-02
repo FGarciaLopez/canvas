@@ -4,9 +4,9 @@
 		.module('lkCanvas')
 		.controller('DisparadoresController' , disparadoresController);
 
-	disparadoresController.$inject = ['Cartas'];
-	function disparadoresController( Cartas) { 
+	disparadoresController.$inject = ['Mazo'];
+	function disparadoresController( Mazo) { 
 		var dis = this;
-		dis.mazo = Cartas.disparadores;
+		dis.mazo = Mazo.disparadores;
 	}
 })()

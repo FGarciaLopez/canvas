@@ -1,6 +1,7 @@
 <!-- NOMBRE -->
 <div class="Carta" ng-class="{ 'u-deactivated': !dc.estaSeleccionada(), 'u-activated': dc.estaSeleccionada()}" >
-
+	<div class="Carta-interior">
+	</div>
 	<p class="Carta-nombre" ng-click="dc.conmutar()">
 		{{carta.nombre}}
 	</p>

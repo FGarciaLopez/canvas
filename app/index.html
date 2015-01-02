@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"-->
     <!--link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'-->
 
-    <link href='http://fonts.googleapis.com/css?family=Muli|Indie+Flower' rel='stylesheet' type='text/css'>
+    <!--link href='http://fonts.googleapis.com/css?family=Muli|Indie+Flower' rel='stylesheet' type='text/css'-->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/ludiko.css" />
 
@@ -37,7 +37,7 @@
     <!--form-login ng-if="!credential.role"></form-login-->
     <div>
       <lk-menu-lateral></lk-menu-lateral>
-      <div class="ViewContainer" ng-class="{'Comportamientos': cmps, 'Disparadores': dis, 'Objetivos': objs, 'Experiencia': exp, 'Motivadores': mots}" ng-view=""></div>
+      <div class="ViewContainer" ng-class="{'Comportamientos': cmps, 'Disparadores': dis, 'Objetivos': objs, 'Experiencia': exp, 'Motivadores': mots, 'Mecanicas': mecs}" ng-view=""></div>
     </div>
     <footer>
         Lúdiko 2014 Versión 0 Beta
@@ -108,8 +108,8 @@
     <script src="lk/canvas/canvas.controller.js"></script>
     <script src="lk/carta/carta.directive.js"></script>
     <script src="lk/carta/carta.service.js"></script>
-    <script src="lk/cartas/cartas.service.js"></script>
-    <script src="lk/cartas/cartas.value.js"></script>
+    <script src="lk/mazo/mazo.service.js"></script>
+    <script src="lk/mazo/mazo.value.js"></script>
     <script src="lk/componentes/componentes.controller.js"></script>
     <script src="lk/comportamientos/comportamientos.controller.js"></script>
     <script src="lk/comportamientos/comportamientos.value.js"></script>
