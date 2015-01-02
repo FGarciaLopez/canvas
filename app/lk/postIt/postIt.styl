@@ -1,0 +1,68 @@
+//cartas.styl
+
+ancho = 250px
+fuente = 'Indie flower'
+color-fondo = #FFE271
+.PostIt-contenedor
+	text-align left
+	.PostIt
+		font-family fuente
+		font-weight bold
+		box-shadow sombra_fuerte
+		display inline-block
+		margin .5em .2em 32px .3em
+		padding 0 !important
+		position relative
+		text-align center
+		width ancho
+		height ancho
+		figure
+			background-color color-fondo
+			left 0
+			position absolute
+			top 0
+			width 100%
+			height 100%
+			img
+				display none
+				background-color color-fondo
+				border-radius 2em
+				width 100%
+				box-shadow sombra
+	.PostIt-texto
+		//background rgba(255,255,255, 0.5)
+		//border-radius 1em
+		background-color transparent
+		display block
+		height 78%
+		left 0
+		left 10%
+		position absolute
+		top 12%
+		width 81%
+		z-index 1
+		&:focus
+			border-radius 0 !important
+		&.u-transparent
+			background transparent
+			border-radius 1em
+			text-decoration none
+			border 0
+			&.u-transparent:hover
+				cursor pointer
+	.PostIt-botonera
+		position absolute
+		top 90%
+		right 10%
+		margin 2px 2px 0 0
+		z-index 2
+		.PostIt-btn
+			width 48px
+			height 48px
+	.u-bubble
+		position absolute
+		top 40%
+		right 10%
+		margin 2px 2px 0 0
+		z-index 99
+		width 80%

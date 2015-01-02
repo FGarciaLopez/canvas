@@ -1,0 +1,5 @@
+<div class="Mecanicas-item Carta" ng-repeat="cme in lme.cartasMecanicas | filter: lme.criterioMecanicas( criteria)">
+	<div class="Carta-titulo">{{cme.nombre}}</div>
+	<img class="Carta-img u-lg" alt="{{cme.nombre}}" src="/img/icons/250.svg"/>
+	<img class="Carta-img u-sm" alt="{{cme.nombre}}" src="/img/icons/125.svg"/>
+</div>

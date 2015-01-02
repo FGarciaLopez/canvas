@@ -1,0 +1,65 @@
+.u-bubble
+	box-shadow sombra
+	background rgba(0,0,0, 0.7)
+	&.u-fadein
+		animation fadein .5s
+	&.u-animation-intro
+		animation intro_w80 .5s
+		easy-in()
+	&.u-raised
+		border-radius 1em
+	&.u-success
+		background success-transparent
+	&.u-warning
+		background warning-transparent
+	&.u-danger
+		background danger-transparent
+		p
+			background danger-light
+	&.u-info
+		background info-transparent
+	&.u-primary
+		background primary-transparent
+	p
+		color white
+		padding .5em 0
+		width 100%
+		margin 0
+	ul
+		display block
+		text-align center
+		padding .5em
+		margin .5em 0 0 0
+		li
+			display inline-block
+			margin 0 .5em 0 .5em
+			a,button
+				text-decoration none
+				background gray
+				font-weight bold
+				padding .5em
+				border-radius 50%
+				min-width 2.5em
+				box-shadow sombra
+				&:hover
+					background #888
+				&.u-success
+					background success-dark
+					&:hover
+						background success-light
+				&.u-warning
+					background warning-dark
+					&:hover
+						background warning-light
+				&.u-danger
+					background danger-dark
+					&:hover
+						background danger-light
+				&.u-primary
+					background primary-dark
+					&:hover
+						background danger-light
+				&.u-info
+					background info-dark
+					&:hover
+						background info-light

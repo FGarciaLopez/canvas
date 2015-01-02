@@ -1,0 +1,38 @@
+<!-- TEXTO DE LA NOTA -->
+<textarea class="PostIt-texto u-transparent" name="nota" rows="4" readonly desabled ng-model="post.nota" 
+ng-hide="dpi.estaSeleccionado()" ng-click="dpi.editar()">
+</textarea>
+<textarea class="PostIt-texto" name="nota" rows="4" autofocus={"{{dpi.estaSeleccionado()}}" ng-model="dpi.postItEdit.nota" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()">
+</textarea>
+
+<div class="PostIt-botonera">
+	<!-- BTN DESHACER -->
+	<img class="PostIt-btn u-button u-fadein u-info u-raised" alt="250x250" src="/img/icons/undo.png" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.cancelar()"/>
+
+	<!-- BTN GUARDAR -->
+	<img class="PostIt-btn u-button u-fadein u-success u-raised" alt="250x250" src="/img/icons/check.svg" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.guardar()"/>
+
+	<!-- BTN ELIMINAR -->
+	<img class="PostIt-btn u-button u-fadein u-danger u-raised" alt="250x250" src="/img/icons/trash.svg" ng-show="dpi.mostrarEliminar()" ng-hide="dpi.ocultarEliminar()" ng-click="dpi.eliminando=true" />
+
+</div>
+
+<div class="PostIt-msg u-bubble u-danger u-fadein" ng-show="dpi.eliminando" ng-hide="!dpi.eliminando">
+	<p class="PostIt-msgTxt">
+		¿Quieres borrar? 
+	</p>
+	<ul>
+		<li><a class="btn u-danger" ng-click="dpi.eliminar()" >
+			<img src="/img/icons/check.svg" alt="BORRAR">
+		</a></li>
+		<li><a class="btn" ng-click="dpi.eliminando=false" >
+			<img src="/img/icons/cross.svg" alt="NO">
+		</a></li>
+	</ul>
+</div>
+
+<!-- IMG POST-IT -->
+<figure>
+	<img class="PostIt-img" src="/img/icons/{{imagen}}.svg" />
+</figure>
+

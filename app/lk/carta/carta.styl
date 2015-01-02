@@ -1,0 +1,60 @@
+//cartas.styl
+
+.Carta-contenedor
+	text-align left
+	.Carta
+		display inline-block
+		height 250px
+		margin 0.5em 0.5em 32px 0
+		padding 0 !important
+		position relative
+		width 250px
+		p
+			display block
+			font-family "Muli", "Helvetica Neue"
+			left 5%
+			text-align center
+			position absolute
+			width 90%
+			z-index 1
+			&.Carta-nombre
+				top 10%
+				height 10%
+				font-weight bold
+			&.Carta-descripcion
+				bottom 4%
+				font-size .9em
+		figure
+			height 100%
+			left 0
+			position absolute
+			top 0
+			width 100%
+			img
+				border-radius 2em
+				width 100%
+				box-shadow sombra
+				transition .3s all
+		.Carta-botonera
+			position absolute
+			top 90%
+			right 10%
+			margin 2px 2px 0 0
+			z-index 2
+			.Carta-btn
+				width 48px
+				height 48px
+		&.u-deactivated
+			p
+				color black !important
+			figure
+				img
+					background #666666 !important
+				
+		.u-bubble
+			position absolute
+			top 40%
+			right 10%
+			margin 2px 2px 0 0
+			z-index 99
+			width 80%

@@ -1,0 +1,67 @@
+.u-button
+	position relative
+	padding .5em
+	box-shadow sombra
+	&:hover
+		cursor pointer
+	&.u-raised
+		border-radius 50%
+	&.u-fadein
+		animation fadein 1s
+	&.u-success
+		background success-dark
+	&.u-success:hover
+		background success-light
+	&.u-warning
+		background warning-dark
+	&.u-warning:hover
+		background warning-light
+	&.u-danger
+		background danger-dark
+	&.u-danger:hover	
+		background danger-light
+	&.u-info
+		background info-dark
+	&.u-info:hover
+		background info-light
+	&.u-primary
+		background primary-dark
+	&.u-primary:hover
+		background primary-light
+	&.u-switch
+		border-radius 24px
+		border 4px
+		border-style solid
+		height 48px
+		width 96px
+		color white
+		img
+			position absolute
+			bottom -1px
+			height 44px !important
+			width 44px !important
+		&.u-on
+			background success-dark
+			border-color success-shadow
+			&:after
+				content "Sí"
+				margin-left 2em
+			&:hover
+				background success-light
+			img
+				animation toOff .5s
+				left 0
+		&.u-off
+			background danger-dark
+			border-color danger-shadow
+			&:before
+				content "No"
+				margin-right 2em
+			&:hover
+				background danger-light
+			img
+				left 48px
+				animation toOn .5s
+				
+			
+

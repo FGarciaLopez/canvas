@@ -1,0 +1,12 @@
+
+<div class="Mecanicas-item" ng-repeat="cme in lme.cartasMecanicas | filter: lme.criterioMecanicas( criteria)">
+	<a type="button" class="btn Mecanicas-carta" ng-class="{'u-activo': cme.activo, 'u-seleccionado': cme.seleccionado }" ng-click="lme.inclMecanica(cme)">
+		<div class="Carta">
+			<div class="Carta-titulo">{{cme.nombre}}</div>
+			<img class="Carta-img u-lg" alt="{{cme.nombre}}" src="/img/icons/250.svg"/>
+			<img class="Carta-img u-sm" alt="{{cme.nombre}}" src="/img/icons/125.svg"/>
+			<div class="BtnCarta" ng-class="{'BtnCarta-excl': !cme.seleccionado, 'BtnCarta-incl': cme.seleccionado}">
+			</div>
+		</div>
+	</a>
+</div>

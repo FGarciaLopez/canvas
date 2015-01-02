@@ -1,0 +1,17 @@
+<div class="SelectorMotivadores" ng-show="btnIM.estaActivoMotivadores()">
+	<div class="Motivadores-item" ng-repeat="cmo in btnIM.cartasMotivadores">
+		<a type="button" class="btn Motivadores-carta Carta" ng-click="btnIM.inclMotivador(cmo)">
+			<div class="Carta-titulo">{{cmo.nombre}}</div>
+			<img class="Carta-img" alt="{{cmo.nombre}}" src="/img/icons/250.svg"/>
+			<div class="BtnCarta" ng-class="{'BtnCarta-excl': !cmo.seleccionado, 'BtnCarta-incl': cmo.seleccionado}">
+			</div>
+		</a>
+	</div>
+</div>
+<div class="Motivadores-item Motivadores-nuevo">
+	<a type="button" class="btn Motivadores-carta Carta" ng-click="btnIM.activaMotivadores()">
+		<div class="Carta-titulo">Añadir</div>
+		<img class="u-lg" alt="250x250" src="/img/icons/250.svg"/>
+		<img class="u-sm" alt="125x125" src="/img/icons/125.svg"/>
+	</a>
+</div>

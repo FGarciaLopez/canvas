@@ -1,0 +1,13 @@
+<!-- TEXTO -->
+<textarea class="PostIt-texto" name="nota" rows="4" ng-model="dpi.postItEdit.nota" ng-show="!dpi.haySeleccionado()" ng-hide="dpi.haySeleccionado()">
+</textarea>
+
+<div class="PostIt-botonera">
+	<!-- BTN AÑADIR -->
+	<img class="PostIt-btn u-button u-fadein u-raised u-success" alt="250x250" src="/img/icons/plus.png" ng-show="!dpi.haySeleccionado()" ng-hide="dpi.haySeleccionado()" ng-click="dpi.guardar()"/>
+</div>
+
+<!-- IMG FONDO -->
+<figure>
+	<img class="PostIt-img" src="/img/icons/{{imagen}}.svg"/>
+</figure>

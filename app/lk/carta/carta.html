@@ -1,0 +1,15 @@
+<!-- NOMBRE -->
+<div class="Carta" ng-class="{ 'u-deactivated': !dc.estaSeleccionada(), 'u-activated': dc.estaSeleccionada()}" >
+
+	<p class="Carta-nombre" ng-click="dc.conmutar()">
+		{{carta.nombre}}
+	</p>
+
+	<p class="Carta-descripcion" ng-click="dc.conmutar()">
+		{{carta.descripcion}}
+	</p>
+
+	<figure class="u-fadein" ng-click="dc.conmutar()">
+		<img class="Carta-img" src="{{dc.getImagen()}}"/>
+	</figure>
+</div>

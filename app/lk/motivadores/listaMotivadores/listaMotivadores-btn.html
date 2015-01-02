@@ -1,0 +1,7 @@
+<div class="Motivadores-item " ng-repeat="m in lms.cartasMotivadores | filter: { seleccionado: true} ">
+	<a type="button" class="btn Motivadores-carta Carta" ng-class="{'u-activo': m.activo}" ng-click="lms.activarMotivador(m)">
+		<div class="Carta-titulo">{{m.nombre}}</div>
+		<img class="u-lg" alt="{{m.nombre}}" src="/img/icons/250.svg"/>
+		<img class="u-sm" alt="{{m.nombre}}" src="/img/icons/125.svg"/>
+	</a>
+</div>

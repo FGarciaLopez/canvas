@@ -1,0 +1,31 @@
+{
+  "name": "Ludiko",
+  "version": "0.0.0",
+  "description": "Plataforma para gamificar la enseñanza",
+  "main": "server.js",
+  "PORT": "8081",
+  "ENV": "development",
+  "scripts": {
+    "test": " mocha",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "~4.0.*",
+    "morgan": "*",
+    "cookie-parser": "*",
+    "body-parser": "*",
+    "jsonwebtoken": "*",
+    "composable-middleware": "*"
+  },
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "chai-as-promised": "~4.1.1",
+    "mocha": "~1.21.3",
+    "supertest": "~0.13.0",
+    "supertest-as-promised": "^1.0.0",
+    "karma": "~0.12.0",
+    "karma-jasmine": "~0.2.0"    
+  },
+  "author": "Francisco Garcia Lopez",
+  "license": "ISC"
+}

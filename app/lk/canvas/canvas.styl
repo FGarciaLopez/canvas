@@ -1,0 +1,74 @@
+.Canvas-cell
+	padding 0
+	margin 0
+	border 1px dotted black
+	img, span 
+		display block
+		margin-left auto
+		margin-right auto
+.Canvas-row
+	width 100%
+	height 30%
+.Canvas-col 
+	height 280px
+.Canvas
+	posistion relative
+	width calc(100%-60px)
+	#CanvasSup
+		margin-left 0
+		.Objetivos
+			float left
+			display inline-block
+			background-color rgba( #bcb5e6,.5)
+			vertical-align top
+			min-width 130px
+			width 32%
+		.Canvas-Cuore
+			display inline-block
+			background red
+			min-width 35%
+			text-aling center
+			.Experiencia
+				display block
+				.Canvas-titulo
+					display inline-block
+					width 200px
+					overflow hidden
+					top 0
+					text-align center
+				.Canvas-alumno
+					display block
+				.Canvas-text
+					display inline-block
+					//width 49% !important
+					width 125px
+					height 115px
+					margin-top 2px
+					background rgba(255,0,0,0.3)
+					span
+						font-weight bold
+			.Comportamientos
+				display block
+		.Disparadores
+			display inline-block
+			float right
+			background-color rgba( #60acb7, .5)
+			vertical-align top
+			min-width 130px
+			width 32%
+	#CanvasInf 
+		.Motivadores
+			display block
+		.Mecanicas
+			display block
+		.Componentes
+			display block
+
+@media screen and (max-width: 480px)
+	.Canvas
+		.Objetivos
+			width 100% !important
+		.Canvas-Cuore
+			width 100%
+		.Disparadores
+			width 100% !important
