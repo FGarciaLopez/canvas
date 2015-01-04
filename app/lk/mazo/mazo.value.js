@@ -6,6 +6,14 @@
 		.module('lkCanvas')
 		.value( 'Mazo', new Mazo());
 
+	function Componente (nombre, descripcion, imagen) {
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.imagen = imagen;
+		this.activo = null;
+		this.seleccionado = true;
+	}
+
 	function Disparador (nombre, descripcion, imagen) {
 		this.nombre = nombre;
 		this.descripcion = descripcion;
@@ -14,24 +22,24 @@
 		this.seleccionado = true;
 	}
 
-	function Motivador (nombre, descripcion, imagen) {
-		this.nombre = nombre;
-		this.descripcion = descripcion;
-		this.imagen = imagen;
-		this.activo = null;
-		this.seleccionado = null;
-		this.ref = [];
-	}
-
 	function Mecanica (nombre, descripcion, imagen, motivadores) {
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.imagen = imagen;
 		this.activo = false;
-		this.seleccionado = false;
+		this.seleccionado = true;
 		this.ref = motivadores;
 		// console.log("pongo", nombre, motivadores)
 		this.algunMotivadorSeleccionado = algunMotivadorSeleccionado;
+	}
+
+	function Motivador (nombre, descripcion, imagen) {
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.imagen = imagen;
+		this.activo = null;
+		this.seleccionado = true;
+		this.ref = [];
 	}
 
 	function algunMotivadorSeleccionado() {
@@ -41,13 +49,6 @@
 				return true;
 		}
 		return false
-	}
-	function Componente (nombre, descripcion, imagen) {
-		this.nombre = nombre;
-		this.descripcion = descripcion;
-		this.imagen = imagen;
-		this.activo = null;
-		this.seleccionado = null;
 	}
 
 	function Mazo() {
@@ -125,25 +126,25 @@
 			nombre: 'Componentes',
 			imagen: 'componente',
 			cartas: [
-				new Componente( 'Ranking', 'Clasificación acorde a una puntuación o valor'),
-				new Componente( 'Desbloqueo de contenido', 'Aspectos que solo estan disponibles cuando los alumnos alcanzan ciertos objetivos'),
-				new Componente( 'Colecciones', 'Elementos a acumular'),
-				new Componente( 'Misiones', 'Desafíos predefinidos con objetivos y recompensas'),
-				new Componente( 'Misiones epicas', 'Desafíos muy complicado al final'),
-				new Componente( 'Medallas', 'Representación visual de los logros'),
-				new Componente( 'Barras de progreso', 'Representación del estado actual de diferentes acciones, niveles, retos, vida, etc'),
-				new Componente( 'Cuenta atrás', 'Cuenta atrás para realizar cierta acciones'),
-				new Componente( 'Logros', 'Objetivos definidos'),
-				new Componente( 'Avatares', 'Representación visual del alumno'),
-				new Componente( 'Puntos', 'Representación numerica de la progresión dentro del juego'),
-				new Componente( 'Niveles', 'Pasos definidos en la progresión de un jugador'),
-				new Componente( 'Mercado', 'Sitio donde se pueden intercambiar los bienes por recompensas'),
-				new Componente( 'Bienes virtuales', 'Activos del juego con un valor virtual'),
-				new Componente( 'Ranking sociales', 'Posición de los alumnos en relación a la participación social'),
-				new Componente( 'Equipos', 'Grupo definido de alumnos que trabaja conjuntamente'),
-				new Componente( 'Recompensas', 'Acciones que se consiguen al intercambiar bienes y ayudan al progreso'),
-				new Componente( 'Roles', 'Permite que existan diferentes personajes con distintas acciones y que tus alumos puedan decidir que rol desempeñan'),
-				new Componente( 'Tesoros escondidos', 'Recompensa obtenidad por exploración o por azar.')
+				new Componente( 'Ranking', 'Clasificación acorde a una puntuación o valor', 'ranking'),
+				new Componente( 'Desbloqueo de contenido', 'Aspectos que solo estan disponibles cuando los alumnos alcanzan ciertos objetivos', 'desbloqueo'),
+				new Componente( 'Colecciones', 'Elementos a acumular', 'colecciones'),
+				new Componente( 'Misiones', 'Desafíos predefinidos con objetivos y recompensas', 'mision'),
+				new Componente( 'Misiones epicas', 'Desafíos muy complicado al final', 'epica'),
+				new Componente( 'Medallas', 'Representación visual de los logros', 'medallas'),
+				new Componente( 'Barras de progreso', 'Representación del estado actual de diferentes acciones, niveles, retos, vida, etc', 'progreso'),
+				new Componente( 'Cuenta atrás', 'Cuenta atrás para realizar cierta acciones', 'cuenta'),
+				new Componente( 'Logros', 'Objetivos definidos', 'logros'),
+				new Componente( 'Avatares', 'Representación visual del alumno', 'avatares'),
+				new Componente( 'Puntos', 'Representación numerica de la progresión dentro del juego', 'puntos'),
+				new Componente( 'Niveles', 'Pasos definidos en la progresión de un jugador', 'niveles'),
+				new Componente( 'Mercado', 'Sitio donde se pueden intercambiar los bienes por recompensas', 'mercado'),
+				new Componente( 'Bienes virtuales', 'Activos del juego con un valor virtual', 'virtuales'),
+				new Componente( 'Ranking sociales', 'Posición de los alumnos en relación a la participación social', 'social'),
+				new Componente( 'Equipos', 'Grupo definido de alumnos que trabaja conjuntamente', 'equipos'),
+				new Componente( 'Recompensas', 'Acciones que se consiguen al intercambiar bienes y ayudan al progreso', 'recompensas'),
+				new Componente( 'Roles', 'Permite que existan diferentes personajes con distintas acciones y que tus alumos puedan decidir que rol desempeñan', 'roles'),
+				new Componente( 'Tesoros escondidos', 'Recompensa obtenidad por exploración o por azar.', 'tesoros')
 		]}
 		// Todos los motivadores con lista mecánicas vacía
 		for( var x in mazos.motivadores.cartas) {

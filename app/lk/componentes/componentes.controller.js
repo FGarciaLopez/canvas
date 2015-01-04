@@ -2,11 +2,11 @@
 	'use strict';
 	angular
 		.module('lkCanvas')
-		.controller('ComponentesController' , componentesController);
+		.controller('ComponentesController' , ComponentesController);
 
-	componentesController.$inject = ['Mazo'];
-	function componentesController( Mazo) { 
+	ComponentesController.$inject = ['Mazo'];
+	function ComponentesController( Mazo) { 
 		var coms = this;
-		coms.cartasComponentes = Mazo.componentes;
+		coms.mazo = Mazo.componentes;
 	}
 })()

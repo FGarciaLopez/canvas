@@ -1,7 +1,8 @@
 .Canvas-cell
 	padding 0
 	margin 0
-	border 1px dotted black
+	border .3em solid black
+	border-radius .5em
 	img, span 
 		display block
 		margin-left auto
@@ -12,30 +13,33 @@
 .Canvas-col 
 	height 280px
 .Canvas
-	posistion relative
-	width calc(100%-60px)
+	background-color black
+	border .8em solid black !important
+	border-radius 1em
+	box-shadow sombra 
+	margin 2px 0 0 2px
 	#CanvasSup
 		margin-left 0
 		.Objetivos
-			float left
+			background #D98BB1
 			display inline-block
-			background-color rgba( #bcb5e6,.5)
-			vertical-align top
+			float left
 			min-width 130px
+			vertical-align top
 			width 32%
 		.Canvas-Cuore
 			display inline-block
-			background red
 			min-width 35%
 			text-aling center
 			.Experiencia
+				background #F9C85E
 				display block
 				.Canvas-titulo
 					display inline-block
-					width 200px
 					overflow hidden
-					top 0
 					text-align center
+					top 0
+					width 200px
 				.Canvas-alumno
 					display block
 				.Canvas-text
@@ -48,22 +52,34 @@
 					span
 						font-weight bold
 			.Comportamientos
+				background #F9C85E
 				display block
 		.Disparadores
 			display inline-block
 			float right
-			background-color rgba( #60acb7, .5)
+			background-color #F9A95E
 			vertical-align top
 			min-width 130px
 			width 32%
 	#CanvasInf 
 		.Motivadores
 			display block
+			background-color #F06162
 		.Mecanicas
 			display block
+			background-color #81C990
 		.Componentes
 			display block
+			background-color #80A5C7
 
+@media screen and (max-width: 700px)
+	.Canvas
+		.Canvas-Cuore
+			width 100%
+		.Objetivos
+			width 50% !important
+		.Disparadores
+			width 50% !important
 @media screen and (max-width: 480px)
 	.Canvas
 		.Objetivos

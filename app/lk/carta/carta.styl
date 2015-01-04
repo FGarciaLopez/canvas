@@ -2,70 +2,70 @@
 ancho = 250px
 .Carta-contenedor
 	text-align left
-	.Carta
-		border-radius 2em
-		display inline-block
-		height ancho
-		margin 0.5em 0.5em 32px 0
-		padding 0 !important
-		position relative
-		box-shadow sombra
-		width ancho
-		.Carta-interior
-			left 0
-			margin 1em
-			position absolute
-			top 0
-			border-radius 2em
-			width (ancho - 32px)
-			height (ancho - 32px)
-			z-index 1
-		p
-			display block
-			font-family "Muli", "Helvetica Neue"
-			left 5%
-			position absolute
-			text-align center
-			width 90%
-			z-index 3
-			&.Carta-nombre
-				top 10%
-				height 10%
-				font-weight bold
-			&.Carta-descripcion
-				bottom 4%
-				font-size .9em
-		figure
-			height 100%
-			left 0
-			position absolute
-			top 0
-			width 100%
-			z-index 2
-			img
-				width 100%
-				transition .3s all
-		.Carta-botonera
-			position absolute
-			top 90%
-			right 10%
-			margin 2px 2px 0 0
-			z-index 3
-			.Carta-btn
-				width 48px
-				height 48px
-		&.u-deactivated
-			background #666666 !important
-			.Carta-interior
-				background #E0E0E0 !important
-			p
-				color black !important	
-			img
-				display none	
-		.u-bubble
-			position absolute
-			top 40%
-			right 10%
-			margin 2px 2px 0 0
-			z-index 99
-			width 80%
+.Carta
+	border-radius 2em
+	display inline-block
+	height ancho
+	margin 0.5em 0.5em 32px 0
+	padding 0 !important
+	position relative
+	box-shadow sombra
+	width ancho
+.Carta-interior
+	left 0
+	margin 1em
+	position absolute
+	top 0
+	border-radius 2em
+	width (ancho - 32px)
+	height (ancho - 32px)
+	z-index 1
+p
+	display block
+	font-family "Muli", "Helvetica Neue"
+	left 5%
+	position absolute
+	text-align center
+	width 90%
+	z-index 3
+	&.Carta-nombre
+		top 10%
+		height 10%
+		font-weight bold
+	&.Carta-descripcion
+		bottom 4%
+		font-size .9em
+figure
+	height 100%
+	left 0
+	position absolute
+	top 0
+	width 100%
+	z-index 2
+	img
+		width 100%
+		transition .3s all
+.Carta-botonera
+	position absolute
+	top 90%
+	right 10%
+	margin 2px 2px 0 0
+	z-index 3
+	.Carta-btn
+		width 48px
+		height 48px
+&.u-deactivated
+	background #666666 !important
+	.Carta-interior
+		background #E0E0E0 !important
+	p
+		color black !important	
+	img
+		display none	
+.u-bubble
+	position absolute
+	top 40%
+	right 10%
+	margin 2px 2px 0 0
+	z-index 99
+	width 80%

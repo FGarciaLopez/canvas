@@ -16,7 +16,6 @@
                      onOff: onOff
               }
 
-
               // Elimina el indicado o el último seleccionado
               function select( mazo, carta) {
                      if(carta)
