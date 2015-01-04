@@ -3,6 +3,7 @@ ancho = 250px
 .Carta-contenedor
 	text-align left
 .Carta
+	transition .3s all
 	border-radius 2em
 	display inline-block
 	height ancho
@@ -22,7 +23,7 @@ ancho = 250px
 	z-index 1
 p
 	display block
-	font-family "Muli", "Helvetica Neue"
+	font-family "Muli", "Helvetica Neue", Arial
 	left 5%
 	position absolute
 	text-align center
@@ -44,28 +45,31 @@ figure
 	z-index 2
 	img
 		width 100%
-		transition .3s all
 .Carta-botonera
 	position absolute
+	min-width 40px
+	height 48px !important
 	top 90%
 	right 10%
 	margin 2px 2px 0 0
 	z-index 3
-	.Carta-btn
-		width 48px
+.Carta-btn
+	&.u-checked
+		display inline-block
+		width 48px 
 		height 48px
+		float right
+		color green
+		margin-right 2em
+		box-shadow sombra-clara
+		background rgba(#fff, .2)
+		border-radius 50%
+		//&:before
 &.u-deactivated
 	background #666666 !important
 	.Carta-interior
 		background #E0E0E0 !important
 	p
 		color black !important	
-	img
-		display none	
-.u-bubble
-	position absolute
-	top 40%
-	right 10%
-	margin 2px 2px 0 0
-	z-index 99
-	width 80%
+	.Carta-btn
+		display none

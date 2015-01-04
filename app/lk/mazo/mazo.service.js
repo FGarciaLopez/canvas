@@ -16,6 +16,7 @@
 
 		return {
 			copy: copy,
+			algunaSeleccionada: algunaSeleccionada,
 			Mazo: Mazo
 		}
 
@@ -25,6 +26,14 @@
 				nuevo.cartas.push(mazo.cartas[i])
 			}
 			return nuevo;
+		}
+
+		function algunaSeleccionada( cartas) {
+			for (var i in cartas) {
+				if( cartas[i].seleccionado)
+					return true;
+			}
+			return false
 		}
 	};
 }) ();

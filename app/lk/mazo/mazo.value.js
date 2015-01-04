@@ -27,10 +27,10 @@
 		this.descripcion = descripcion;
 		this.imagen = imagen;
 		this.activo = false;
-		this.seleccionado = true;
+		this.seleccionado = false;
 		this.ref = motivadores;
+		this.motivadores = [];
 		// console.log("pongo", nombre, motivadores)
-		this.algunMotivadorSeleccionado = algunMotivadorSeleccionado;
 	}
 
 	function Motivador (nombre, descripcion, imagen) {
@@ -38,17 +38,7 @@
 		this.descripcion = descripcion;
 		this.imagen = imagen;
 		this.activo = null;
-		this.seleccionado = true;
-		this.ref = [];
-	}
-
-	function algunMotivadorSeleccionado() {
-		for (var i in this.motivadores) {
-			if( this.motivadores[i].seleccionado)
-				console.log("motivador seleccionado", this.motivadores[i])
-				return true;
-		}
-		return false
+		this.seleccionado = false;
 	}
 
 	function Mazo() {
@@ -146,10 +136,6 @@
 				new Componente( 'Roles', 'Permite que existan diferentes personajes con distintas acciones y que tus alumos puedan decidir que rol desempeñan', 'roles'),
 				new Componente( 'Tesoros escondidos', 'Recompensa obtenidad por exploración o por azar.', 'tesoros')
 		]}
-		// Todos los motivadores con lista mecánicas vacía
-		for( var x in mazos.motivadores.cartas) {
-			mazos.motivadores.cartas[x].mecanicas = [];
-		}
 
 		for( var i in mazos.mecanicas.cartas) {
 			var motivadores = [];
@@ -177,8 +163,6 @@
 						descripcion += ', '
 					}
 					descripcion += mazos.motivadores.cartas[x].nombre;
-					// Añade la mecánica a la lista de mecánicas del motivador
-					mazos.motivadores.cartas[x].mecanicas.push( mazos.mecanicas.cartas[i]);
 				}
 				
 			}

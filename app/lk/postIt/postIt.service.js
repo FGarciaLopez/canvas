@@ -7,7 +7,7 @@
 		.factory('PostItService', PostItService);
 
 	function PostItService() {
-
+              var ultimoId = new Contador(0);
               return {
                      PostIt: PostIt,
                      crear: crear, 
@@ -19,7 +19,8 @@
                      unselect: unselect, // Deselecciona un Post-it 
                      selected: selected, // Ultimo Post-it que se ha seleccionado 
                      isSelected: isSelected,
-                     haySeleccionado: haySeleccionado
+                     haySeleccionado: haySeleccionado,
+                     getId: getId
               }
 
               function PostIt( nota) {
@@ -107,6 +108,17 @@
 
               function haySeleccionado( pila) {
                      return (selected( pila))? true: false
+              }
+
+              function getId() {
+                     ultimoId.avanza()
+                     return ultimoId.valor;
+              }
+              function Contador( inicia) {
+                     this.valor = inicia;
+                     this.avanza = function () {
+                            this.valor++;
+                     }
               }
 
 	};

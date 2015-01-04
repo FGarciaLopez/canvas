@@ -13,7 +13,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91pre3 r13670"
-   sodipodi:docname="desafio.svg">
+   sodipodi:docname="desafio-bw.svg">
   <metadata
      id="metadata462">
     <rdf:RDF>
@@ -22,11 +22,21 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Desafio</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs460" />
+     id="defs460">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Greyscale"
+       id="filter8318">
+      <feColorMatrix
+         values="0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0 0 0 1 0 "
+         id="feColorMatrix8320" />
+    </filter>
+  </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -41,17 +51,18 @@
      id="namedview458"
      showgrid="false"
      inkscape:zoom="1.9692925"
-     inkscape:cx="51.024559"
-     inkscape:cy="59.919998"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:cx="42.13812"
+     inkscape:cy="59.92"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <title
      id="title4">Desafio</title>
   <g
      transform="matrix(0.62340114,0,0,0.55139141,21.226088,16.008522)"
-     id="g6">
+     id="g6"
+     style="filter:url(#filter8318)">
     <ellipse
        cx="62.639"
        cy="62.224998"

@@ -9,6 +9,9 @@
 	<p class="Carta-descripcion" ng-click="dc.conmutar()">
 		{{carta.descripcion}}
 	</p>
+	<figure class="Carta-botonera">
+		<img class="Carta-btn" ng-class="{'u-checked': dc.estaSeleccionada()}" src="img/icons/check-green.svg"/>
+	</figure>
 
 	<figure class="u-fadein" ng-click="dc.conmutar()">
 		<img class="Carta-img" src="{{dc.getImagen()}}"/>

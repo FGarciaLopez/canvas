@@ -46,13 +46,17 @@
 		dpi.eliminar = eliminar;
 		dpi.mostrarEliminar = mostrarEliminar;
 		dpi.ocultarEliminar = ocultarEliminar;
+
 		dpi.imagen = $scope.imagen;
 
+		if ($scope.post)
+			$scope.post.id = PostItService.getId();
+		
 		function crear() { dpi.postItEdit = PostItService.crear( $scope.mazo) }
 
 		function editar( ) { 
+			angular.element(document.getElementById($scope.post.id)).trigger( "click");
 			dpi.postItEdit = PostItService.editar( $scope.mazo, $scope.post);
-			console.log("this", this)
 		}
 
 		function mostrarEliminar() {

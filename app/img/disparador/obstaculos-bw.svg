@@ -13,7 +13,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91pre3 r13670"
-   sodipodi:docname="obstaculos.svg">
+   sodipodi:docname="obstaculos-bw.svg">
   <metadata
      id="metadata170">
     <rdf:RDF>
@@ -84,10 +84,35 @@
          cx="322.602"
          id="circle26" />
     </clipPath>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Greyscale"
+       id="filter8230">
+      <feColorMatrix
+         values="0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0 0 0 1 0 "
+         id="feColorMatrix8232" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Greyscale"
+       id="filter8234">
+      <feColorMatrix
+         values="0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0 0 0 1 0 "
+         id="feColorMatrix8236" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Greyscale"
+       id="filter8238">
+      <feColorMatrix
+         values="0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0 0 0 1 0 "
+         id="feColorMatrix8240" />
+    </filter>
   </defs>
   <g
      transform="matrix(.235 0 0 .2 -39.64 -3.704)"
-     id="g32">
+     id="g32"
+     style="filter:url(#filter8230)">
     <path
        opacity=".2"
        fill="#96dede"

@@ -1,57 +1,55 @@
+ancho-menu= 60px
+alto-menu =400px
+fondo-menu= rgba(#000,.5)
+color-txt-menu= #333
+posicion()
+	top 10em
+	left 0px
+	
 // menu-lateral.styl
 .MenuLateral-container
 	position fixed
 	display block
-	top 10em
-	left 0px
-	width 60px
-	height 400px
-	background rgba(0,0,0,0.5)
+	width ancho-menu
+	height alto-menu
+	background fondo-menu
 	-webkit-transition all .3s
 	z-index 9
-
-	.MenuLateral
-		position absolute
-		display block
+	posicion()
+.MenuLateral
+	position absolute
+	display block
+	top 0
+	left 0
+	padding 0px
+.MenuLateral-item
+	position relative
+	display block
+	span
+		color color-txt-menu
+	.MenuLateral-btn
+		padding 0
+	.MenuLateral-logo
 		top 0
-		left 0
-		padding 0px
-		.MenuLateral-item
-			position relative
-			display block
-			span
-				color #000
-			.MenuLateral-btn
-				padding 0
-			.MenuLateral-logo
-				top 0
-				height 60px
-				width 60px
-				-webkit-transition 1s
-			.MenuLateral-logo:hover
-				-webkit-transform rotate(360deg)			
-			.MenuLateral-icon
-				margin-left ((60 - 45 )/2)px
-				margin-top 5px
-				height 45px
-				width 45px
-			.MenuLateral-text
-				display none
+		height ancho-menu
+		width ancho-menu
+		-webkit-transition 1s
+	.MenuLateral-logo:hover
+		-webkit-transform rotate(360deg)			
+	.MenuLateral-icon
+		margin-left ((ancho-menu - 45 )/2)px
+		margin-top 5px
+		height 45px
+		width 45px
+	.MenuLateral-text
+		display none
+		color white
 
 .MenuLateral-container:hover
 	width 200px
-	.MenuLateral
-		position absolute
-		display block
-		top 0
-		left 0
-		width 100%
-		height 100%
-		list-style-type none
-		.MenuLateral-item
-			.MenuLateral-text
-				display inline
-
+	.MenuLateral-text
+		display inline
+/*
 @media screen and (orientation: landscape)
 	.MenuLateral-portrait
 		display none !important
@@ -59,3 +57,4 @@
 @media screen and (orientation: portrait)
 	.MenuLateral-landscape
 		display none !important
+*/

@@ -1,13 +1,11 @@
 <!-- TEXTO DE LA NOTA -->
-<div class="PostIt-texto u-transparent" ng-click="dpi.editar()">
+<div class="PostIt-texto u-transparent" ng-hide="dpi.estaSeleccionado()" ng-show="!dpi.estaSeleccionado()" ng-click="dpi.editar()">
 	{{post.nota}} 
 </div>
-<div class="PostIt-texto" name="nota" rows="4" focus="{{dpi.estaSeleccionado()}}" ng-model="dpi.postItEdit.nota" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()">
-</div>
-<!--textarea class="PostIt-texto u-transparent" name="nota" rows="4" readonly desabled ng-model="post.nota" 
-ng-hide="dpi.estaSeleccionado()" ng-click="dpi.editar()">
-</textarea-->
-
+<form>
+	<textarea id="{{post.id}}"class="PostIt-texto" name="nota" ng-model="dpi.postItEdit.nota" ng-hide="!dpi.estaSeleccionado()" ng-show="dpi.estaSeleccionado()" >
+	</textarea>
+</form>
 <div class="PostIt-botonera">
 	<!-- BTN DESHACER -->
 	<img class="PostIt-btn u-button u-fadein u-info u-raised" alt="250x250" src="/img/icons/undo.png" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.cancelar()"/>

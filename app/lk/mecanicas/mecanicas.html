@@ -1,7 +1,7 @@
 <div class="Mecanicas-contenedor">
 	<h1 class="Mecanicas-titulo u-titulo">MECANICAS</h1>
 	<div class="Mecanicas-lista Carta-contenedor u-contenedor">
-		<lk-carta carta=c mazo=mecs.mazo class="Mecanicas-item" ng-repeat="c in mecs.mazo.cartas">
+		<lk-carta carta=c mazo=mecs.mazo class="Mecanicas-item" ng-repeat="c in mecs.mazo.cartas | filter: {activo: true}">
 		</lk-carta>
 	</div>
 </div>
