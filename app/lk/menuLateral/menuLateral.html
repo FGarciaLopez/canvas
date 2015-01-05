@@ -2,23 +2,23 @@
 <div class="MenuLateral-container">
 	<ul class="MenuLateral">
 		<li class"MenuLateral-item">
-			<a href="#/canvas">
+			<a role="menuitem" href="#/canvas">
 				<img class="MenuLateral-logo" alt="60x60" src="/img/icons/60.svg"/>
 			</a>
         </li>
 		<li class="MenuLateral-item" >
-			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" href="/#/canvas#CanvasSup">
+			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" ng-click="menu.arriba()">
 				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/arriba.svg"/>
 				<span class="MenuLateral-text">Ir al inicio</span>
 			</a>
         </li>
 		<li class="MenuLateral-item">
-			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" href="/#/canvas#CanvasInf">
+			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" ng-click="menu.abajo()">
 				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/abajo.svg"/>
 				<span class="MenuLateral-text">Ir al final</span>
 			</a>
         </li>
-		<li class="MenuLateral-item">
+		<li class="MenuLateral-item" ng-hide="true">
 			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" ng-click="updateView() ">
 				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/45.svg"/>
 				<span class="MenuLateral-text">Resultado</span>

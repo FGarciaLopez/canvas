@@ -1,6 +1,20 @@
 <div class="Comportamientos-contenedor">
 	<h1 class="Comportamientos-titulo u-titulo">COMPORTAMIENTOS</h1>
-	<div class="Comportamientos-lista PostIt-contenedor u-contenedor">
+	<div class="Comportamientos-intro">
+		<img class="Comportamientos-icon" src="img/canvas/comportamientos.svg"/>
+		<div class="Comportamientos-texto">
+			<p>
+				Recuerda. Existen tres alternativas a la hora de modificar un comportamiento:
+			</p>
+			<ul>
+				<li>Que algo se haga <span class="u-destacado">MÁS</span></li>
+				<li>Que algo se haga <span class="u-destacado">DIFERENTE<span></li>
+				<li>Que algo <span class="u-destacado">NO</span> se haga</li>
+			</ul>	
+			
+		</div>
+	</div>
+	<div class="Comportamientos-lista PostIt-contenedor">
 		<lk-post-it post=post mazo=cmps.mazo imagen="'carta'" class="Comportamientos-item PostIt" ng-repeat="post in cmps.mazo.postIts">
 		</lk-post-it>
 		<lk-post-it type="crear" mazo=cmps.mazo imagen="'carta'" class="Comportamientos-item PostIt">

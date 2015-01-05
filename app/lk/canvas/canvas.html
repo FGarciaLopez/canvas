@@ -1,29 +1,29 @@
 <div class="Canvas">
-	<div id="CanvasSup">
-		<div class="Canvas-col Canvas-Cuore">
-			<div class="Canvas-cell Experiencia">
-				<div class="Canvas-titulo">¿Qué experiencia quiero crear?</div>
-				<a href="#/experiencia" class="Canvas-mazoContenedor">
-					<img class="Canvas-alumno" alt="70x70" src="/img/icons/70.svg"/>
-				</a>
-			</div>
-			<div class="Canvas-cell Comportamientos">
-				<div>Comportamientos</div>
-				<a href="#/comportamientos" class="Canvas-mazoContenedor">
-					<img class="Canvas-mazo" alt="125x125" src="/img/icons/125.svg"/>
-				</a>
-			</div>
-		</div>
-		<div class="Canvas-cell Canvas-col Disparadores">
-			<div>Disparadores de la atención</div>
-			<a href="#/disparadores" class="Canvas-mazoContenedor">
-				<img class="Canvas-mazo" alt="125x125" src="/img/icons/125.svg"/>
+	<div id="Arriba">
+		<!--div class="Canvas-col Canvas-Cuore"-->
+		<div class="Canvas-cell Canvas-experiencia">
+			<span class="Canvas-titulo">¿Qué experiencia quiero crear?</span>
+			<a href="#/experiencia">
+				<img alt="Experiencia del alumo" src="/img/canvas/experiencia.svg"/>
 			</a>
 		</div>
-		<div class="Canvas-cell Canvas-col Objetivos">
+		<!--/div-->
+		<div class="Canvas-cell Canvas-col Canvas-objetivos">
 			<span>Objetivos</span>
-			<a href="#/objetivos" class="Canvas-mazoContenedor">
-				<img class="Canvas-mazo" alt="125x125" src="/img/icons/125.svg" ng-click=""/>
+			<a href="#/objetivos">
+				<img alt="Los objetivos" src="/img/canvas/objetivos.svg" ng-click=""/>
+			</a>
+		</div>
+		<div class="Canvas-cell Canvas-col Canvas-disparadores">
+			<div>Disparadores de la atención</div>
+			<a href="#/disparadores">
+				<img alt="Disparadores de la atención" src="/img/canvas/disparadores.svg"/>
+			</a>
+		</div>
+		<div class="Canvas-cell Canvas-comportamientos">
+			<div>Comportamientos</div>
+			<a href="#/comportamientos">
+				<img alt="Comportamientos" src="/img/canvas/comportamientos.svg"/>
 			</a>
 		</div>
 	</div>
@@ -31,19 +31,19 @@
 		<div class="Canvas-cell Canvas-row Canvas-motivadores">
 			<div>Motivadores</div>
 			<a href="#/motivadores" class="Canvas-mazoContenedor" ng-click="canvas.activaMazo('motivadores')">
-				<img class="Canvas-mazo" alt="125x125" src="/img/icons/125.svg"/>
+				<img alt="Motivadores" src="/img/canvas/motivadores.svg"/>
 			</a>
 		</div>
 		<div class="Canvas-cell Canvas-row Canvas-mecanicas">
-			<div>Mecánicas</div>
+			<div>Mecánicas de juego</div>
 			<a href="#/mecanicas" class="Canvas-mazoContenedor" ng-click="canvas.activaMazo('mecanicas')">
-				<img class="Canvas-mazo" alt="125x125" src="/img/icons/125.svg"/>
+				<img alt="Mecánicas de juego" src="/img/canvas/mecanicas.svg"/>
 			</a>
 		</div>
-		<div id="CanvasInf" class="Canvas-cell Canvas-row Canvas-componentes">
-			<div>Componentes</div>
+		<div id="Abajo" class="Canvas-cell Canvas-row Canvas-componentes">
+			<div>Componentes de juego</div>
 			<a href="#/componentes" class="Canvas-mazoContenedor">
-				<img class="Canvas-mazo" alt="125x125" src="/img/icons/125.svg"/>
+				<img alt="Componentes de juego" src="/img/canvas/componentes.svg"/>
 			</a>
 		</div>
 	</div>

@@ -56,10 +56,9 @@
 			imagen = imagen + $scope.mazo.imagen+'/';
 			if( $scope.carta.seleccionado)
 				imagen = imagen + $scope.carta.imagen
-			else if ($scope.mazo.imagen == 'disparador')
-				imagen = imagen + $scope.carta.imagen+'-bw'
 			else
-				imagen = imagen +$scope.mazo.imagen;
+//			else if ($scope.mazo.imagen == 'disparador')
+				imagen = imagen + $scope.carta.imagen+'-bw'
 			imagen = imagen + '.svg';
 			return imagen;
 		}

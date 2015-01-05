@@ -1,2 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" preserveAspectRatio="none"><defs/><rect width="70" height="70" fill="#EEEEEE"/><g>
-<text x="10" y="30" style="fill:#AAAAAA;font-weight:bold;font-family:Arial, Helvetica, Open Sans, sans-serif, monospace;font-size:10pt;dominant-baseline:central">70x70</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" preserveAspectRatio="none"><path fill="#eee" d="M0 0h70v70H0z"/><text x="10" y="30" fill="#aaa" font-weight="bold" font-family="Arial, Helvetica, Open Sans, sans-serif, monospace" font-size="10pt" dominant-baseline="central">70x70</text></svg>

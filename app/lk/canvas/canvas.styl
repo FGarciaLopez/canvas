@@ -7,11 +7,17 @@
 		display block
 		margin-left auto
 		margin-right auto
+	img
+		width 125px
+		height 125px
 .Canvas-row
 	width 100%
 	height 30%
 .Canvas-col 
-	height 280px
+	height 340px
+	img
+		position relative
+		top 50px
 .Canvas
 	background-color black
 	border .8em solid black !important
@@ -20,49 +26,45 @@
 	font-family "Muli", "Helvetica Neue", Arial
 	font-weight bold
 	margin 1em 2em 0 1em
-	#CanvasSup
-		margin-left 0
-		.Objetivos
-			background #D98BB1
-			display inline-block
-			float left
-			min-width 130px
-			vertical-align top
-			width 32%
-		.Canvas-Cuore
-			display inline-block
-			min-width 35%
-			text-aling center
-			.Experiencia
-				background #F9C85E
-				display block
-				.Canvas-titulo
-					display inline-block
-					overflow hidden
-					text-align center
-					top 0
-					width 200px
-				.Canvas-alumno
-					display block
-				.Canvas-text
-					display inline-block
-					//width 49% !important
-					width 125px
-					height 115px
-					margin-top 2px
-					background rgba(255,0,0,0.3)
-					span
-						font-weight bold
-			.Comportamientos
-				background #F9C85E
-				display block
-		.Disparadores
-			display inline-block
-			float right
-			background-color #F9A95E
-			vertical-align top
-			min-width 130px
-			width 32%
+
+.Canvas-experiencia
+	background red !important
+	display inline-block
+	width 35%
+	min-height 185px !important
+.Canvas-titulo
+	display inline-block
+	overflow hidden
+	text-align center
+	top 0
+.Canvas-text
+	display inline-block
+	//width 49% !important
+	width 125px
+	height 115px
+	margin-top 2px
+	background rgba(255,0,0,0.3)
+	span
+		width 80%
+		font-weight bold
+.Canvas-objetivos
+	background #D98BB1
+	display inline-block
+	float left
+	min-width 130px
+	vertical-align top
+	width 32%
+.Canvas-disparadores
+	background-color #F9A95E
+	display inline-block
+	float right
+	min-width 130px
+	vertical-align top
+	width 32%
+.Canvas-comportamientos
+	min-width 35%
+	background #F9C85E
+	display inline-block
 .Canvas-motivadores
 	display block
 	background-color #F06162
@@ -73,19 +75,24 @@
 	display block
 	background-color #80A5C7
 
-@media screen and (max-width: 700px)
+@media screen and (max-width: 800px)
 	.Canvas
-		.Canvas-Cuore
-			width 100%
-		.Objetivos
-			width 50% !important
-		.Disparadores
-			width 50% !important
+		margin .5em .5em 0 .2em
+	.Canvas-col
+		height 300px
+	.Canvas-experiencia
+	.Canvas-comportamientos
+		width 100%
+	.Canvas-objetivos
+		width 50% !important
+	.Canvas-disparadores
+		width 50% !important
 @media screen and (max-width: 480px)
-	.Canvas
-		.Objetivos
-			width 100% !important
-		.Canvas-Cuore
-			width 100%
-		.Disparadores
-			width 100% !important
+	.Canvas-col
+		height auto
+		img
+			top 0
+	.Canvas-objetivos
+		width 100% !important
+	.Canvas-disparadores
+		width 100% !important

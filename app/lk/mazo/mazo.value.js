@@ -11,7 +11,7 @@
 		this.descripcion = descripcion;
 		this.imagen = imagen;
 		this.activo = null;
-		this.seleccionado = true;
+		this.seleccionado = false;
 	}
 
 	function Disparador (nombre, descripcion, imagen) {
@@ -19,7 +19,7 @@
 		this.descripcion = descripcion;
 		this.imagen = imagen;
 		this.activo = null;
-		this.seleccionado = true;
+		this.seleccionado = false;
 	}
 
 	function Mecanica (nombre, descripcion, imagen, motivadores) {
@@ -48,22 +48,22 @@
 			imagen: 'disparador',
 			cartas: [
 				new Disparador( 'Desafío', 'Propón retos interesantes. Proporcionados a las habilidades físicas y coginitivas de tus alumnos, y alineados con los objetivos.', 'desafio'),
-				new Disparador( 'Sensación física',	'Permite a tus alumnos que experimente con sus sentidos. Efectos visuales muy atractivos, acciones que impliquen movimiento.', 'fisica'),
-				new Disparador( 'Obstaculos', 'Crea diferentes resticciones que reten al alumno', 'obstaculos'),
+				new Disparador( 'Sensación física',	'Permíteles experimentar con sus sentidos. Efectos visuales muy atractivos, acciones que impliquen movimiento.', 'fisica'),
+				new Disparador( 'Obstaculos', 'Crea diferentes restricciones que reten al alumno', 'obstaculos'),
 				new Disparador( 'Fantasia','Estimula la atención con la creación de elementos y mundos imaginarios.', 'fantasia'),
-				new Disparador( 'Expresión', 'Permite a tus alumnos que puedan expresarse creando, diseñando, personalizando etc.', 'expresion'),
+				new Disparador( 'Expresión', 'Déjales expresarse creando, diseñando, personalizando...', 'expresion'),
 				new Disparador( 'Descubrimiento', 'Permite a los alumnos que son más exploradores poder buscar y encontrar cosas nuevas.', 'descubrimiento'),
 				new Disparador( 'Social', 'La posibilidad de crear equipos, cooperar, actuar en comunidad.', 'social'),
-				new Disparador( 'Narrativa','A los alumnos les atraen poderosamenta las historias. Permite a tus alumnos que puedan experimentar el desarrollo de una historia.', 'narrativa')
+				new Disparador( 'Narrativa','A los alumnos les atraen poderosamenta las historias. Permíteles que experimenten el desarrollo de una historia.', 'narrativa')
 		]}
 		mazos.motivadores = {
 			nombre: 'Motivadores',
 			imagen: 'motivador',
 			cartas: [
 				new Motivador( 'Aceptación', 'Esta carta sirve para fijar un tipo de recompensa que permita al alumno sentirse aprobado', 'aceptacion'),
-				new Motivador( 'Actividad Física', 'Utiliza esta carta si tus alumnos van a tener que ejercitar sus musculos durante la experiencia.', 'actividad'),
-				new Motivador( 'Ahorrar', 'Utiliza esta carta cuando quiera que el alumno coleccione una serie de item que ira consiguiendo con su progreso en la experiencia.', 'ahorrar'),
-				//new Motivador( 'Coleccionar', 'Utiliza esta carta cuando quiera que el alumno coleccione una serie de item que ira consiguiendo con su progreso en la experiencia.'),
+				new Motivador( 'Actividad Física', 'Utiliza esta carta si tus alumnos van a tener que ejercitar sus músculos durante la experiencia.', 'actividad'),
+				new Motivador( 'Ahorrar', 'Utiliza esta carta cuando quiera que el alumno coleccione una serie de item que irá consiguiendo con su progreso en la experiencia.', 'ahorrar'),
+				//new Motivador( 'Coleccionar', 'Utiliza esta carta cuando quiera que el alumno coleccione una serie de item que irá consiguiendo con su progreso en la experiencia.'),
 				new Motivador( 'Contacto social', 'Esta carta hace es usada cuando tu experiencia permite compartir y relacionarse con otros compañeros', 'contacto'),
 				new Motivador( 'Curiosidad', 'Utiliza esta carta para que tus alumnos vayan descubriendo nuevos contenidos', 'curiosidad'),
 				new Motivador( 'Idealismo', 'Cuando usas esta causa tu experiencia esta relacionada con hacer del mundo un lugar mejor', 'idealismo'),
@@ -116,25 +116,26 @@
 			nombre: 'Componentes',
 			imagen: 'componente',
 			cartas: [
-				new Componente( 'Ranking', 'Clasificación acorde a una puntuación o valor', 'ranking'),
-				new Componente( 'Desbloqueo de contenido', 'Aspectos que solo estan disponibles cuando los alumnos alcanzan ciertos objetivos', 'desbloqueo'),
-				new Componente( 'Colecciones', 'Elementos a acumular', 'colecciones'),
-				new Componente( 'Misiones', 'Desafíos predefinidos con objetivos y recompensas', 'mision'),
-				new Componente( 'Misiones epicas', 'Desafíos muy complicado al final', 'epica'),
-				new Componente( 'Medallas', 'Representación visual de los logros', 'medallas'),
-				new Componente( 'Barras de progreso', 'Representación del estado actual de diferentes acciones, niveles, retos, vida, etc', 'progreso'),
-				new Componente( 'Cuenta atrás', 'Cuenta atrás para realizar cierta acciones', 'cuenta'),
-				new Componente( 'Logros', 'Objetivos definidos', 'logros'),
 				new Componente( 'Avatares', 'Representación visual del alumno', 'avatares'),
-				new Componente( 'Puntos', 'Representación numerica de la progresión dentro del juego', 'puntos'),
-				new Componente( 'Niveles', 'Pasos definidos en la progresión de un jugador', 'niveles'),
-				new Componente( 'Mercado', 'Sitio donde se pueden intercambiar los bienes por recompensas', 'mercado'),
+				new Componente( 'Barras de progreso', 'Representación del estado actual de diferentes acciones, niveles, retos, vida, etc', 'progreso'),
 				new Componente( 'Bienes virtuales', 'Activos del juego con un valor virtual', 'virtuales'),
-				new Componente( 'Ranking sociales', 'Posición de los alumnos en relación a la participación social', 'social'),
+				new Componente( 'Colecciones', 'Elementos a acumular', 'colecciones'),
+				new Componente( 'Cuenta atrás', 'Cuenta atrás para realizar cierta acciones', 'cuenta'),
+				new Componente( 'Desbloqueo de contenido', 'Aspectos que solo estan disponibles cuando los alumnos alcanzan ciertos objetivos', 'desbloqueo'),
 				new Componente( 'Equipos', 'Grupo definido de alumnos que trabaja conjuntamente', 'equipos'),
+				new Componente( 'Logros', 'Objetivos definidos', 'logros'),
+				new Componente( 'Medallas', 'Representación visual de los logros', 'medallas'),
+				new Componente( 'Mercado', 'Sitio donde se pueden intercambiar los bienes por recompensas', 'mercado'),
+				new Componente( 'Misiones epicas', 'Desafíos muy complicado al final', 'epica'),
+				new Componente( 'Misiones', 'Desafíos predefinidos con objetivos y recompensas', 'mision'),
+				new Componente( 'Niveles', 'Pasos definidos en la progresión de un jugador', 'niveles'),
+				new Componente( 'Puntos', 'Representación numerica de la progresión dentro del juego', 'puntos'),
+				new Componente( 'Ranking sociales', 'Posición de los alumnos en relación a la participación social', 'social'),
+				new Componente( 'Ranking', 'Clasificación acorde a una puntuación o valor', 'ranking'),
 				new Componente( 'Recompensas', 'Acciones que se consiguen al intercambiar bienes y ayudan al progreso', 'recompensas'),
 				new Componente( 'Roles', 'Permite que existan diferentes personajes con distintas acciones y que tus alumos puedan decidir que rol desempeñan', 'roles'),
-				new Componente( 'Tesoros escondidos', 'Recompensa obtenidad por exploración o por azar.', 'tesoros')
+				new Componente( 'Tesoros escondidos', 'Recompensa obtenidad por exploración o por azar.', 'tesoros'),
+				new Componente( 'Vidas', 'Salud virtual del alumno', 'vida')
 		]}
 
 		for( var i in mazos.mecanicas.cartas) {
