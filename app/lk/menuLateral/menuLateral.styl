@@ -1,9 +1,9 @@
 ancho-menu= 60px
-alto-menu =400px
+alto-menu =60%
 fondo-menu= rgba(#000,.5)
 color-txt-menu= #333
 posicion()
-	top 10em
+	top 20%
 	left 0px
 	
 // menu-lateral.styl
@@ -16,6 +16,10 @@ posicion()
 	-webkit-transition all .3s
 	z-index 9
 	posicion()
+	&:hover
+		width 200px
+		.MenuLateral-text
+			display inline
 .MenuLateral
 	position absolute
 	display block
@@ -27,28 +31,24 @@ posicion()
 	display block
 	span
 		color color-txt-menu
-	.MenuLateral-btn
-		padding 0
-	.MenuLateral-logo
-		top 0
-		height ancho-menu
-		width ancho-menu
-		-webkit-transition 1s
-	.MenuLateral-logo:hover
+.MenuLateral-btn
+	padding 0
+.MenuLateral-logo
+	top 0
+	height ancho-menu
+	width ancho-menu
+	-webkit-transition 1s
+	&:hover
 		-webkit-transform rotate(360deg)			
-	.MenuLateral-icon
-		margin-left ((ancho-menu - 45 )/2)px
-		margin-top 5px
-		height 45px
-		width 45px
-	.MenuLateral-text
-		display none
-		color white
+.MenuLateral-icon
+	margin-left ((ancho-menu - 45 )/2)px
+	margin-top 5px
+	height 45px
+	width 45px
+.MenuLateral-text
+	display none
+	color white !important
 
-.MenuLateral-container:hover
-	width 200px
-	.MenuLateral-text
-		display inline
 /*
 @media screen and (orientation: landscape)
 	.MenuLateral-portrait
