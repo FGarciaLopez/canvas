@@ -16,6 +16,7 @@
 		</div>
 		<div class="Canvas-cell Canvas-col Canvas-disparadores">
 			<div>Disparadores de la atención</div>
+			<span class="Canvas-contador">{{canvas.numOfSelected('disparadores')}}</span>
 			<a href="#/disparadores">
 				<img alt="Disparadores de la atención" src="/img/canvas/disparadores.svg"/>
 			</a>
@@ -30,18 +31,21 @@
 	<div>
 		<div class="Canvas-cell Canvas-row Canvas-motivadores">
 			<div>Motivadores</div>
+			<span class="Canvas-contador">{{canvas.numOfSelected('motivadores')}}</span>
 			<a href="#/motivadores" class="Canvas-mazoContenedor" ng-click="canvas.activaMazo('motivadores')">
 				<img alt="Motivadores" src="/img/canvas/motivadores.svg"/>
 			</a>
 		</div>
 		<div class="Canvas-cell Canvas-row Canvas-mecanicas">
 			<div>Mecánicas de juego</div>
+			<span class="Canvas-contador">{{canvas.numOfSelected('mecanicas')}}</span>
 			<a href="#/mecanicas" class="Canvas-mazoContenedor" ng-click="canvas.activaMazo('mecanicas')">
 				<img alt="Mecánicas de juego" src="/img/canvas/mecanicas.svg"/>
 			</a>
 		</div>
 		<div id="Abajo" class="Canvas-cell Canvas-row Canvas-componentes">
 			<div>Componentes de juego</div>
+			<span class="Canvas-contador">{{canvas.numOfSelected('componentes')}}</span>
 			<a href="#/componentes" class="Canvas-mazoContenedor">
 				<img alt="Componentes de juego" src="/img/canvas/componentes.svg"/>
 			</a>
