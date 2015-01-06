@@ -68,7 +68,7 @@
 				new Motivador( 'Curiosidad', 'Utiliza esta carta para que tus alumnos vayan descubriendo nuevos contenidos', 'curiosidad'),
 				new Motivador( 'Idealismo', 'Cuando usas esta causa tu experiencia esta relacionada con hacer del mundo un lugar mejor', 'idealismo'),
 				new Motivador( 'Independencia', 'El uso de esta carta hace que esta experiencia permita a los alumnos ser autonomos', 'independencia'),
-				new Motivador( 'Justicia', 'Esta carta es utilizada para permitir que tus alumnos puedan hacer justicia con alguna causa.', 'justicia'),
+				new Motivador( 'Justicia', 'Tus alumnos podrán hacer justicia con alguna causa.', 'justicia'),
 				new Motivador( 'Orden', 'Esta carta permite que en nuestra experiencia el alumno puede ordenar y organizar.', 'orden'),
 				new Motivador( 'Poder', 'Con esta carta nuestra experiencia permite que nuestros alumnos puedan liderar', 'poder'),
 				new Motivador( 'Posición social', 'Usar esta carta hace de tu experiencia un lugar donde se puede destacar socialmente', 'posicion'),

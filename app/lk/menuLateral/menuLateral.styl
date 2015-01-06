@@ -19,7 +19,7 @@ posicion()
 	&:hover
 		width 200px
 		.MenuLateral-text
-			display inline
+			display inline-block
 .MenuLateral
 	position absolute
 	display block
@@ -29,8 +29,6 @@ posicion()
 .MenuLateral-item
 	position relative
 	display block
-	span
-		color color-txt-menu
 .MenuLateral-btn
 	padding 0
 .MenuLateral-logo
@@ -47,7 +45,14 @@ posicion()
 	width 45px
 .MenuLateral-text
 	display none
+	color color-txt-menu
+	position absolute
+	left 0
+	width (ancho-menu*3)
+	top (ancho-menu/2)
+	margin-left (ancho-menu+2em)
 	color white !important
+	overflow hide
 
 /*
 @media screen and (orientation: landscape)
