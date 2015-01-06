@@ -4,11 +4,17 @@
 		.module('lkCanvas')
 		.controller('CanvasController' , canvasController);
 
-	canvasController.$inject = ['Mazo'];
+	canvasController.$inject = ['Mazo', '$location'];
 
-	function canvasController( Mazo ) { 
+	function canvasController( Mazo, $location ) { 
 		var canvas = this;
 		canvas.numOfSelected = numOfSelected;
+		canvas.irA = irA;
+
+		function irA( destino) {
+			console.log("irA", destino)
+			$location.path(destino);
+		}
 
 		function numOfSelected(nombreMazo) {
 			var cartas, cuantas=0;

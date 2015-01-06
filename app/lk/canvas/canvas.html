@@ -1,54 +1,34 @@
 <div class="Canvas">
-	<div id="Arriba">
-		<!--div class="Canvas-col Canvas-Cuore"-->
-		<div class="Canvas-cell Canvas-experiencia">
-			<span class="Canvas-titulo">¿Qué experiencia quiero crear?</span>
-			<a href="#/experiencia">
-				<img alt="Experiencia del alumo" src="/img/canvas/experiencia.svg"/>
-			</a>
-		</div>
-		<!--/div-->
-		<div class="Canvas-cell Canvas-col Canvas-objetivos">
-			<span>Objetivos</span>
-			<a href="#/objetivos">
-				<img alt="Los objetivos" src="/img/canvas/objetivos.svg" ng-click=""/>
-			</a>
-		</div>
-		<div class="Canvas-cell Canvas-col Canvas-disparadores">
-			<div>Disparadores de la atención</div>
-			<span class="Canvas-contador">{{canvas.numOfSelected('disparadores')}}</span>
-			<a href="#/disparadores">
-				<img alt="Disparadores de la atención" src="/img/canvas/disparadores.svg"/>
-			</a>
-		</div>
-		<div class="Canvas-cell Canvas-comportamientos">
-			<div>Comportamientos</div>
-			<a href="#/comportamientos">
-				<img alt="Comportamientos" src="/img/canvas/comportamientos.svg"/>
-			</a>
-		</div>
+	<div id="Arriba" class="Canvas-cell Canvas-experiencia" ng-click="canvas.irA('/experiencia')">
+		<span class="Canvas-titulo">¿Qué experiencia quiero crear?</span>
+		<img alt="Experiencia del alumo" src="/img/canvas/experiencia.svg"/>
 	</div>
-	<div>
-		<div class="Canvas-cell Canvas-row Canvas-motivadores">
-			<div>Motivadores</div>
-			<span class="Canvas-contador">{{canvas.numOfSelected('motivadores')}}</span>
-			<a href="#/motivadores" class="Canvas-mazoContenedor" ng-click="canvas.activaMazo('motivadores')">
-				<img alt="Motivadores" src="/img/canvas/motivadores.svg"/>
-			</a>
-		</div>
-		<div class="Canvas-cell Canvas-row Canvas-mecanicas">
-			<div>Mecánicas de juego</div>
-			<span class="Canvas-contador">{{canvas.numOfSelected('mecanicas')}}</span>
-			<a href="#/mecanicas" class="Canvas-mazoContenedor" ng-click="canvas.activaMazo('mecanicas')">
-				<img alt="Mecánicas de juego" src="/img/canvas/mecanicas.svg"/>
-			</a>
-		</div>
-		<div id="Abajo" class="Canvas-cell Canvas-row Canvas-componentes">
-			<div>Componentes de juego</div>
-			<span class="Canvas-contador">{{canvas.numOfSelected('componentes')}}</span>
-			<a href="#/componentes" class="Canvas-mazoContenedor">
-				<img alt="Componentes de juego" src="/img/canvas/componentes.svg"/>
-			</a>
-		</div>
+	<div class="Canvas-cell Canvas-col Canvas-objetivos" ng-click="canvas.irA('/objetivos')">
+		<span>Objetivos</span>
+		<img alt="Los objetivos" src="/img/canvas/objetivos.svg"/>
+	</div>
+	<div class="Canvas-cell Canvas-col Canvas-disparadores" ng-click="canvas.irA('/disparadores')">
+		<div>Disparadores de la atención</div>
+		<span class="Canvas-contador">{{canvas.numOfSelected('disparadores')}}</span>
+		<img alt="Disparadores de la atención" src="/img/canvas/disparadores.svg"/>
+	</div>
+	<div class="Canvas-cell Canvas-comportamientos" ng-click="canvas.irA('/comportamientos')">
+		<div>Comportamientos</div>
+		<img alt="Comportamientos" src="/img/canvas/comportamientos.svg" />
+	</div>
+	<div class="Canvas-cell Canvas-row Canvas-motivadores" ng-click="canvas.irA('/motivadores')">
+		<div>Motivadores</div>
+		<span class="Canvas-contador">{{canvas.numOfSelected('motivadores')}}</span>
+		<img alt="Motivadores" src="/img/canvas/motivadores.svg"/>
+	</div>
+	<div class="Canvas-cell Canvas-row Canvas-mecanicas"  ng-click="canvas.irA('/mecanicas')">
+		<div>Mecánicas de juego</div>
+		<span class="Canvas-contador">{{canvas.numOfSelected('mecanicas')}}</span>
+		<img alt="Mecánicas de juego" src="/img/canvas/mecanicas.svg"/>
+	</div>
+	<div id="Abajo" class="Canvas-cell Canvas-row Canvas-componentes" ng-click="canvas.irA('/componentes')">
+		<div>Componentes de juego</div>
+		<span class="Canvas-contador">{{canvas.numOfSelected('componentes')}}</span>
+		<img alt="Componentes de juego" src="/img/canvas/componentes.svg"/>
 	</div>
 </div>

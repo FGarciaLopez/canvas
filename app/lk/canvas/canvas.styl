@@ -1,15 +1,26 @@
+.Canvas
+	background-color black
+	border .8em solid black !important
+	border-radius 1em
+	box-shadow sombra 
+	font-family "Muli", "Helvetica Neue", Arial
+	font-weight bold
+	margin 1em 2em 0 1em
+
 .Canvas-cell
-	padding 0
-	margin 0
 	border .3em solid black
 	border-radius .5em
-	img, span 
+	margin 0
+	padding 0
+	img, span, figure
 		display block
 		margin-left auto
 		margin-right auto
 	img
 		width 125px
 		height 125px
+	&:hover
+		cursor pointer
 .Canvas-row
 	width 100%
 	height 30%
@@ -26,14 +37,6 @@
 	bottom 0
 	margin 0 2em .5em 0 !important
 	font-weight normal
-.Canvas
-	background-color black
-	border .8em solid black !important
-	border-radius 1em
-	box-shadow sombra 
-	font-family "Muli", "Helvetica Neue", Arial
-	font-weight bold
-	margin 1em 2em 0 1em
 .Canvas-experiencia
 	background red !important
 	display inline-block
