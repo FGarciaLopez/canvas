@@ -19,27 +19,19 @@
 		return directive;
 	};
 
-	menuLateralController.$inject = ['$scope', '$location'];
-	function menuLateralController( $scope, $location) {
+	menuLateralController.$inject = ['$scope', 'StatusService'];
+	function menuLateralController( $scope,  StatusService) {
 		var menu = this;
 		menu.tipo = $scope.tipo;
-		menu.arriba = arriba;
 		menu.abajo = abajo;
+		menu.arriba = arriba;
+		menu.cambiaModoSeleccion = cambiaModoSeleccion;
+		menu.estaActivoModoSeleccion = estaActivoModoSeleccion;
 
-		function arriba() {
-			goSection('#Arriba');
-		}
-		function abajo() {
-			goSection('#Abajo');
-		}
+		function abajo() { StatusService.cambiarAApartado( '#Abajo') }
+		function arriba() { StatusService.cambiarAApartado( '#Arriba') }
+		function cambiaModoSeleccion() { return StatusService.cambiarModoSeleccion()}
+		function estaActivoModoSeleccion() { return StatusService.estaActivadoModoSeleccion() }
 
-		function goSection( section) {
-			var url = $location.url();
-			if( url.indexOf( section) < 0) {
-				if( url.lastIndexOf('#') > 0)
-					url = url.substring(0, url.lastIndexOf('#'));
-				$location.url(url+section);
-			}
-		}
 	}
 })()

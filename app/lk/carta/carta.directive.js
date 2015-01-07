@@ -29,39 +29,23 @@
 		return directive;
     }
 
-	lkCartaController.$inject = ['$scope', 'CartaService'];
-	function lkCartaController( $scope, CartaService) {
+	lkCartaController.$inject = ['$scope', 'CartaService', 'StatusService'];
+	function lkCartaController( $scope, CartaService, StatusService) {
 		var dc = this;
-		dc.incluir = incluir;
-		dc.excluir = excluir;
-		dc.estaSeleccionada =estaSeleccionada;
 		dc.algunaSeleccionada = algunaSeleccionada;
 		dc.conmutar = conmutar;
+		dc.estaModoSeleccion = estaModoSeleccion;
+		dc.estaSeleccionada =estaSeleccionada;
 		dc.getImagen =  getImagen;
 
-		function incluir() { 
-			CartaService.select( $scope.mazo, $scope.carta);
-		}
-
-		function conmutar() { CartaService.onOff( $scope.mazo, $scope.carta)}
-
-		function excluir( ) { CartaService.unselect( $scope.mazo, $scope.carta) }
-
-		function estaSeleccionada( ) { return CartaService.isSelected( $scope.carta) }
-
 		function algunaSeleccionada( ) { return CartaService.someSelected( $scope.mazo) }
-
-		function getImagen() {
-			var imagen = '/img/';
-			imagen = imagen + $scope.mazo.imagen+'/';
-			if( $scope.carta.seleccionado)
-				imagen = imagen + $scope.carta.imagen
-			else
-//			else if ($scope.mazo.imagen == 'disparador')
-				imagen = imagen + $scope.carta.imagen+'-bw'
-			imagen = imagen + '.svg';
-			return imagen;
+		function estaModoSeleccion() { return StatusService.estaEnModoSeleccion() }
+		function estaSeleccionada( ) { return CartaService.isSelected( $scope.carta) }
+		function conmutar() { 
+			console.log("paso conmutar" , StatusService.estaEnModoSeleccion())
+			if( StatusService.estaEnModoSeleccion()) 
+				CartaService.onOff( $scope.mazo, $scope.carta) 
 		}
-		// function imagen() { return CartaService.getImage( $scope.carta)}
+		function getImagen() { return CartaService.getImage( $scope.mazo, $scope.carta) }
 	}
 })();

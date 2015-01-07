@@ -1,19 +1,19 @@
 <!-- NOMBRE -->
-<div class="Carta" ng-class="{ 'u-deactivated': !dc.estaSeleccionada(), 'u-activated': dc.estaSeleccionada()}" >
+<div class="Carta" ng-class="{ 'u-deactivated': !dc.estaSeleccionada(), 'u-activated': dc.estaSeleccionada()}" ng-click="dc.conmutar()">
 	<div class="Carta-interior">
 	</div>
-	<p class="Carta-nombre" ng-click="dc.conmutar()">
+	<p class="Carta-nombre" >
 		{{carta.nombre}}
 	</p>
 
-	<p class="Carta-descripcion" ng-click="dc.conmutar()">
+	<p class="Carta-descripcion" >
 		{{carta.descripcion}}
 	</p>
-	<figure class="Carta-botonera">
+	<figure class="Carta-botonera" ng-hide="!dc.estaModoSeleccion()" ng-show="dc.estaModoSeleccion()">
 		<img class="Carta-btn" ng-class="{'u-checked': dc.estaSeleccionada()}" src="img/icons/check-green.svg"/>
 	</figure>
 
-	<figure class="u-fadein" ng-click="dc.conmutar()">
+	<figure class="u-fadein">
 		<img class="Carta-img" src="{{dc.getImagen()}}"/>
 	</figure>
 </div>

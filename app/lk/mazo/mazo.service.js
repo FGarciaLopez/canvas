@@ -6,8 +6,8 @@
 		.module('lkCanvas')
 		.factory('MazoService', MazoService);
 
-	function MazoService() {
-
+	MazoService.$injector = ['StatusService']
+	function MazoService(StatusService) {
 		function Mazo( nombre, imagen, cartas) {
 			this.nombre = nombre;
 			this.imagen = imagen;
@@ -15,17 +15,16 @@
 		}
 
 		return {
-			copy: copy,
 			algunaSeleccionada: algunaSeleccionada,
-			Mazo: Mazo
+			Mazo: Mazo,
+			filtro: filtro
 		}
 
-		function copy( mazo) {
-			var nuevo = new Mazo( mazo.nombre, mazo.imagen, [] );
-			for( var i in mazo.cartas) {
-				nuevo.cartas.push(mazo.cartas[i])
+		function filtro(valor) {
+			if( StatusService.estaEnModoSeleccion()) {
+				return true
 			}
-			return nuevo;
+			return valor.seleccionado;
 		}
 
 		function algunaSeleccionada( cartas) {

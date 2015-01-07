@@ -8,6 +8,7 @@
 		var mecs = this;
 		// mecs.cartasMotivadores = Mazo.motivadores;
 		mecs.mazo = getMecanicas( Mazo.motivadores);
+		mecs.filtro = MazoService.filtro;
 
 		function getMecanicas( motivadores) {
 			var mazo = Mazo.mecanicas;

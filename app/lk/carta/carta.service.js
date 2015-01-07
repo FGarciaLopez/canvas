@@ -8,28 +8,23 @@
 
 	function CartaService() {
 
-              return {
-                     select: select, // Selecciona un Carta
-                     unselect: unselect, // Deselecciona un Carta 
+              var carta = {
                      isSelected: isSelected,
                      someSelected: someSelected,
-                     onOff: onOff
-              }
+                     onOff: onOff,
+                     getImage: getImage
+              };
+              return carta
 
-              // Elimina el indicado o el último seleccionado
-              function select( mazo, carta) {
-                     if(carta)
-                            carta.seleccionado = true;
-              }
-
-              function unselect( mazo, carta) {
-                     if(carta)
-                            carta.seleccionado = false;
+              function getImage(mazo, carta) {
+                     var imagen = '/img/' + mazo.imagen+'/'+carta.imagen
+                     if( !carta.seleccionado)
+                            imagen = imagen + '-bw'
+                     return imagen+ '.svg';
               }
 
               function onOff( mazo, carta) {
-                     if(carta)
-                            carta.seleccionado = ! carta.seleccionado;
+                     if(carta) carta.seleccionado = ! carta.seleccionado;
               }
 
               function isSelected( carta) { 
