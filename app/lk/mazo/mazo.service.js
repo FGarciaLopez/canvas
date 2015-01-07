@@ -6,25 +6,35 @@
 		.module('lkCanvas')
 		.factory('MazoService', MazoService);
 
-	MazoService.$injector = ['StatusService']
-	function MazoService(StatusService) {
-		function Mazo( nombre, imagen, cartas) {
-			this.nombre = nombre;
-			this.imagen = imagen;
-			this.cartas = cartas;
-		}
+	MazoService.$injector = ['StatusService', '$rootScope', 'Mazo', '$location']
+	function MazoService(StatusService, $rootScope, Mazo, $location) {
+        // Cuando ha cambiado la ruta, activa o no el modo selección en el correspondiente mazo
+        $rootScope.$on('$locationChangeSuccess', function(event, next, current) {
+             var activadoModoSeleccion = (StatusService.seccionesConCartas.indexOf($location.path()) >= 0);
+             StatusService.activarModoSeleccion(activadoModoSeleccion)
+             if( activadoModoSeleccion) {
+	             var mazo = mazoService.get($location.path().replace('/','').replace('#',''))
+	             var modoSeleccion = ! algunaSeleccionada(mazo.cartas);
+	             StatusService.cambiarModoSeleccion( modoSeleccion);
+             }
+        })
 
-		return {
+		var mazoService = {
 			algunaSeleccionada: algunaSeleccionada,
-			Mazo: Mazo,
-			filtro: filtro
+			filtro: filtro,
+			get: get
 		}
+		return mazoService;
 
 		function filtro(valor) {
 			if( StatusService.estaEnModoSeleccion()) {
 				return true
 			}
 			return valor.seleccionado;
+		}
+
+		function get( nombre) {
+			return Mazo[nombre];
 		}
 
 		function algunaSeleccionada( cartas) {

@@ -5,12 +5,12 @@
         .module('lkCanvas')
         .factory('StatusService', StatusService);
 
-	StatusService.$injector = ['$location', '$rootScope', '$injector']    
-    function StatusService ($location, $rootScope, $injector) {
+	StatusService.$injector = ['$location', '$injector']    
+    function StatusService ($location, $injector) {
     	var activadoModoSeleccion = false;
-        var seccionesConCartas = ['/disparadores', '/motivadores', '/mecanicas', '/componentes'];
         var modoSeleccion= false;
         var service = {
+            seccionesConCartas: ['/disparadores', '/motivadores', '/mecanicas', '/componentes'],
             activarModoSeleccion: activarModoSeleccion,
             cambiarAApartado: cambiarAApartado,
             cambiarModoSeleccion: cambiarModoSeleccion,
@@ -18,16 +18,10 @@
             estaEnModoSeleccion: estaEnModoSeleccion
         };
 
-        // Cuando ha cambiado la ruta, activa o no el modo selección (solo para seccciones con cartas)
-        $rootScope.$on('$locationChangeSuccess', function(event, next, current) {
-             activadoModoSeleccion = (seccionesConCartas.indexOf($location.path()) >= 0);
-             modoSeleccion = false;
-        })
-
         return service;
 
         function activarModoSeleccion( valor) {
-            activarModoSeleccion = (typeof valor === 'undefined')? true: valor;
+            activadoModoSeleccion = (typeof valor === 'undefined')? true: valor;
             modoSeleccion = false;
         }
 
@@ -40,9 +34,9 @@
             }
         }
 
-        function cambiarModoSeleccion() {
-        	modoSeleccion = ! modoSeleccion;
-            console.log('cambio modo a ', modoSeleccion)
+        function cambiarModoSeleccion( valor) {
+            var valor = (typeof valor === 'undefined')? ! modoSeleccion: valor;
+        	modoSeleccion = valor;
         	return modoSeleccion;
         }
 

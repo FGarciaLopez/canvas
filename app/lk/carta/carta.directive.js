@@ -42,7 +42,6 @@
 		function estaModoSeleccion() { return StatusService.estaEnModoSeleccion() }
 		function estaSeleccionada( ) { return CartaService.isSelected( $scope.carta) }
 		function conmutar() { 
-			console.log("paso conmutar" , StatusService.estaEnModoSeleccion())
 			if( StatusService.estaEnModoSeleccion()) 
 				CartaService.onOff( $scope.mazo, $scope.carta) 
 		}
