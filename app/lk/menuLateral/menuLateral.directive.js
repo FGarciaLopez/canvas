@@ -27,6 +27,8 @@
 		menu.arriba = arriba;
 		menu.cambiaModoSeleccion = cambiaModoSeleccion;
 		menu.estaActivoModoSeleccion = estaActivoModoSeleccion;
+		menu.irSiguiente = StatusService.cambiarPaso;
+		menu.getSiguiente = StatusService.pasoSiguiente;
 
 		function abajo() { StatusService.cambiarAApartado( '#Abajo') }
 		function arriba() { StatusService.cambiarAApartado( '#Arriba') }

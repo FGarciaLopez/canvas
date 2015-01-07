@@ -20,6 +20,12 @@
 			</a>
         </li>
 		<li class="MenuLateral-item">
+			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" ng-click="menu.irSiguiente()">
+				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/45.svg"/>
+				<span class="MenuLateral-text">Ir a {{menu.getSiguiente() | lowercase}}</span>
+			</a>
+        </li>
+		<li class="MenuLateral-item">
 			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" ng-show="menu.estaActivoModoSeleccion()" ng-hide="!menu.estaActivoModoSeleccion()" ng-click="menu.cambiaModoSeleccion() ">
 				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/45.svg"/>
 				<span class="MenuLateral-text">Modo selección</span>

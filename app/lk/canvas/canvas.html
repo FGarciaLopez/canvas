@@ -1,32 +1,32 @@
 <div class="Canvas">
-	<div id="Arriba" class="Canvas-cell Canvas-experiencia" ng-click="canvas.irA('/experiencia')">
+	<div id="Arriba" class="Canvas-cell Canvas-experiencia" ng-click="canvas.irA('Experiencia')">
 		<span class="Canvas-titulo">¿Qué experiencia quiero crear?</span>
 		<img alt="Experiencia del alumo" src="/img/canvas/experiencia.svg"/>
 	</div>
-	<div class="Canvas-cell Canvas-col Canvas-objetivos" ng-click="canvas.irA('/objetivos')">
+	<div class="Canvas-cell Canvas-col Canvas-objetivos" ng-click="canvas.irA('Objetivos')">
 		<span>Objetivos</span>
 		<img alt="Los objetivos" src="/img/canvas/objetivos.svg"/>
 	</div>
-	<div class="Canvas-cell Canvas-col Canvas-disparadores" ng-click="canvas.irA('/disparadores')">
+	<div class="Canvas-cell Canvas-col Canvas-disparadores" ng-click="canvas.irA('Disparadores')">
 		<div>Disparadores de la atención</div>
 		<span class="Canvas-contador">{{canvas.numOfSelected('disparadores')}}</span>
 		<img alt="Disparadores de la atención" src="/img/canvas/disparadores.svg"/>
 	</div>
-	<div class="Canvas-cell Canvas-comportamientos" ng-click="canvas.irA('/comportamientos')">
+	<div class="Canvas-cell Canvas-comportamientos" ng-click="canvas.irA('Comportamientos')">
 		<div>Comportamientos</div>
 		<img alt="Comportamientos" src="/img/canvas/comportamientos.svg" />
 	</div>
-	<div class="Canvas-cell Canvas-row Canvas-motivadores" ng-click="canvas.irA('/motivadores')">
+	<div class="Canvas-cell Canvas-row Canvas-motivadores" ng-click="canvas.irA('Motivadores')">
 		<div>Motivadores</div>
 		<span class="Canvas-contador">{{canvas.numOfSelected('motivadores')}}</span>
 		<img alt="Motivadores" src="/img/canvas/motivadores.svg"/>
 	</div>
-	<div class="Canvas-cell Canvas-row Canvas-mecanicas"  ng-click="canvas.irA('/mecanicas')">
+	<div class="Canvas-cell Canvas-row Canvas-mecanicas"  ng-click="canvas.irA('Mecanicas')">
 		<div>Mecánicas de juego</div>
 		<span class="Canvas-contador">{{canvas.numOfSelected('mecanicas')}}</span>
 		<img alt="Mecánicas de juego" src="/img/canvas/mecanicas.svg"/>
 	</div>
-	<div id="Abajo" class="Canvas-cell Canvas-row Canvas-componentes" ng-click="canvas.irA('/componentes')">
+	<div id="Abajo" class="Canvas-cell Canvas-row Canvas-componentes" ng-click="canvas.irA('Componentes')">
 		<div>Componentes de juego</div>
 		<span class="Canvas-contador">{{canvas.numOfSelected('componentes')}}</span>
 		<img alt="Componentes de juego" src="/img/canvas/componentes.svg"/>
