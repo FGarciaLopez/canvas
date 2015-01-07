@@ -10,7 +10,8 @@
         function Paso( nombre, path, siguiente) {
             this.path = path;
             this.nombre = nombre,
-            this.siguiente = siguiente
+            this.siguiente = siguiente,
+            this.anterior = this;
         }
         var pasos = [];
         pasos.push( new Paso( 'Tablero', '/canvas', 'Experiencia'));
@@ -26,6 +27,7 @@
             for( var j in pasos) {
                 if( pasos[i].nombre === pasos[j].siguiente) {
                     pasos[j].siguiente = pasos[i];
+                    pasos[i].anterior = pasos[j];
                     break;
                 }
             }
@@ -35,15 +37,16 @@
     	var activadoModoSeleccion = false;
         var modoSeleccion= false;
         var service = {
-            seccionesConCartas: ['/disparadores', '/motivadores', '/mecanicas', '/componentes'],
             activarModoSeleccion: activarModoSeleccion,
             cambiarAApartado: cambiarAApartado,
             cambiarModoSeleccion: cambiarModoSeleccion,
+            cambiarPaso: cambiarPaso,
             estaActivadoModoSeleccion: estaActivadoModoSeleccion,
             estaEnModoSeleccion: estaEnModoSeleccion,
             pasoActual: pasoActual,
+            pasoAnterior: pasoAnterior,
             pasoSiguiente: pasoSiguiente,
-            cambiarPaso: cambiarPaso
+            seccionesConCartas: ['/disparadores', '/motivadores', '/mecanicas', '/componentes']
         };
 
         return service;
@@ -56,14 +59,20 @@
             return paso.siguiente.nombre;
         }
 
+        function pasoAnterior() {
+            return paso.anterior.nombre;
+        }
+
         function cambiarPaso( siguiente) {
-            if( typeof  siguiente === 'string') {
+            if( typeof siguiente === 'string') {
                 for( var i in pasos) {
                     if( pasos[i].nombre === siguiente) {
                         paso = pasos[i];
                         break;
                     }
                 }
+            } else if( typeof siguiente === 'Object') {
+                paso = siguiente;
             } else {
                 paso = paso.siguiente;
             }

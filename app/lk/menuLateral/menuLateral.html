@@ -1,22 +1,28 @@
 <!-- menuLateral.html -->
 <div class="MenuLateral-container">
 	<ul class="MenuLateral">
-		<li class"MenuLateral-item">
-			<a role="menuitem" href="#/canvas">
+		<li class"MenuLateral-item" ng-click="menu.goHome()">
+			<a role="menuitem">
 				<img class="MenuLateral-logo" alt="Lúdiko" src="/img/icons/logo.svg"/>
 				<span class="MenuLateral-text">Lúdiko</span>
 			</a>
         </li>
-		<li class="MenuLateral-item" >
+		<li class="MenuLateral-item" ng-show="menu.estaEnTablero()" ng-hide="!menu.estaEnTablero()">
 			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" ng-click="menu.arriba()">
 				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/arriba.svg"/>
 				<span class="MenuLateral-text">Ir al inicio</span>
 			</a>
         </li>
-		<li class="MenuLateral-item">
+		<li class="MenuLateral-item" ng-show="menu.estaEnTablero()" ng-hide="!menu.estaEnTablero()">
 			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" ng-click="menu.abajo()">
 				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/abajo.svg"/>
 				<span class="MenuLateral-text">Ir al final</span>
+			</a>
+        </li>
+		<li class="MenuLateral-item">
+			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" ng-click="menu.irAnterior()">
+				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/45.svg"/>
+				<span class="MenuLateral-text">Ir a {{menu.getAnterior() | lowercase}}</span>
 			</a>
         </li>
 		<li class="MenuLateral-item">
@@ -25,8 +31,8 @@
 				<span class="MenuLateral-text">Ir a {{menu.getSiguiente() | lowercase}}</span>
 			</a>
         </li>
-		<li class="MenuLateral-item">
-			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" ng-show="menu.estaActivoModoSeleccion()" ng-hide="!menu.estaActivoModoSeleccion()" ng-click="menu.cambiaModoSeleccion() ">
+		<li class="MenuLateral-item" ng-show="menu.estaActivoModoSeleccion()" ng-hide="!menu.estaActivoModoSeleccion()">
+			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1"  ng-click="menu.cambiaModoSeleccion() ">
 				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/45.svg"/>
 				<span class="MenuLateral-text">Modo selección</span>
 			</a>

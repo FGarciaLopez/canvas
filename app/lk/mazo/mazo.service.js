@@ -10,7 +10,6 @@
 	function MazoService(StatusService, $rootScope, Mazo, $location) {
         // Cuando ha cambiado la ruta, activa o no el modo selección en el correspondiente mazo
         $rootScope.$on('$locationChangeSuccess', function(event, next, current) {
-        	console.log("entro", next);
 			var activadoModoSeleccion = (StatusService.seccionesConCartas.indexOf($location.path()) >= 0);
 			StatusService.activarModoSeleccion(activadoModoSeleccion)
 			if( activadoModoSeleccion) {
