@@ -2,9 +2,9 @@
 <div class="MenuLateral-container">
 	<ul class="MenuLateral">
 		<li class"MenuLateral-item" ng-click="menu.goHome()">
-			<a role="menuitem">
+			<a role="menuitem" class="MenuLateral-btn btn">
 				<img class="MenuLateral-logo" alt="Lúdiko" src="/img/icons/logo.svg"/>
-				<span class="MenuLateral-text">Lúdiko</span>
+				<span class="MenuLateral-textoLogo">Lúdiko</span>
 			</a>
         </li>
 		<li class="MenuLateral-item" ng-show="menu.estaEnTablero()" ng-hide="!menu.estaEnTablero()">
@@ -13,14 +13,14 @@
 				<span class="MenuLateral-text">Ir al inicio</span>
 			</a>
         </li>
-		<li class="MenuLateral-item" ng-show="menu.estaEnTablero()" ng-hide="!menu.estaEnTablero()">
-			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" ng-click="menu.abajo()">
+		<li class="MenuLateral-item" ng-show="menu.estaEnTablero()" ng-hide="!menu.estaEnTablero()" ng-click="menu.abajo()">
+			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" >
 				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/abajo.svg"/>
 				<span class="MenuLateral-text">Ir al final</span>
 			</a>
         </li>
-		<li class="MenuLateral-item">
-			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" ng-click="menu.irAnterior()">
+		<li class="MenuLateral-item" ng-click="menu.irAnterior()">
+			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" >
 				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/45.svg"/>
 				<span class="MenuLateral-text">Ir a {{menu.getAnterior() | lowercase}}</span>
 			</a>
@@ -37,7 +37,7 @@
 				<span class="MenuLateral-text">Modo selección</span>
 			</a>
         </li>
-		<li class="MenuLateral-item" ng-hide="true">
+		<li class="MenuLateral-item" ng-hide="!menu.estaCompletado()" ng-show="menu.estaCompletado()">
 			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1" ng-click="updateView() ">
 				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/45.svg"/>
 				<span class="MenuLateral-text">Resultado</span>

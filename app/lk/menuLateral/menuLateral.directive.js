@@ -19,8 +19,8 @@
 		return directive;
 	};
 
-	menuLateralController.$inject = ['$scope', 'StatusService'];
-	function menuLateralController( $scope,  StatusService) {
+	menuLateralController.$inject = ['$scope', 'StatusService', 'MazoService', 'Comportamientos', 'Objetivos', 'ExperienciaService'];
+	function menuLateralController( $scope,  StatusService, MazoService, Comportamientos, Objetivos, ExperienciaService) {
 		var menu = this;
 		menu.abajo = abajo;
 		menu.arriba = arriba;
@@ -33,6 +33,7 @@
 		menu.irAnterior = irAnterior;
 		menu.irSiguiente = StatusService.cambiarPaso;
 		menu.tipo = $scope.tipo;
+		menu.estaCompletado = estaCompletado;
 
 		function abajo() { StatusService.cambiarAApartado( '#Abajo') }
 		function arriba() { StatusService.cambiarAApartado( '#Arriba') }
@@ -41,6 +42,26 @@
 		function estaEnTablero() { return (StatusService.pasoActual()==='Tablero') }
 		function goHome() { StatusService.cambiarPaso('Tablero') }
 		function irAnterior() { StatusService.cambiarPaso( StatusService.pasoAnterior()) }
-
+		function estaCompletado() {
+			if (! MazoService.algunaSeleccionada( MazoService.get('componentes').cartas)) {
+				return false;
+			};
+			if (! MazoService.algunaSeleccionada( MazoService.get('mecanicas').cartas)) {
+				return false;
+			};
+			if (! MazoService.algunaSeleccionada( MazoService.get('motivadores').cartas)) {
+				return false;
+			};
+			if (! MazoService.algunaSeleccionada( MazoService.get('disparadores').cartas)) {
+				return false;
+			};
+			if( Comportamientos.postIts.length===0) {
+				return false
+			}
+			if( Objetivos.postIts.length===0) {
+				return false
+			}
+			return ExperienciaService.todosRellenos();
+		}
 	}
 })()

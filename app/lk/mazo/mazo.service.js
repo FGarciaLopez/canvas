@@ -8,6 +8,12 @@
 
 	MazoService.$injector = ['StatusService', '$rootScope', 'Mazo', '$location']
 	function MazoService(StatusService, $rootScope, Mazo, $location) {
+		var mazoService = {
+			algunaSeleccionada: algunaSeleccionada,
+			filtro: filtro,
+			get: get
+		}
+
         // Cuando ha cambiado la ruta, activa o no el modo selección en el correspondiente mazo
         $rootScope.$on('$locationChangeSuccess', function(event, next, current) {
 			var activadoModoSeleccion = (StatusService.seccionesConCartas.indexOf($location.path()) >= 0);
@@ -18,12 +24,6 @@
 			 StatusService.cambiarModoSeleccion( modoSeleccion);
 			}
         })
-
-		var mazoService = {
-			algunaSeleccionada: algunaSeleccionada,
-			filtro: filtro,
-			get: get
-		}
 		return mazoService;
 
 		function filtro(valor) {
