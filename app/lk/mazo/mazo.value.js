@@ -81,7 +81,7 @@
 				new Mecanica( 'Dominar habilidades','1', 'dominar', ['Poder', 'Independencia', 'Actividad Física']),
 				// new Mecanica( 'Ser un villano', '2', ['Poder', 'Independencia', 'Venganza']),
 				new Mecanica( 'Encontrar tesoros', '2',	'tesoros', ['Poder', 'Ahorrar', 'Posición social']),
-				new Mecanica( 'Ser un revelde', '3', 'revelde', ['Poder', 'Independencia', 'Idealismo', 'Contacto social', 'Posición social', 'Justicia']),
+				new Mecanica( 'Ser un rebelde', '3', 'rebelde', ['Poder', 'Independencia', 'Idealismo', 'Contacto social', 'Posición social', 'Justicia']),
 				new Mecanica( 'Triunfar en conflictos', '4', 'conflictos', ['Poder', 'Justicia']),
 				new Mecanica( 'Completar cosas', '5','completar', ['Poder', 'Independencia', 'Orden', 'Seguridad']),
 				new Mecanica( 'Ser un sabio', '6', 'sabio', ['Poder', 'Independencia', 'Aceptación', 'Ahorrar', 'Posición social']),

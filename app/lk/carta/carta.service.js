@@ -20,7 +20,7 @@
                      var imagen = '/img/' + mazo.imagen+'/'+carta.imagen
                      if( !carta.seleccionado)
                             imagen = imagen + '-bw'
-                     return imagen+ '.svg';
+                     return imagen+ '.png';
               }
 
               function onOff( mazo, carta) {
