@@ -2,13 +2,19 @@
 	angular
 	.module('lkCanvas')
 	.factory('MenuLateralFactory', function(){
+		var desplegado = false;
 
-		function MenuDesplegable( desplegado) {
-			this.desplegado = desplegado || false;
+		function close() { desplegado = false}
+		function toggle() {  desplegado = ! desplegado}
+		function isDesplegado() { 
+			return desplegado;
+		}
+
+		var factory =  {
+			close: close,
+			toggle: toggle,
+			isDesplegado: isDesplegado
 		} 
-		var factory =  new MenuDesplegable( false);
-		factory.close = function() { factory.desplegado = false}
-		factory.toogle = function() { factory.desplegado = ! factory.desplegado}
 		return factory;
 	})
 })();

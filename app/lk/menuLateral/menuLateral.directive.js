@@ -18,26 +18,22 @@
 
 	menuLateralController.$inject = ['$scope', 'StatusService', 'MazoService', 'Comportamientos', 'Objetivos', 'ExperienciaService', 'MenuLateralFactory'];
 	function menuLateralController( $scope,  StatusService, MazoService, Comportamientos, Objetivos, ExperienciaService, MenuLateralFactory) {
-		var sugmn = this;
-		sugmn.abajo = abajo;
-		sugmn.arriba = arriba;
-		sugmn.cambiaModoSeleccion = cambiaModoSeleccion;
-		sugmn.estaActivoModoSeleccion = estaActivoModoSeleccion;
-		sugmn.estaEnTablero = estaEnTablero;
-		sugmn.getAnterior = StatusService.pasoAnterior;
-		sugmn.getSiguiente = StatusService.pasoSiguiente;
-		sugmn.goHome = goHome;
-		sugmn.irAnterior = irAnterior;
-		sugmn.irSiguiente = StatusService.cambiarPaso;
-		sugmn.tipo = $scope.tipo;
-		sugmn.estaCompletado = estaCompletado;
-		sugmn.close = MenuLateralFactory.close;
-		sugmn.desplegado = function() { return MenuLateralFactory.desplegado }
+		var submn = this;
+		submn.cambiaModoSeleccion = StatusService.cambiarModoSeleccion;
+		submn.close = MenuLateralFactory.close;
+		submn.desplegado = MenuLateralFactory.isDesplegado;
+		submn.estaActivoModoSeleccion = StatusService.estaActivadoModoSeleccion;
+		submn.estaCompletado = estaCompletado;
+		submn.estaEnModoSeleccion = StatusService.estaEnModoSeleccion;
+		submn.estaEnTablero = estaEnTablero;
+		submn.getAnterior = StatusService.pasoAnterior;
+		submn.getSiguiente = StatusService.pasoSiguiente;
+		submn.goHome = goHome;
+		submn.irAnterior = irAnterior;
+		submn.irSiguiente = StatusService.cambiarPaso;
+		submn.pasos = StatusService.pasos;
+		submn.tipo = $scope.tipo;
 
-		function abajo() { StatusService.cambiarAApartado( '#Abajo') }
-		function arriba() { StatusService.cambiarAApartado( '#Arriba') }
-		function cambiaModoSeleccion() { return StatusService.cambiarModoSeleccion()}
-		function estaActivoModoSeleccion() { return StatusService.estaActivadoModoSeleccion() }
 		function estaEnTablero() { return (StatusService.pasoActual()==='Tablero') }
 		function goHome() { StatusService.cambiarPaso('Tablero') }
 		function irAnterior() { StatusService.cambiarPaso( StatusService.pasoAnterior()) }

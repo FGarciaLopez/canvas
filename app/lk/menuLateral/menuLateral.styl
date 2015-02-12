@@ -1,7 +1,6 @@
 ancho-menu= 60px
 alto-menu =60%
 fondo-menu= rgba(#000,.5)
-color-txt-menu= #DEF
 posicion()
 	top 20%
 	left 0px
@@ -15,33 +14,38 @@ posicion()
 	position fixed
 	right 0
 	top 0
-	transition all .3s
-	z-index 9
+	z-index 10
 .MenuLateral
-	background  white
+	background white
+	box-shadow 0 4px 5px rgba(#fff,0.26)
 	display block
 	height 100%
+	left 0
 	margin 0
 	padding 0px
 	position relative
-	transition all .3s
+	transition .5s
 	width 200px
-	z-index 100
-	&.u-close
-		left -200px
-		.MenuLateral-text
-			display inline-block
-		.MenuLateral-textoLogo
-			display inline-block
-	&.u-open
-		left 0
-		.MenuLateral-text
-			display inline-block
-		.MenuLateral-textoLogo
-			display inline-block
+	z-index 10
+	animation slidein .3s ease-in
+
+
 .MenuLateral-item
 	position relative
 	display block
+	&.u-separate-bottom
+		border-bottom 1px solid #aaa
+	&.u-separate-top
+		border-top 1px solid #aaa
+	a
+		display block
+		top 0
+		bottom 0
+.MenuLateral-text
+	display inline-block
+	line-height 200%
+.MenuLateral-textoLogo
+	display inline-block
 .MenuLateral-btn
 	padding 0
 	&:hover
@@ -50,34 +54,20 @@ posicion()
 	top 0
 	height ancho-menu
 	width ancho-menu
-	-webkit-transition 1s
+	transition 1s
 	&:hover
 		cursor pointer
-		-webkit-transform rotate(360deg)			
+		transform rotate(360deg)			
 .MenuLateral-icon
 	margin-left ((ancho-menu - 45 )/2)px
 	margin-top 5px
 	height 45px
 	width 45px
 	
-.MenuLateral-textoLogo
-	color white
-	display none
-	left ancho-menu
-	margin-left 1em
-	overflow hidden
-	position absolute
-	top (ancho-menu/2)
-	width (ancho-menu*2)
-
 .MenuLateral-text
 	color color-txt-menu
-	display none
 	margin-left 1em
 	overflow hidden
-	position absolute
-	top 50%
-	transform translateY(-50%)
 	width (ancho-menu*2)
 /*
 @media screen and (orientation: landscape)
@@ -88,3 +78,13 @@ posicion()
 	.MenuLateral-landscape
 		display none !important
 */
+
+@keyframes slidein {
+  from {
+    left -200px
+  }
+
+  to {
+    left 0
+  }
+}

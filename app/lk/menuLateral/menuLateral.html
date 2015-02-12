@@ -1,43 +1,25 @@
 <!-- menuLateral.html -->
 <div class="MenuLateral-container" ng-hide="!submn.desplegado()" ng-show="submn.desplegado()" ng-click="submn.close()">
 	<ul class="MenuLateral" ng-class="{'u-open': submn.desplegado(), 'u-close': !submn.desplegado()}">
-		<li class"MenuLateral-item" ng-click="submn.goHome()">
+		<li class="MenuLateral-item u-separate-bottom" ng-click="submn.goHome()">
 			<a role="submnitem" class="MenuLateral-btn btn">
 				<img class="MenuLateral-logo" alt="Lúdiko" src="/img/icons/logo.svg"/>
-				<span class="MenuLateral-textoLogo">Lúdiko</span>
+				<span class="MenuLateral-text">Gamification Thinking</span>
 			</a>
         </li>
-		<li class="MenuLateral-item" ng-show="submn.estaEnTablero()" ng-hide="!submn.estaEnTablero()">
-			<a role="submnitem" class="MenuLateral-btn btn" tabindex="-1" ng-click="submn.arriba()">
-				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/arriba.svg"/>
-				<span class="MenuLateral-text">Ir al inicio</span>
-			</a>
-        </li>
-		<li class="MenuLateral-item" ng-show="submn.estaEnTablero()" ng-hide="!submn.estaEnTablero()" ng-click="submn.abajo()">
+
+		<li class="MenuLateral-item" ng-repeat="paso in submn.pasos | filter: { nombre: '!Tablero'}" ng-click="submn.irSiguiente( paso.nombre)">
 			<a role="submnitem" class="MenuLateral-btn btn" tabindex="-1" >
-				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/abajo.svg"/>
-				<span class="MenuLateral-text">Ir al final</span>
+				<span class="MenuLateral-text">{{paso.nombre}}</span>
 			</a>
         </li>
-		<li class="MenuLateral-item" ng-click="submn.irAnterior()">
-			<a role="submnitem" class="MenuLateral-btn btn" tabindex="-1" >
-				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/45.svg"/>
-				<span class="MenuLateral-text">Ir a {{submn.getAnterior() | lowercase}}</span>
-			</a>
-        </li>
-		<li class="MenuLateral-item">
-			<a role="submnitem" class="MenuLateral-btn btn" tabindex="-1" ng-click="submn.irSiguiente()">
-				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/45.svg"/>
-				<span class="MenuLateral-text">Ir a {{submn.getSiguiente() | lowercase}}</span>
-			</a>
-        </li>
-		<li class="MenuLateral-item" ng-show="submn.estaActivoModoSeleccion()" ng-hide="!submn.estaActivoModoSeleccion()">
-			<a role="submnitem" class="MenuLateral-btn btn" tabindex="-1"  ng-click="submn.cambiaModoSeleccion() ">
-				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/45.svg"/>
+		<li class="MenuLateral-item u-separate-top" ng-show="submn.estaActivoModoSeleccion()" ng-hide="!submn.estaActivoModoSeleccion()">
+			<a role="submnitem" class="MenuLateral-btn btn" tabindex="-1"  ng-click="submn.cambiaModoSeleccion()">
+				<i ng-class="{'fa-check-square': submn.estaEnModoSeleccion(), 'fa-square-o': !submn.estaEnModoSeleccion()}"></i>
 				<span class="MenuLateral-text">Modo selección</span>
 			</a>
         </li>
-		<li class="MenuLateral-item" ng-hide="!submn.estaCompletado()" ng-show="submn.estaCompletado()">
+		<li class="MenuLateral-item u-separate-top" ng-hide="!submn.estaCompletado()" ng-show="submn.estaCompletado()">
 			<a role="submnitem" class="MenuLateral-btn btn" tabindex="-1" ng-click="updateView() ">
 				<img class="MenuLateral-icon" alt="45x45" src="/img/icons/45.svg"/>
 				<span class="MenuLateral-text">Resultado</span>

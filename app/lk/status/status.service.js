@@ -44,7 +44,8 @@
             pasoActual: pasoActual,
             pasoAnterior: pasoAnterior,
             pasoSiguiente: pasoSiguiente,
-            seccionesConCartas: ['/disparadores', '/motivadores', '/mecanicas', '/componentes']
+            seccionesConCartas: ['/disparadores', '/motivadores', '/mecanicas', '/componentes'],
+            pasos: pasos
         };
 
         return service;
@@ -62,7 +63,6 @@
         }
 
         function cambiarPaso( siguiente) {
-            console.log("voy a: ", siguiente);
             if( typeof siguiente === 'string') {
                 for( var i in pasos) {
                     if( pasos[i].nombre === siguiente) {

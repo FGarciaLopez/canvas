@@ -21,8 +21,11 @@
 		var menu = this;
 		menu.abajo = abajo;
 		menu.arriba = arriba;
-		menu.cambiaModoSeleccion = cambiaModoSeleccion;
-		menu.estaActivoModoSeleccion = estaActivoModoSeleccion;
+		menu.cambiaModoSeleccion = StatusService.cambiarModoSeleccion;
+		menu.desplegado = MenuLateralFactory.isDesplegado;
+		menu.estaActivoModoSeleccion = StatusService.estaActivadoModoSeleccion;
+		menu.estaCompletado = estaCompletado;
+		menu.estaEnModoSeleccion = StatusService.estaEnModoSeleccion;
 		menu.estaEnTablero = estaEnTablero;
 		menu.getAnterior = StatusService.pasoAnterior;
 		menu.getSiguiente = StatusService.pasoSiguiente;
@@ -30,13 +33,10 @@
 		menu.irAnterior = irAnterior;
 		menu.irSiguiente = StatusService.cambiarPaso;
 		menu.tipo = $scope.tipo;
-		menu.estaCompletado = estaCompletado;
-		menu.toogle = MenuLateralFactory.toogle;
-		menu.desplegado = function() {return MenuLateralFactory.desplegado }
+		menu.toggle = MenuLateralFactory.toggle;
+
 		function abajo() { StatusService.cambiarAApartado( '#Abajo') }
 		function arriba() { StatusService.cambiarAApartado( '#Arriba') }
-		function cambiaModoSeleccion() { return StatusService.cambiarModoSeleccion()}
-		function estaActivoModoSeleccion() { return StatusService.estaActivadoModoSeleccion() }
 		function estaEnTablero() { return (StatusService.pasoActual()==='Tablero') }
 		function goHome() { console.log("voy"); StatusService.cambiarPaso('Tablero') }
 		function irAnterior() { StatusService.cambiarPaso( StatusService.pasoAnterior()) }

@@ -1,4 +1,5 @@
 <div class="Menu">
-	<button class="Menu-item fa fa-navicon" ng-click="menu.toogle()"></button>
-	<img class="Menu-item Menu-logo" ng-click="menu.goHome()" alt="Lúdiko" src="/img/icons/logo.svg" />
+	<button class="Menu-item fa fa-navicon" ng-click="menu.toggle()"></button>
+	<button class="Menu-item fa u-right" ng-class="{'fa-pencil-square': menu.estaEnModoSeleccion(), 'fa-square-o': !menu.estaEnModoSeleccion()}" ng-click="menu.cambiaModoSeleccion()"></button>
+	<!--img class="Menu-item Menu-logo" ng-click="menu.goHome()" alt="Lúdiko" src="/img/icons/logo.svg" /-->
 </div>
