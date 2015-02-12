@@ -11,26 +11,28 @@
 			},
 			templateUrl: 'lk/menuLateral/menuLateral.html',
 			controller: menuLateralController,
-			controllerAs: 'menu'
+			controllerAs: 'submn'
 		}
 		return directive;
 	};
 
-	menuLateralController.$inject = ['$scope', 'StatusService', 'MazoService', 'Comportamientos', 'Objetivos', 'ExperienciaService'];
-	function menuLateralController( $scope,  StatusService, MazoService, Comportamientos, Objetivos, ExperienciaService) {
-		var menu = this;
-		menu.abajo = abajo;
-		menu.arriba = arriba;
-		menu.cambiaModoSeleccion = cambiaModoSeleccion;
-		menu.estaActivoModoSeleccion = estaActivoModoSeleccion;
-		menu.estaEnTablero = estaEnTablero;
-		menu.getAnterior = StatusService.pasoAnterior;
-		menu.getSiguiente = StatusService.pasoSiguiente;
-		menu.goHome = goHome;
-		menu.irAnterior = irAnterior;
-		menu.irSiguiente = StatusService.cambiarPaso;
-		menu.tipo = $scope.tipo;
-		menu.estaCompletado = estaCompletado;
+	menuLateralController.$inject = ['$scope', 'StatusService', 'MazoService', 'Comportamientos', 'Objetivos', 'ExperienciaService', 'MenuLateralFactory'];
+	function menuLateralController( $scope,  StatusService, MazoService, Comportamientos, Objetivos, ExperienciaService, MenuLateralFactory) {
+		var sugmn = this;
+		sugmn.abajo = abajo;
+		sugmn.arriba = arriba;
+		sugmn.cambiaModoSeleccion = cambiaModoSeleccion;
+		sugmn.estaActivoModoSeleccion = estaActivoModoSeleccion;
+		sugmn.estaEnTablero = estaEnTablero;
+		sugmn.getAnterior = StatusService.pasoAnterior;
+		sugmn.getSiguiente = StatusService.pasoSiguiente;
+		sugmn.goHome = goHome;
+		sugmn.irAnterior = irAnterior;
+		sugmn.irSiguiente = StatusService.cambiarPaso;
+		sugmn.tipo = $scope.tipo;
+		sugmn.estaCompletado = estaCompletado;
+		sugmn.close = MenuLateralFactory.close;
+		sugmn.desplegado = function() { return MenuLateralFactory.desplegado }
 
 		function abajo() { StatusService.cambiarAApartado( '#Abajo') }
 		function arriba() { StatusService.cambiarAApartado( '#Arriba') }

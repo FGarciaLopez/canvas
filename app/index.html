@@ -37,6 +37,7 @@
     <!--form-login ng-if="!credential.role"></form-login-->
     <div>
       <nav lk-menu></nav>
+      <nav lk-menu-lateral></nav>
       <div class="ViewContainer" ng-class="{'Comportamientos': cmps, 'Disparadores': dis, 'Objetivos': objs, 'Experiencia': exp, 'Motivadores': mots, 'Mecanicas': mecs, 'Componentes': coms}" ng-view=""></div>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID>
@@ -100,8 +101,6 @@
 <!-- modules, routes, run -->
     <script src="app.js"></script>
     <script src="app.route.js"></script>
-
-<!-- menuLateral -->
     <script src="lk/canvas/canvas.controller.js"></script>
     <script src="lk/carta/carta.directive.js"></script>
     <script src="lk/carta/carta.service.js"></script>
@@ -116,6 +115,8 @@
     <script src="lk/mecanicas/listaMecanicas/listaMecanicas.directive.js"></script>
     <script src="lk/mecanicas/mecanicas.controller.js"></script>
     <script src="lk/menu/menu.directive.js"></script>
+    <script src="lk/menuLateral/menuLateral.directive.js"></script>
+    <script src="lk/menuLateral/menuLateral.factory.js"></script>
     <script src="lk/motivadores/btnInclMotivador/btnInclMotivador.directive.js"></script>
     <script src="lk/motivadores/listaMotivadores/listaMotivadores.directive.js"></script>
     <script src="lk/motivadores/motivadores.controller.js"></script>

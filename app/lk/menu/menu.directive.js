@@ -16,8 +16,8 @@
 		return directive;
 	};
 
-	MenuController.$inject = ['$scope', 'StatusService', 'MazoService', 'Comportamientos', 'Objetivos', 'ExperienciaService'];
-	function MenuController( $scope,  StatusService, MazoService, Comportamientos, Objetivos, ExperienciaService) {
+	MenuController.$inject = ['$scope', 'StatusService', 'MazoService', 'Comportamientos', 'Objetivos', 'ExperienciaService', 'MenuLateralFactory'];
+	function MenuController( $scope,  StatusService, MazoService, Comportamientos, Objetivos, ExperienciaService, MenuLateralFactory) {
 		var menu = this;
 		menu.abajo = abajo;
 		menu.arriba = arriba;
@@ -31,6 +31,8 @@
 		menu.irSiguiente = StatusService.cambiarPaso;
 		menu.tipo = $scope.tipo;
 		menu.estaCompletado = estaCompletado;
+		menu.toogle = MenuLateralFactory.toogle;
+		menu.desplegado = function() {return MenuLateralFactory.desplegado }
 		function abajo() { StatusService.cambiarAApartado( '#Abajo') }
 		function arriba() { StatusService.cambiarAApartado( '#Arriba') }
 		function cambiaModoSeleccion() { return StatusService.cambiarModoSeleccion()}

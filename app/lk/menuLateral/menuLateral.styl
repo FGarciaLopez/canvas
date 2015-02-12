@@ -8,26 +8,37 @@ posicion()
 	
 // menu-lateral.styl
 .MenuLateral-container
-	position fixed
-	display block
-	width ancho-menu
-	height alto-menu
 	background fondo-menu
+	bottom 0
+	display block
+	left 0
+	position fixed
+	right 0
+	top 0
 	transition all .3s
 	z-index 9
-	posicion()
-	&:hover
-		width 200px
+.MenuLateral
+	background  white
+	display block
+	height 100%
+	margin 0
+	padding 0px
+	position relative
+	transition all .3s
+	width 200px
+	z-index 100
+	&.u-close
+		left -200px
 		.MenuLateral-text
 			display inline-block
 		.MenuLateral-textoLogo
 			display inline-block
-.MenuLateral
-	position absolute
-	display block
-	top 0
-	left 0
-	padding 0px
+	&.u-open
+		left 0
+		.MenuLateral-text
+			display inline-block
+		.MenuLateral-textoLogo
+			display inline-block
 .MenuLateral-item
 	position relative
 	display block
