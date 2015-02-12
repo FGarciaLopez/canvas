@@ -1,5 +1,4 @@
 (function() {
-	'use strict';
 	angular
 		.module('lkCanvas')
 		.controller('ExperienciaController' , ExperienciaController);
@@ -10,4 +9,4 @@
 		exp.mazo = ExperienciaService.mazo;
 	}
 
-})()
+})();

@@ -1,7 +1,5 @@
 // postIt.directive.js
 (function() {
-    'use strict';
-
     angular
         .module('lkCanvas')
         .directive('lkPostIt', lkPostIt);

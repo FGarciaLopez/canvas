@@ -1,5 +1,4 @@
 (function() {
-	'use strict';
 	angular
 		.module('lkCanvas')
 		.controller('DisparadoresController' , disparadoresController);
@@ -10,4 +9,4 @@
 		dis.mazo = Mazo.disparadores;
 		dis.filtro = MazoService.filtro;
 	}
-})()
+})();

@@ -1,5 +1,4 @@
 (function() {
-	'use strict';
 	angular
 		.module('lkCanvas')
 		.controller('MecanicasController' , mecanicasController);
@@ -20,4 +19,4 @@
 
 	}
 
-})()
+})();

@@ -1,7 +1,5 @@
 // disparadores.value.js
 (function() {
-	'use strict';
-
 	angular
 		.module('lkCanvas')
 		.value( 'Mazo', new Mazo());
@@ -172,4 +170,4 @@
 			//console.log("-->", mazos.mecanicas.cartas[i])
 		}
 	}
-})();	
+})();

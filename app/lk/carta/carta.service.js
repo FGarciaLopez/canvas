@@ -1,7 +1,5 @@
 // btnInclMotivador.service.js
 ( function() {
-	'use strict';
-
 	angular
 		.module('lkCanvas')
 		.factory('CartaService', CartaService);

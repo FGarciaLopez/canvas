@@ -1,7 +1,5 @@
 // disparadores.value.js
 (function() {
-	'use strict';
-
 	angular
 		.module('lkCanvas')
 		.value( 'Comportamientos',  new Comportamientos());
@@ -11,4 +9,4 @@
 		this.name = "comportamientos";
 		// this.seleccionado = false;
 	}
-})();	
+})();

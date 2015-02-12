@@ -1,7 +1,5 @@
 // disparadores.value.js
 (function() {
-	'use strict';
-
 	angular
 		.module('lkCanvas')
 		.value( 'Objetivos', new Objetivos());

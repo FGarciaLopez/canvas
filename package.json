@@ -3,11 +3,10 @@
   "version": "0.0.0",
   "description": "Plataforma para gamificar la enseñanza",
   "main": "server.js",
-  "PORT": "8081",
-  "ENV": "development",
   "scripts": {
     "test": " mocha",
-    "start": "node server.js"
+    "start": "node server.js",
+    "gulp": "gulp"
   },
   "dependencies": {
     "express": "~4.0.*",
@@ -20,11 +19,16 @@
   "devDependencies": {
     "chai": "~1.9.1",
     "chai-as-promised": "~4.1.1",
+    "gulp": "^3.8.10",
+    "gulp-concat": "^2.4.3",
+    "gulp-minify-html": "^0.1.8",
+    "gulp-ng-html2js": "^0.1.8",
+    "gulp-uglify": "^1.1.0",
+    "karma": "~0.12.0",
+    "karma-jasmine": "~0.2.0",
     "mocha": "~1.21.3",
     "supertest": "~0.13.0",
-    "supertest-as-promised": "^1.0.0",
-    "karma": "~0.12.0",
-    "karma-jasmine": "~0.2.0"    
+    "supertest-as-promised": "^1.0.0"
   },
   "author": "Francisco Garcia Lopez",
   "license": "ISC"

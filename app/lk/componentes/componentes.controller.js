@@ -1,5 +1,4 @@
 (function() {
-	'use strict';
 	angular
 		.module('lkCanvas')
 		.controller('ComponentesController' , ComponentesController);
@@ -10,4 +9,4 @@
 		coms.mazo = Mazo.componentes;
 		coms.filtro = MazoService.filtro;
 	}
-})()
+})();

@@ -1,6 +1,4 @@
 (function() {
-    'use strict';
-
     angular
         .module('lkCanvas')
         .factory('StatusService', StatusService);
@@ -64,6 +62,7 @@
         }
 
         function cambiarPaso( siguiente) {
+            console.log("voy a: ", siguiente);
             if( typeof siguiente === 'string') {
                 for( var i in pasos) {
                     if( pasos[i].nombre === siguiente) {

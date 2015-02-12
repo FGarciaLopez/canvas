@@ -1,23 +1,23 @@
 ( function() {
 	angular
 		.module('lkCanvas')
-		.directive('lkMenuLateral', lkMenuLateral);
+		.directive('lkMenu', lkMenu);
 	
-	function lkMenuLateral() {
+	function lkMenu() {
 		var directive = {
 			restrict: 'EA',
 			scope: {
 				type: "="
 			},
-			templateUrl: 'lk/menuLateral/menuLateral.html',
-			controller: menuLateralController,
+			templateUrl: 'lk/menu/menu.html',
+			controller: MenuController,
 			controllerAs: 'menu'
 		}
 		return directive;
 	};
 
-	menuLateralController.$inject = ['$scope', 'StatusService', 'MazoService', 'Comportamientos', 'Objetivos', 'ExperienciaService'];
-	function menuLateralController( $scope,  StatusService, MazoService, Comportamientos, Objetivos, ExperienciaService) {
+	MenuController.$inject = ['$scope', 'StatusService', 'MazoService', 'Comportamientos', 'Objetivos', 'ExperienciaService'];
+	function MenuController( $scope,  StatusService, MazoService, Comportamientos, Objetivos, ExperienciaService) {
 		var menu = this;
 		menu.abajo = abajo;
 		menu.arriba = arriba;
@@ -31,13 +31,12 @@
 		menu.irSiguiente = StatusService.cambiarPaso;
 		menu.tipo = $scope.tipo;
 		menu.estaCompletado = estaCompletado;
-
 		function abajo() { StatusService.cambiarAApartado( '#Abajo') }
 		function arriba() { StatusService.cambiarAApartado( '#Arriba') }
 		function cambiaModoSeleccion() { return StatusService.cambiarModoSeleccion()}
 		function estaActivoModoSeleccion() { return StatusService.estaActivadoModoSeleccion() }
 		function estaEnTablero() { return (StatusService.pasoActual()==='Tablero') }
-		function goHome() { StatusService.cambiarPaso('Tablero') }
+		function goHome() { console.log("voy"); StatusService.cambiarPaso('Tablero') }
 		function irAnterior() { StatusService.cambiarPaso( StatusService.pasoAnterior()) }
 		function estaCompletado() {
 			if (! MazoService.algunaSeleccionada( MazoService.get('componentes').cartas)) {

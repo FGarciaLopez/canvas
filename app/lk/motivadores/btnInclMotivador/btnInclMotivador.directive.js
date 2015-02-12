@@ -1,7 +1,5 @@
 ( function() {
 
-	'use strict';
-
 	angular
 		.module('lkCanvas')
 		.directive('lkBtnInclMotivador', btnInclMotivador);
@@ -63,4 +61,4 @@
 	}
 
 
-})()
+})();

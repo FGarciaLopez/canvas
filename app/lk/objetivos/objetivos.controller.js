@@ -1,5 +1,4 @@
 (function() {
-	'use strict';
 	angular
 		.module('lkCanvas')
 		.controller('ObjetivosController' , objetivosController);
@@ -10,4 +9,4 @@
 		objs.mazo = Objetivos;
 	}
 
-})()
+})();

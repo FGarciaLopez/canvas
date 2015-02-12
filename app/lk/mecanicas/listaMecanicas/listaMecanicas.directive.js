@@ -1,7 +1,4 @@
 ( function() {
-
-	'use strict';
-
 	angular
 		.module('lkCanvas')
 		.directive('lkListaMecanicas', lkListaMecanicas);
@@ -70,4 +67,4 @@
 		};
 	}
 
-})()
+})();

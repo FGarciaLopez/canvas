@@ -1,5 +1,4 @@
 (function() {
-	'use strict';
 	angular
 		.module('lkCanvas')
 		.controller('MotivadoresController' , MotivadoresController);
@@ -10,4 +9,4 @@
 		mots.mazo = Mazo.motivadores;
 		mots.filtro = MazoService.filtro;
 	}
-})()
+})();

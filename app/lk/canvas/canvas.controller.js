@@ -1,5 +1,4 @@
 (function() {
-	'use strict';
 	angular
 		.module('lkCanvas')
 		.controller('CanvasController' , canvasController);
@@ -31,7 +30,7 @@
 			for(var i in cartas) {
 				if(cartas[i].seleccionado) cuantas++;
 			}
-			return (!cuantas)? 'No hay ninguna carta seleccionada todavía': 'Has seleccionado '+cuantas;
+			return (cuantas)? 'Has seleccionado '+cuantas: 'No hay ninguna carta seleccionada todavía';
 		}
 	}
-})()
+})();

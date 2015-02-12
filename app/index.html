@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"-->
     <!--link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'-->
 
-    <!--link href='http://fonts.googleapis.com/css?family=Muli|Indie+Flower' rel='stylesheet' type='text/css'-->
+    <link href='http://fonts.googleapis.com/css?family=Muli|Indie+Flower' rel='stylesheet' type='text/css'>
     <!--link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"-->
     <link rel="stylesheet" href="style/ludiko.css" />
-
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <!--link rel='stylesheet prefetch' href='styles/font-awesome.min.css'-->
   </head>
   <body ng-app="lkCanvas">
@@ -36,12 +36,9 @@
     </script-->
     <!--form-login ng-if="!credential.role"></form-login-->
     <div>
-      <lk-menu-lateral></lk-menu-lateral>
+      <nav lk-menu></nav>
       <div class="ViewContainer" ng-class="{'Comportamientos': cmps, 'Disparadores': dis, 'Objetivos': objs, 'Experiencia': exp, 'Motivadores': mots, 'Mecanicas': mecs, 'Componentes': coms}" ng-view=""></div>
     </div>
-    <footer>
-        Lúdiko 2014 Versión 0 Beta
-    </footer>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID>
      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -118,7 +115,7 @@
     <script src="lk/mazo/mazo.value.js"></script>
     <script src="lk/mecanicas/listaMecanicas/listaMecanicas.directive.js"></script>
     <script src="lk/mecanicas/mecanicas.controller.js"></script>
-    <script src="lk/menuLateral/menuLateral.directive.js"></script>
+    <script src="lk/menu/menu.directive.js"></script>
     <script src="lk/motivadores/btnInclMotivador/btnInclMotivador.directive.js"></script>
     <script src="lk/motivadores/listaMotivadores/listaMotivadores.directive.js"></script>
     <script src="lk/motivadores/motivadores.controller.js"></script>
@@ -127,6 +124,7 @@
     <script src="lk/postIt/postIt.directive.js"></script>
     <script src="lk/postIt/postIt.service.js"></script>
     <script src="lk/status/status.service.js"></script>
+    <script src="lk/utils/utils.value.js"></script>
 
     <!--script src='scripts/vendor/textAngular-sanitize.min.js'></script-->
     <!--script src='scripts/vendor/textAngular.min.js'></script-->

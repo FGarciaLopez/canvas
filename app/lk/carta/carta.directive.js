@@ -1,7 +1,5 @@
 // carta.directive.js
 (function() {
-    'use strict';
-
     angular
         .module('lkCanvas')
         .directive('lkCarta', lkCarta);

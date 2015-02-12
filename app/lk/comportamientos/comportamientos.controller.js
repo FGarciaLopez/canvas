@@ -1,5 +1,4 @@
 (function() {
-	'use strict';
 	angular
 		.module('lkCanvas')
 		.controller('ComportamientosController' , comportamientosController);
@@ -10,4 +9,4 @@
 		cmps.mazo = Comportamientos;
 	}
 
-})()
+})();
