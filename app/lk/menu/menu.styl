@@ -18,21 +18,25 @@ ancho = alto-menu
 	display inline
 	height 2em
 	text-align center
-	width 2em
 	z-index 10
 button.fa
 	background none
 	border none //2px solid color-txt-menu
 	color color-txt-menu
-	margin 8px 0 0 12px
 	outline none
 	padding 1px .25em
 	&:hover
 		cursor pointer
 	&:active
 		border 0
+	&.u-left
+		float left
+		margin 8px 0 0 12px
 	&.u-right
 		float right
+		margin 8px 12px 0 0
+	&:before
+		margin-right 8px
 .Menu-logo
 	-webkit-transition 1s
 	float right

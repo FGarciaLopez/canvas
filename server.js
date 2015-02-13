@@ -23,14 +23,15 @@ app.set("env", env);
 */
 confExpresss(app);
 var httpServer = http.createServer(app);
-if( env === 'development') {
+//if( env === 'development') {
 	app.use(express.static('./app'));
 	console.log('Entorno de desarrollo:', env);
+/*
 } else {
 	app.use(express.static('./dist'));
 	console.log("Entorno producción:", env)
 }
-
+*/
 // TODO: var httpServer = https(app);
 
 //Abrir puertos
