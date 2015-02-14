@@ -31,12 +31,14 @@
 		submn.goHome = goHome;
 		submn.irAnterior = irAnterior;
 		submn.irSiguiente = StatusService.cambiarPaso;
+		submn.estaActivo = estaActivo;
 		submn.pasos = StatusService.pasos;
 		submn.tipo = $scope.tipo;
 
 		function estaEnTablero() { return (StatusService.pasoActual()==='Tablero') }
 		function goHome() { StatusService.cambiarPaso('Tablero') }
 		function irAnterior() { StatusService.cambiarPaso( StatusService.pasoAnterior()) }
+		function estaActivo( nombrePaso) { return StatusService.pasoActual() === nombrePaso}
 		function estaCompletado() {
 			if (! MazoService.algunaSeleccionada( MazoService.get('componentes').cartas)) {
 				return false;

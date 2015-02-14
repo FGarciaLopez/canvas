@@ -1,7 +1,7 @@
 ancho = alto-menu
 
 .Menu
-	background rgba(#fff,.4)
+	background rgba(#fff,.7)
 	display block
 	height alto-menu
 	left 0
@@ -17,11 +17,12 @@ ancho = alto-menu
 	float left
 	display inline
 	height 2em
+	width 2em
 	text-align center
 	z-index 10
 button.fa
 	background none
-	border none //2px solid color-txt-menu
+	border none
 	color color-txt-menu
 	outline none
 	padding 1px .25em
@@ -30,9 +31,11 @@ button.fa
 	&:active
 		border 0
 	&.u-left
+		text-align left
 		float left
 		margin 8px 0 0 12px
 	&.u-right
+		text-align right
 		float right
 		margin 8px 12px 0 0
 	&:before

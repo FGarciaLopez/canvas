@@ -5,21 +5,22 @@
 
 	StatusService.$injector = ['$location']    
     function StatusService ($location) {
-        function Paso( nombre, path, siguiente) {
+        function Paso( nombre, path, siguiente, icon) {
             this.path = path;
-            this.nombre = nombre,
-            this.siguiente = siguiente,
+            this.nombre = nombre;
+            this.siguiente = siguiente;
             this.anterior = this;
+            this.icon = icon;
         }
         var pasos = [];
-        pasos.push( new Paso( 'Tablero', '/canvas', 'Experiencia'));
-        pasos.push( new Paso( 'Experiencia', '/experiencia', 'Objetivos'));
-        pasos.push( new Paso( 'Objetivos', '/objetivos', 'Disparadores'));
-        pasos.push( new Paso( 'Disparadores', '/disparadores', 'Comportamientos'));
-        pasos.push( new Paso( 'Comportamientos', '/comportamientos', 'Motivadores'));
-        pasos.push( new Paso( 'Motivadores', '/motivadores', 'Mecánicas'));
-        pasos.push( new Paso( 'Mecánicas', '/mecanicas', 'Componentes'));
-        pasos.push( new Paso( 'Componentes', '/componentes','Tablero'));
+        pasos.push( new Paso( 'Tablero', '/canvas', 'Experiencia', 'angle-right'));
+        pasos.push( new Paso( 'Experiencia', '/experiencia', 'Objetivos', 'users'));
+        pasos.push( new Paso( 'Objetivos', '/objetivos', 'Disparadores', 'dot-circle-o'));
+        pasos.push( new Paso( 'Disparadores', '/disparadores', 'Comportamientos', 'rocket'));
+        pasos.push( new Paso( 'Comportamientos', '/comportamientos', 'Motivadores', 'eye'));
+        pasos.push( new Paso( 'Motivadores', '/motivadores', 'Mecánicas', 'diamond'));
+        pasos.push( new Paso( 'Mecánicas', '/mecanicas', 'Componentes', 'cogs'));
+        pasos.push( new Paso( 'Componentes', '/componentes','Tablero', 'cubes'));
 
         for( var i in pasos) {
             for( var j in pasos) {
