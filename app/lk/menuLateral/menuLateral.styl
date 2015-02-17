@@ -1,5 +1,4 @@
 ancho-menu= 250px
-alto-menu =60%
 fondo-menu= rgba(#000,.5)
 
 // menu-lateral.styl
@@ -24,40 +23,46 @@ fondo-menu= rgba(#000,.5)
 	transition .5s
 	width ancho-menu
 	z-index 10
-
 .MenuLateral-header
 	display block
 	height 4em
 	color white !important
-	background color-txt-menu//#84D4C8
+	background color-txt-menu
 .MenuLateral-item
 	color color-txt-menu
 	display block
 	height 2em
 	&.u-separate-top
 		border-top 1px solid color-txt-menu
+	&.u-separate-bottom
+		border-bottom 1px solid color-txt-menu
 	&.u-activo
 		background #f7f7f7
 	&:hover
 		color white
-		background #69CCDA// 3FBACB
+		background #69CCDA// 69CCDA// 3FBACB
 	
 .MenuLateral-btn
-	display inline-block
+	display block
 	height 2em
 	padding 0
 	&:hover
 		cursor pointer
+	&.u-action-call
+		color white
+		background-color action-color
 .MenuLateral-logo
 	display inline-block
 	height 2em
+	img 
+		margin .4em 0 0 .2em
 .MenuLateral-logo-text
 	display inline-block
 	height 2em
 	overflow hidden
 .MenuLateral-icon
 	width 1em
-	margin-right .5em
+	margin-right 1em
 	
 .MenuLateral-text
 	display inline-block

@@ -8,13 +8,14 @@
 </form>
 <div class="PostIt-botonera">
 	<!-- BTN DESHACER -->
-	<img class="PostIt-btn u-button u-fadein u-info u-raised" alt="250x250" src="/img/icons/undo.png" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.cancelar()"/>
+	<div class="PostIt-btn u-info fa fa-undo" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.cancelar()"></div>
 
 	<!-- BTN GUARDAR -->
-	<img class="PostIt-btn u-button u-fadein u-success u-raised" alt="250x250" src="/img/icons/check.svg" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.guardar()"/>
+	<div class="PostIt-btn u-button u-fadein u-success u-raised fa fa-check" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.guardar()">
+	</div>
 
 	<!-- BTN ELIMINAR -->
-	<img class="PostIt-btn u-button u-fadein u-danger u-raised" alt="250x250" src="/img/icons/trash.svg" ng-show="dpi.mostrarEliminar()" ng-hide="dpi.ocultarEliminar()" ng-click="dpi.eliminando=true" />
+	<div class="PostIt-btn u-button u-fadein u-danger u-raised fa fa-trash-o" ng-show="dpi.mostrarEliminar()" ng-hide="dpi.ocultarEliminar()" ng-click="dpi.eliminando=true" /></div>
 
 </div>
 

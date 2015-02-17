@@ -1,8 +1,11 @@
 ancho = alto-menu
-
+sombra-menu = 0 2px 5px rgba(0,0,0,0.26)
+sombra-extra-menu = 0 3px 6px rgba(0,0,0,0.6)
 .Menu
 	background rgba(#fff,.7)
+	box-shadow sombra-menu
 	display block
+	font-size 24px
 	height alto-menu
 	left 0
 	margin 0
@@ -11,14 +14,12 @@ ancho = alto-menu
 	right 0
 	top 0
 	z-index 8
-	font-size 24px
-	box-shadow 0 2px 5px rgba(0,0,0,0.26)
 .Menu-item
-	float left
 	display inline
+	float left
 	height 2em
-	width 2em
 	text-align center
+	width 2em
 	z-index 10
 button.fa
 	background none
@@ -40,6 +41,15 @@ button.fa
 		margin 8px 12px 0 0
 	&:before
 		margin-right 8px
+	&.u-action-call
+		background #FF7A00
+		border-radius 50%
+		box-shadow sombra-menu
+		color white
+		// transform translateY(50%)
+		&.u-selected
+			background #FFA24C//FF8C22
+			box-shadow sombra-extra-menu
 .Menu-logo
 	-webkit-transition 1s
 	float right

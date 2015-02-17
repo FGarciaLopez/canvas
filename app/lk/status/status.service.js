@@ -13,7 +13,7 @@
             this.icon = icon;
         }
         var pasos = [];
-        pasos.push( new Paso( 'Tablero', '/canvas', 'Experiencia', 'angle-right'));
+        pasos.push( new Paso( 'Inicio', '/canvas', 'Experiencia', 'home'));
         pasos.push( new Paso( 'Experiencia', '/experiencia', 'Objetivos', 'users'));
         pasos.push( new Paso( 'Objetivos', '/objetivos', 'Disparadores', 'dot-circle-o'));
         pasos.push( new Paso( 'Disparadores', '/disparadores', 'Comportamientos', 'rocket'));

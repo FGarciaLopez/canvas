@@ -29,9 +29,14 @@ sombra_fuerte = 6px 6px 3px 0px rgba(20,20,20,.6)
 
 color-txt-menu=  #1DABC0// #6FBDCC// #84D4C8//#63A4B6 //#599FB2
 alto-menu=60px
-
+action-color = #FF8C22
 .u-hide
 	display none !important
+.u-raised
+	border-radius 50%
+.u-fadein
+	animation fadein .5s
+	
 centrado_vertical()
 	position relative
 	top 50%
@@ -68,3 +73,23 @@ p
 */
 .u-contenedor	
 	margin-top 1em
+
+@keyframes slidein {
+  from {
+    left -200px
+  }
+
+  to {
+    left 0
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity 0
+  }
+
+  to {
+    opacity 1
+  }
+}

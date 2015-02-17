@@ -56,17 +56,18 @@ figure
 	margin 2px 2px 0 0
 	z-index 3
 .Carta-btn
+	@extends .u-fadein
 	&.u-checked
+		background #009E1C
+		color white
 		display inline-block
-		width 48px 
-		height 48px
 		float right
-		color green
+		height 2em
+		line-height 2em
 		margin-right 2em
-		box-shadow sombra-clara
-		background rgba(#fff, .2)
-		border-radius 50%
-		//&:before
+		text-align center
+		width 2em
+		font-size 24px
 &.u-deactivated
 	background #666666 !important
 	.Carta-interior

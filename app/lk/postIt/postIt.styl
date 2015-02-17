@@ -51,14 +51,20 @@ color-fondo = #FFE271
 		&.u-transparent:hover
 			cursor pointer
 .PostIt-botonera
-	position absolute
-	top 90%
-	right 10%
+	color white
 	margin 2px 2px 0 0
+	position absolute
+	right 10%
+	top 90%
 	z-index 2
 	.PostIt-btn
-		width 48px
-		height 48px
+		@extends .u-button 
+		@extends .u-fadein
+		@extends .u-raised
+		height 2em
+		line-height 2em
+		font-size 24px
+		width 2em
 .u-bubble
 	position absolute
 	top 40%

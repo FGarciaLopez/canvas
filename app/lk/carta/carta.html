@@ -10,7 +10,9 @@
 		{{carta.descripcion}}
 	</p>
 	<figure class="Carta-botonera" ng-hide="!dc.estaModoSeleccion()" ng-show="dc.estaModoSeleccion()">
-		<img class="Carta-btn" ng-class="{'u-checked': dc.estaSeleccionada()}" src="img/icons/check-green.svg"/>
+		<div class="Carta-btn fa u-button u-raised fa-check" ng-class="{'u-checked': dc.estaSeleccionada()}">
+		</div>
+		<!--img class="Carta-btn" ng-class="{'u-checked': dc.estaSeleccionada()}" src="img/icons/check-green.svg"/-->
 	</figure>
 
 	<figure class="u-fadein">
