@@ -1,17 +1,16 @@
 <!-- menuLateral.html -->
-<div class="MenuLateral-container" ng-hide="!submn.desplegado()" ng-show="submn.desplegado()" ng-click="submn.close()">
+<div class="MenuLateral-container" ng-hide="!submn.desplegado()" ng-show="submn.desplegado()">
 	<ul class="MenuLateral">
 		<li class="MenuLateral-header">
 			<div class="MenuLateral-logo">
 				<img alt="Lúdiko" src="/img/icons/logo.png" width="48" height="48"/>
 			</div>
-	
 			<div class="MenuLateral-logo-text">
 				Gamification Thinking
 			</div>
 		</li>
-		<li class="MenuLateral-item u-separate-bottom"><!-- ng-hide="!submn.estaCompletado()" ng-show="submn.estaCompletado()"-->
-			<a role="submnitem" class="MenuLateral-btn btn u-action-call" tabindex="-1" ng-click="updateView() ">
+		<li class="MenuLateral-item u-separate-bottom">
+			<a role="menuitem" class="MenuLateral-btn u-action-call" tabindex="-1" ng-disabled="!submn.estaCompletado()" ng-click="updateView()">
 				<div class="MenuLateral-text">
 					<i class="fa fa-file-pdf-o MenuLateral-icon"></i>
 					Guardar en PDF
@@ -20,9 +19,9 @@
         </li>
 		<li class="MenuLateral-item" 
 			ng-repeat="paso in submn.pasos"
-			ng-class="{'u-activo': submn.estaActivo(paso.nombre), 'u-no-activo': submn.estaActivo(paso.nombre)}" 
+			ng-class="{'u-selected': submn.estaActivo(paso.nombre), 'u-unselected': submn.estaActivo(paso.nombre)}" 
 			ng-click="submn.irSiguiente( paso.nombre)">
-			<a role="submnitem" class="MenuLateral-btn btn" tabindex="-1" >
+			<a role="menuitem" class="MenuLateral-btn" tabindex="-1" >
 				<div class="MenuLateral-text">
 					<i class="fa MenuLateral-icon {{'fa-'+paso.icon}}"></i>
 					{{paso.nombre}}
@@ -30,7 +29,7 @@
 			</a>
         </li>
 		<li class="MenuLateral-item u-separate-top" ng-show="submn.estaActivoModoSeleccion()" ng-hide="!submn.estaActivoModoSeleccion()">
-			<a role="submnitem" class="MenuLateral-btn btn" tabindex="-1"  ng-click="submn.cambiaModoSeleccion()">
+			<a role="menuitem" class="MenuLateral-btn btn" tabindex="-1"  ng-click="submn.cambiaModoSeleccion()">
 				<div class="MenuLateral-text">
 					<i class="fa MenuLateral-icon" ng-class="{'fa-check-square': submn.estaEnModoSeleccion(), 'fa-square-o': !submn.estaEnModoSeleccion()}"></i>
 					Modo selección
@@ -38,4 +37,5 @@
 			</a>
         </li>
     </ul>
+    <div class="MenuLateral-background" ng-click="submn.close()"></div>
 </div>

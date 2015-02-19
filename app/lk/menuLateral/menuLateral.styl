@@ -14,7 +14,7 @@ fondo-menu= rgba(#000,.5)
 .MenuLateral
 	animation slidein .3s ease-in
 	background white
-	display block
+	display inline-block
 	height 100%
 	left 0
 	margin 0
@@ -33,12 +33,13 @@ fondo-menu= rgba(#000,.5)
 	color color-txt-menu
 	display block
 	height 2em
+	transition .3s all
 	&.u-separate-top
 		border-top 1px solid color-txt-menu
 	&.u-separate-bottom
 		border-bottom 1px solid color-txt-menu
-	&.u-activo
-		background #f7f7f7
+	&.u-selected
+		background #eef
 	&:hover
 		color white
 		background #69CCDA// 69CCDA// 3FBACB
@@ -47,17 +48,26 @@ fondo-menu= rgba(#000,.5)
 	display block
 	height 2em
 	padding 0
+	text-decoration none
+	&:focus
+		outline 0
+		background-color action-color
 	&:hover
 		cursor pointer
 	&.u-action-call
 		color white
 		background-color action-color
+		&[disabled]
+			color action-color-light
+			cursor default
+			
 .MenuLateral-logo
 	display inline-block
 	height 2em
 	img 
 		margin .4em 0 0 .2em
 .MenuLateral-logo-text
+	cursor default
 	display inline-block
 	height 2em
 	overflow hidden
@@ -70,13 +80,8 @@ fondo-menu= rgba(#000,.5)
 	line-height 2em
 	margin-left 1em
 	overflow hidden
-/*
-@media screen and (orientation: landscape)
-	.MenuLateral-portrait
-		display none !important
-
-@media screen and (orientation: portrait)
-	.MenuLateral-landscape
-		display none !important
-*/
-
+.MenuLateral-background
+	display inline-block
+	height 100%
+	position absolute
+	width 100%
