@@ -1,9 +1,9 @@
-ancho-menu= 250px
 fondo-menu= rgba(#000,.5)
+color-txt-menu = primary-color-dark
 
 // menu-lateral.styl
 .MenuLateral-container
-	background fondo-menu
+	font-family fuente-titulos
 	bottom 0
 	display block
 	left 0
@@ -11,8 +11,10 @@ fondo-menu= rgba(#000,.5)
 	right 0
 	top 0
 	z-index 10
+	background fondo-menu
+	animation fadein .3s ease-in
 .MenuLateral
-	animation slidein .3s ease-in
+	animation slidein-menu .3s ease-in
 	background white
 	display inline-block
 	height 100%
@@ -21,7 +23,7 @@ fondo-menu= rgba(#000,.5)
 	overflow auto
 	padding 0
 	position relative
-	transition .5s
+	transition .3s
 	width ancho-menu
 	z-index 10
 .MenuLateral-header
@@ -39,10 +41,10 @@ fondo-menu= rgba(#000,.5)
 	&.u-separate-bottom
 		border-bottom 1px solid color-txt-menu
 	&.u-selected
-		background #eef
+		background primary-color-light
 	&:hover
 		color white
-		background #69CCDA// 69CCDA// 3FBACB
+		background primary-color // #69CCDA// 69CCDA// 3FBACB
 	
 .MenuLateral-btn
 	display block
@@ -69,6 +71,7 @@ fondo-menu= rgba(#000,.5)
 .MenuLateral-logo-text
 	cursor default
 	display inline-block
+	font-weight 400
 	height 2em
 	overflow hidden
 .MenuLateral-icon
@@ -85,3 +88,13 @@ fondo-menu= rgba(#000,.5)
 	height 100%
 	position absolute
 	width 100%
+
+@keyframes slidein-menu {
+  from {
+    left - ancho-menu
+  }
+
+  to {
+    left 0
+  }
+}

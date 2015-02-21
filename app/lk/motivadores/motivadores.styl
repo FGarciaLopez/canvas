@@ -1,12 +1,10 @@
+motivadores-color=#f06162
 .Motivadores-contenedor
-	margin-left 1em
-	text-align center
+	@extends .Carta-contenedor
 .Motivadores-item
-	color #B01516
+	color u-mas-brillo(motivadores-color, -40%)// #2a547b
 	.Carta
-		background #f06162
-	.Carta-interior
-		background #f0e3c3 
-.Motivadores-titulo 
-	color #178B17
+		carta-color(motivadores-color)
+		&:hover
+			carta-color(u-mas-brillo(motivadores-color,5%))
 	

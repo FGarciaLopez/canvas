@@ -1,36 +1,44 @@
+color-tablero = lightness(primary-color,20%)
+fuente-tablero = black
 .Canvas
-	background-color black
-	border .8em solid black !important
+	background-color color-tablero
+	color fuente-tablero
+	border .8em solid color-tablero !important
 	border-radius 1em
 	box-shadow sombra 
-	font-family "Muli", "Helvetica Neue", Arial
-	font-weight bold
+	font-family fuente-normal
+	font-weight 600
 	margin 1em 2em 0 1em
 
-.Canvas-cell
-	border .3em solid black
+.Canvas-item
+	border .3em solid color-tablero
 	border-radius .5em
 	margin 0
 	padding 0
+	transition background .5s
+	transition border .3s
 	img, span, figure
 		display block
 		margin-left auto
 		margin-right auto
+	span
+		padding-top .5em !important
 	img
 		width 125px
 		height 125px
 	&:hover
+		background-color primary-color-light
+		border .3em ridge  primary-color
 		cursor pointer
 .Canvas-row
 	width 100%
 	height 30%
-.Canvas-col 
+.Canvas-col
 	height 340px
 	img
 		position relative
 		top 50px
 .Canvas-contador
-	color black
 	text-align center
 	position absolute
 	right 0
@@ -38,7 +46,7 @@
 	margin 0 2em .5em 0 !important
 	font-weight normal
 .Canvas-experiencia
-	background red !important
+	background #CDB0E5
 	display inline-block
 	width 35%
 	min-height 185px !important
@@ -56,9 +64,9 @@
 	background rgba(255,0,0,0.3)
 	span
 		width 80%
-		font-weight bold
+		font-weight 600
 .Canvas-objetivos
-	background #D98BB1
+	background #6EA8AD//D98BB1
 	display inline-block
 	float left
 	min-width 130px
@@ -66,7 +74,7 @@
 	width 32%
 .Canvas-disparadores
 	position relative
-	background-color #F9A95E
+	background-color #7CDA72//F9A95E
 	display inline-block
 	float right
 	min-width 130px
@@ -79,21 +87,21 @@
 		bottom 0
 .Canvas-comportamientos
 	min-width 35%
-	background #F9C85E
+	background #F1849B//F9C85E
 	display inline-block
 .Canvas-motivadores
 	position relative
 	display block
-	background-color #F06162
+	background-color #EE9643//F06162
 .Canvas-mecanicas
 	position relative
 	display block
-	background-color #81C990
+	background-color #80A4A0//81C990
 .Canvas-componentes
 	position relative
 	display block
-	background-color #80A5C7
-
+	background-color #ADF46D//80A5C7
+	
 @media screen and (max-width: 800px)
 	.Canvas
 		margin .5em .5em 0 .2em

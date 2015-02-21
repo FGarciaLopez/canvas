@@ -1,56 +1,100 @@
-success-shadow = #006D28
-success-dark = #098D48
-success-light = #109D58
+u-mas-brillo( c, p)
+	lightness( c, lightness(c)+p)
+
+// ---  COLORES
+
+// Primary
+primary-color = #1E8DD4// 00BCD4
+secondary-color =#888//13DB7B
+action-color = #FF9800 //FF5722//FF7A00
+
+primary-color-light = u-mas-brillo(primary-color,20%) // #B2EBF2 //B2EBF2
+primary-color-dark = u-mas-brillo(primary-color,-10%)//#0097A7
+primary-color-shadow = u-mas-brillo(primary-color, -20%)
+
+secondary-color-light = u-mas-brillo(secondary-color,40%) // #B2EBF2 //B2EBF2
+secondary-color-dark = u-mas-brillo(secondary-color,-10%)//#0097A7
+secondary-color-shadow = u-mas-brillo(secondary-color, -20%)
+
+action-color-light = lightness( action-color, 70%) //#FFB74D//FFCCBC
+action-color-dark = lightness( action-color, 30%)//#F57C00
+
+//dark
+
+sombra = 5px 5px 3px 0px rgba(primary-color-shadow,.5)
+sombra-clara = 5px 5px 3px 0px rgba(primary-color-shadow,.2)
+sombra-fuerte = 6px 6px 3px 0px rgba(primary-color-shadow,.6)
+
+// Sucess
+success-color = #6ac24a//009E1C
+success-color-shadow =lightness( success-color, lightness( success-color) - 20%)// #006D28
+success-color-light = lightness( success-color, lightness( success-color) + 5%)// #109D58
+success-color-dark = lightness( success-color, lightness( success-color) - 5%)//#098D48
 success-transparent = rgba(9,141,72,.5)
 
+// Warning
 warning-shadow =#DE3702
 warning-dark = #EE4712
 warning-light = #FE5722
 warning-transparent= rgba(238,71,18,.5)
 
+// Danger
 danger-shadow = #c11304
 danger-dark = #e13324
 danger-light = #F14334
 danger-transparent = rgba(225,51,36,.5)
 
+// Info
 info-shadow = #2588CB 
 info-dark = #3598DB
 info-ligth = #2588CB
 info-transparent = rgba(53,152,219,.5)
 
+// Primary
 primary-shadow = #2266D5 
 primary-dark = #3276E5
 primary-light = #4286F5
 primary-transparent= rgba(50,118,229,.5)
 
-sombra = 5px 5px 3px 0px rgba(50,50,50,.5)
-sombra-clara = 5px 5px 3px 0px rgba(50,50,50,.2)
-sombra_fuerte = 6px 6px 3px 0px rgba(20,20,20,.6)
-
-color-txt-menu=  #1DABC0// #6FBDCC// #84D4C8//#63A4B6 //#599FB2
+// --- TAMAÑOS
 alto-menu=60px
-action-color = #FF8C22
-action-color-light = #FFAC92
+ancho-icons=125px
+ancho-menu=250px
+
+// --- FUENTES DE LETRA
+fuente-extra = "Indie Flower"
+fuente-normal = "Muli"
+fuente-titulos = "Roboto", "Sans serif"
+
+
+figure
+p
+	margin 0
+
+// Utilidades
 .u-hide
 	display none !important
 .u-raised
 	border-radius 50%
 .u-fadein
 	animation fadein .5s
-	
+.u-icon
+	width ancho-icons
+
 centrado_vertical()
 	position relative
 	top 50%
 	transform translateY(-50%)
 *
 	box-sizing border-box
-figure
-p
-	margin 0
+.u-contenedor	
+	margin-top 1em
 .u-titulo 
-	color color-txt-menu  !important// #666
+	color white  !important
+	overflow hidden
 	display block
-	font-family Muli
+	font-family fuente-titulos
+	font-size 24px
 	left 0
 	line-height alto-menu
 	margin 0 alto-menu
@@ -58,6 +102,7 @@ p
 	position fixed
 	right 0
 	text-align left
+	text-transform capital
 	top 0
 	z-index 9
 
@@ -66,24 +111,7 @@ p
   	font-size 1em
   }
 }
-/*	&:before
-		content ">"
-		padding 0 .5em
-		font-size .7em
-		font-weight 800
-*/
-.u-contenedor	
-	margin-top 1em
 
-@keyframes slidein {
-  from {
-    left -200px
-  }
-
-  to {
-    left 0
-  }
-}
 
 @keyframes fadein {
   from {

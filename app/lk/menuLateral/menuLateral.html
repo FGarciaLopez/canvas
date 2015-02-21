@@ -1,6 +1,6 @@
 <!-- menuLateral.html -->
 <div class="MenuLateral-container" ng-hide="!submn.desplegado()" ng-show="submn.desplegado()">
-	<ul class="MenuLateral">
+	<ul class="MenuLateral" ng-class="{'desplegado': submn.desplegado()}" >
 		<li class="MenuLateral-header">
 			<div class="MenuLateral-logo">
 				<img alt="Lúdiko" src="/img/icons/logo.png" width="48" height="48"/>

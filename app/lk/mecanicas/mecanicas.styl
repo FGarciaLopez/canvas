@@ -1,13 +1,12 @@
+mecanicas-color=#81c990
+
 .Mecanicas-contenedor
 	margin-left 1em
 	text-align center
 .Mecanicas-item
-	padding 4px 0 4px 0 !important
-	color #308D45
+	color u-mas-brillo(mecanicas-color, -40%)// #2a547b
 	.Carta
-		background #81c990
-	.Carta-interior
-		background #cfe6c1
-.Mecanicas-titulo 
-	color #81C990
+		carta-color(mecanicas-color)
+		&:hover
+			carta-color(u-mas-brillo(mecanicas-color,5%))
 	

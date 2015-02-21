@@ -1,12 +1,11 @@
+disparador-color=#f9a95e
 .Disparadores-contenedor
 	margin 0
 	text-align center
 .Disparadores-item
 	padding 4px 0 4px 0 !important
-	color #4D2F04
+	color u-mas-brillo(disparador-color, -40%)// #2a547b
 	.Carta
-		background #f9a95e
-	.Carta-interior
-		background #f9c487
-.Disparadores-titulo
-	color #116571
+		carta-color(disparador-color)
+		&:hover
+			carta-color(u-mas-brillo(disparador-color,5%))

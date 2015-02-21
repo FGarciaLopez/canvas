@@ -1,15 +1,19 @@
 .u-button
 //	position relative
 	padding 0
-	box-shadow sombra
+	box-shadow 0 2px 5px rgba(secondary-color-shadow,0.26)
 	&:active
 		transform translateY(1px)
 	&:hover
 		cursor pointer
+		box-shadow 0 2px 10px rgba(secondary-color-shadow,0.5)
 	&.u-success
-		background success-dark
+		background success-color
+		&[disabled]
+			background success-color-dark
+			color success-color-light !important
 	&.u-success:hover
-		background success-light
+		background success-color-light
 	&.u-warning
 		background warning-dark
 	&.u-warning:hover
@@ -39,13 +43,13 @@
 			height 44px !important
 			width 44px !important
 		&.u-on
-			background success-dark
-			border-color success-shadow
+			background success-color
+			border-color success-color-shadow
 			&:after
 				content "Sí"
 				margin-left 2em
 			&:hover
-				background success-light
+				background success-color-light
 			img
 				animation toOff .5s
 				left 0

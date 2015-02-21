@@ -1,13 +1,11 @@
+componente-color=#80a5c7
 .Componentes-contenedor
 	margin-left 1em
 	text-align center
 .Componentes-item
 	padding 4px 0 4px 0 !important
-	color #2a547b
+	color u-mas-brillo(componente-color, -40%)// #2a547b
 	.Carta
-		background #80a5c7
-	.Carta-interior
-		background #e7f4f9
-.Componentes-titulo 
-	color #178B17
-	
+		carta-color(componente-color)
+		&:hover
+			carta-color(u-mas-brillo(componente-color,10%))
