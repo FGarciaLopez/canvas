@@ -30,7 +30,7 @@
 			for(var i in cartas) {
 				if(cartas[i].seleccionado) cuantas++;
 			}
-			return (cuantas)? 'Has seleccionado '+cuantas: 'No hay ninguna carta seleccionada todavía';
+			return cuantas+' seleccionadas' //(cuantas)? 'Has seleccionado '+cuantas: 'No hay ninguna carta seleccionada todavía';
 		}
 	}
 })();

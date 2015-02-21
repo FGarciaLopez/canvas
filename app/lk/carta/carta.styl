@@ -16,24 +16,15 @@ carta-color-important( c)
 	border-radius 2em
 	display inline-block
 	height ancho
-	margin 0.5em 0.5em .5em 0
-	padding 0 !important
+	margin 0.25em
+	padding .3em !important
 	position relative
 	width ancho
-	box-shadow 0 2px 5px rgba(secondary-color-shadow,0.26)
 	border-radius 2em
-	&:hover
-		box-shadow 0 2px 10px rgba(secondary-color-shadow,0.5)
+	box-shadow 0 2px 10px rgba(#000,0.7)
+	&.u-seleccionable:hover
+		box-shadow 0 2px 5px rgba(#000,0.26)
 		cursor pointer
-.Carta-interior
-	left 0
-	margin 1em
-	position absolute
-	top 0
-	border-radius 2em
-	width (ancho - 32px)
-	height (ancho - 32px)
-	z-index 1
 p
 	display block
 	font-family "Muli", "Helvetica Neue", Arial
@@ -81,13 +72,11 @@ figure
 		text-align center
 		width 2em
 		font-size 24px
-&.u-deactivated
-	carta-color-important(#666)
+.u-seleccionable.u-deactivated
+	carta-color-important(primary-color-dark)
 	&:hover
-		carta-color-important(#888)
-	.Carta-interior
-		background #E0E0E0 !important
+		carta-color-important(primary-color)
 	p
 		color black !important	
 	.Carta-btn
-		display none
+		display none !important

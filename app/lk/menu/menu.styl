@@ -1,13 +1,23 @@
 ancho = alto-menu
 sombra-menu = 0 2px 5px rgba(primary-color-dark,0.26)
 sombra-extra-menu = 0 3px 6px rgba(0,0,0,0.6)
-color-txt-menu= white //primary-color-light
 color-menu= primary-color
+color-txt-menu= white
+color-txt-menu-dark = u-mas-brillo(color-txt-menu,-20%)
+
+u-left()
+	float left
+	margin 8px 0 0 12px
+
+u-right()
+	float right
+	margin 8px 12px 0 0
+
 .Menu
-	font-family fuente-titulos
 	background color-menu//rgba(#fff,.7)
 	box-shadow sombra-menu
 	display block
+	font-family fuente-titulos
 	font-size 24px
 	height alto-menu
 	left 0
@@ -24,40 +34,31 @@ color-menu= primary-color
 	text-align center
 	width 2em
 	z-index 10
+
 button.fa
-	background none
+	@extends .u-button
+	@extends .u-raised
+	@extends .u-fadein
 	border none
-	color color-txt-menu
+	color color-txt-menu-dark
 	outline none
 	padding 1px .25em
+	text-align center
+	text-shadow 0 1px 1px rgba(#000,.7)
+	&.fa-navicon
+		@extends .u-button.u-transparent
+		u-left()
+		text-align center
+	&.fa-pencil
+		@extends .u-button.u-info
+		u-right()
+		&.u-selected
+			@extends .u-button.u-success
+			color color-txt-menu
 	&:hover
-		cursor pointer
+		color color-txt-menu
 	&:active
 		border 0
-	&.u-left
-		text-align left
-		float left
-		margin 8px 0 0 12px
-	&.u-right
-		text-align right
-		float right
-		margin 8px 12px 0 0
-	&:before
-		margin-right 8px
-	&.u-action-call
-		background color-menu//#FF7A00
-		border-radius 50%
-		box-shadow sombra-menu
-		color white
-		transition .3s ease-in
-		// transform translateY(50%)
-		&.u-selected
-			background action-color//#FFA24C//FF8C22
-			box-shadow sombra-extra-menu
-		&:hover
-			background primary-color-dark//#FFA24C//FF8C22
-		&.u-selected:hover
-			background action-color-light//#FFA24C//FF8C22
 			
 .Menu-logo
 	-webkit-transition 1s
@@ -69,7 +70,7 @@ button.fa
 	&:hover
 		cursor pointer
 		-webkit-transform rotate(360deg)			
-		
+	
 .Menu-textoLogo
 	color white
 	left ancho
@@ -83,8 +84,6 @@ button.fa
 	margin-top 5px
 	height 45px
 	width 45px
-	
-
 .Menu-text
 	color color-txt-menu
 	display none
@@ -94,12 +93,3 @@ button.fa
 	top 50%
 	transform translateY(-50%)
 	width (ancho*2)
-/*
-@media screen and (orientation: landscape)
-	.Menu-portrait
-		display none !important
-
-@media screen and (orientation: portrait)
-	.Menu-landscape
-		display none !important
-*/

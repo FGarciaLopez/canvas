@@ -1,35 +1,42 @@
 .u-button
 //	position relative
 	padding 0
-	box-shadow 0 2px 5px rgba(secondary-color-shadow,0.26)
+	box-shadow 0 2px 5px rgba(#000,0.5)
+	transition all .3s
 	&:active
 		transform translateY(1px)
 	&:hover
 		cursor pointer
-		box-shadow 0 2px 10px rgba(secondary-color-shadow,0.5)
+		box-shadow 0 2px 5px rgba(#000,0.2)
 	&.u-success
 		background success-color
 		&[disabled]
 			background success-color-dark
 			color success-color-light !important
-	&.u-success:hover
-		background success-color-light
+		&:hover
+			background success-color-light
 	&.u-warning
 		background warning-dark
-	&.u-warning:hover
-		background warning-light
+		&:hover
+			background warning-light
 	&.u-danger
-		background danger-dark
-	&.u-danger:hover	
-		background danger-light
+		background color-danger-dark
+		&:hover	
+			background color-danger-light
 	&.u-info
-		background info-dark
-	&.u-info:hover
-		background info-light
+		background info-color-dark
+		&:hover
+			background info-color-light
 	&.u-primary
-		background primary-dark
-	&.u-primary:hover
-		background primary-light
+		background primary-color
+		&:hover
+			background primary-color-light
+	&.u-transparent
+		box-shadow none
+		background transparent
+		&:hover
+			box-shadow none
+			background transparent
 	&.u-switch
 		border-radius 24px
 		border 4px
@@ -54,13 +61,13 @@
 				animation toOff .5s
 				left 0
 		&.u-off
-			background danger-dark
-			border-color danger-shadow
+			background color-danger-dark
+			border-color color-danger-shadow
 			&:before
 				content "No"
 				margin-right 2em
 			&:hover
-				background danger-light
+				background color-danger-light
 			img
 				left 48px
 				animation toOn .5s
