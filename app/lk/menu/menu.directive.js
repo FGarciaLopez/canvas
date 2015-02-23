@@ -26,6 +26,7 @@
 		menu.estaActivoModoSeleccion = StatusService.estaActivadoModoSeleccion;
 		menu.estaCompletado = estaCompletado;
 		menu.estaEnModoSeleccion = StatusService.estaEnModoSeleccion;
+		menu.estaEnUltimo = estaEnUltimo;
 		menu.estaEnTablero = estaEnTablero;
 		menu.getAnterior = StatusService.pasoAnterior;
 		menu.getSiguiente = StatusService.pasoSiguiente;
@@ -38,7 +39,8 @@
 		function abajo() { StatusService.cambiarAApartado( '#Abajo') }
 		function arriba() { StatusService.cambiarAApartado( '#Arriba') }
 		function estaEnTablero() { return (StatusService.pasoActual()==='Tablero') }
-		function goHome() { console.log("voy"); StatusService.cambiarPaso('Tablero') }
+		function goHome() { StatusService.cambiarPaso('Tablero') }
+		function estaEnUltimo() { return (StatusService.pasoActual()==='Componentes') }
 		function irAnterior() { StatusService.cambiarPaso( StatusService.pasoAnterior()) }
 		function estaCompletado() {
 			if (! MazoService.algunaSeleccionada( MazoService.get('componentes').cartas)) {

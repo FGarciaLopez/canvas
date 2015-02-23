@@ -18,7 +18,7 @@
 				mazo: "="
 			},
 			templateUrl: function (scope, attrs) {
-				if ( attrs.type=="crear") return 'lk/carta/carta-new.html'
+				//if ( attrs.type=="crear") return 'lk/carta/carta-new.html'
 				return 'lk/carta/carta.html'
 			},
 			controller: lkCartaController,

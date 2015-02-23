@@ -11,6 +11,7 @@
 	text-align center
 	top 0
 	width 100%
+	animation slidein-container .3s ease-in
 /*
 .ViewContainer.Componentes
 	background-color #FFE89D
@@ -27,8 +28,12 @@
 .ViewContainer.Objetivos
 	background-color #6EA8AD
 */
-@css {
-	.ViewContainer {
-		//background-image: url("/img/icons/fondo.png");
-	}
+@keyframes slidein-container {
+  from {
+    left 100%
+  }
+
+  to {
+    left 0
+  }
 }

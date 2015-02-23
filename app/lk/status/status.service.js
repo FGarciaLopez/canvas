@@ -76,6 +76,8 @@
             } else {
                 paso = paso.siguiente;
             }
+            if (!paso)
+                paso = pasos[0];
             $location.url(paso.path);
         }
 

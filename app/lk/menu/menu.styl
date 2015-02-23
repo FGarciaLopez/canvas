@@ -4,18 +4,18 @@ sombra-extra-menu = 0 3px 6px rgba(0,0,0,0.6)
 color-menu= primary-color
 color-txt-menu= white
 color-txt-menu-dark = u-mas-brillo(color-txt-menu,-20%)
-
+margenes =  .7em
 u-left()
 	float left
-	margin 8px 0 0 12px
+	margin .2em 0 0 .2em
 
 u-right()
 	float right
-	margin 8px 12px 0 0
+	margin .2em .2em 0 0
 
 .Menu
 	background color-menu//rgba(#fff,.7)
-	box-shadow sombra-menu
+	box-shadow 0 2px 10px rgba(#000,0.26)
 	display block
 	font-family fuente-titulos
 	font-size 24px
@@ -45,51 +45,23 @@ button.fa
 	padding 1px .25em
 	text-align center
 	text-shadow 0 1px 1px rgba(#000,.7)
+	z-index 100
 	&.fa-navicon
 		@extends .u-button.u-transparent
 		u-left()
 		text-align center
 	&.fa-pencil
-		@extends .u-button.u-info
+		@extends .u-button.u-transparent
 		u-right()
 		&.u-selected
 			@extends .u-button.u-success
 			color color-txt-menu
-	&:hover
+	&.fa-arrow-right
+		@extends .u-button.u-transparent
+		u-right()
+		&.u-selected
+			text-align center
+	&:hover 
 		color color-txt-menu
 	&:active
 		border 0
-			
-.Menu-logo
-	-webkit-transition 1s
-	float right
-	top 0
-	height ancho
-	width ancho
-	z-index 10
-	&:hover
-		cursor pointer
-		-webkit-transform rotate(360deg)			
-	
-.Menu-textoLogo
-	color white
-	left ancho
-	margin-left 1em
-	overflow hidden
-	position absolute
-	top (ancho/2)
-	width (ancho*2)
-
-.Menu-icon
-	margin-top 5px
-	height 45px
-	width 45px
-.Menu-text
-	color color-txt-menu
-	display none
-	margin-left 1em
-	overflow hidden
-	position absolute
-	top 50%
-	transform translateY(-50%)
-	width (ancho*2)

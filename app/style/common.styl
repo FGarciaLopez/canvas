@@ -6,7 +6,7 @@ u-mas-brillo( c, p)
 // Primary
 primary-color = #3af//666//1E8DD4// 00BCD4
 secondary-color =#888//13DB7B
-action-color = #FF9800 //FF5722//FF7A00
+action-color = #F06162 //FF5722//FF7A00
 
 primary-color-light = u-mas-brillo(primary-color,20%) // #B2EBF2 //B2EBF2
 primary-color-dark = u-mas-brillo(primary-color,-10%)//#0097A7
@@ -16,7 +16,7 @@ secondary-color-light = u-mas-brillo(secondary-color,40%) // #B2EBF2 //B2EBF2
 secondary-color-dark = u-mas-brillo(secondary-color,-10%)//#0097A7
 secondary-color-shadow = u-mas-brillo(secondary-color, -20%)
 
-action-color-light = lightness( action-color, 70%) //#FFB74D//FFCCBC
+action-color-light = lightness( action-color, 90%) //#FFB74D//FFCCBC
 action-color-dark = lightness( action-color, 30%)//#F57C00
 
 //dark
@@ -56,7 +56,7 @@ primary-light = #4286F5
 primary-transparent= rgba(50,118,229,.5)
 
 // --- TAMAÑOS
-alto-menu=2.8em
+alto-menu=64px // 44.8
 ancho-icons=125px
 ancho-menu=250px
 
@@ -99,12 +99,12 @@ centrado_vertical()
 	margin 0 (alto-menu + 1em)
 	padding 0 
 	position fixed
-	right 0
 	text-align left
 	text-transform capital
 	top 0
 	z-index 9
-
+.u-hidden
+	display none !important
 @media screen and (max-width: 600px) {
   .u-titulo {
   	font-size 1em

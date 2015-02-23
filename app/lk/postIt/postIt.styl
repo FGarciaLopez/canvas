@@ -5,16 +5,16 @@ color-fondo = #FFE271
 .PostIt-contenedor
 	text-align center
 .PostIt
+	box-shadow 0 2px 10px rgba(#000,0.26)
+	display inline-block
 	font-family fuente
 	font-weight bold
-	box-shadow sombra_fuerte
-	display inline-block
+	height ancho
 	margin .5em .2em 32px .3em
 	padding 0 !important
 	position relative
 	text-align center
 	width ancho
-	height ancho
 	figure
 		background-color color-fondo
 		height 100%
@@ -24,23 +24,23 @@ color-fondo = #FFE271
 		width 100%
 		z-index 0
 		img
-			display none
 			background-color color-fondo
 			border-radius 2em
-			width 100%
 			box-shadow sombra
+			display none
+			width 100%
 .PostIt-texto
-	//background rgba(255,255,255, 0.5)
-	//border-radius 1em
 	background-color transparent
 	display block
 	height 78%
 	left 10%
 	position absolute
+	cursor  pointer
 	top 12%
 	width 81%
 	z-index 1
 	&:focus
+		cursor auto
 		border-radius 0 !important
 		background-color white
 	&.u-transparent
