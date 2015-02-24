@@ -95,24 +95,17 @@ color-fondo = #FFE271
 	@extends .u-fadein
 	@extends .u-raised
 
-color-placeholder= #444
-weight-placeholder = 600
-::-webkit-input-placeholder {
-	color: color-placeholder;
-	font-weight: weight-placeholder;
-}
 
-:-moz-placeholder { /* Firefox 18- */
- 	color: color-placeholder;  
-	font-weight: weight-placeholder;
-}
+placeloder()
+	color #444
+	font-weight 600
+	font-size 18px
+::-webkit-input-placeholder
+	placeloder()
+:-moz-placeholder 
+	placeloder()
+::-moz-placeholder
+	placeloder()
+:-ms-input-placeholder
+	placeloder()
 
-::-moz-placeholder {  /* Firefox 19+ */
-	color: color-placeholder;  
-	font-weight: weight-placeholder;
-}
-
-:-ms-input-placeholder {  
-	color: color-placeholder;  
-	font-weight: weight-placeholder;
-}
