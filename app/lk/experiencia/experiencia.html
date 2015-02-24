@@ -4,34 +4,27 @@
 	</h1>
 	<h2 class="Experiencia-titulo">
 		¿Qué experiencia quiero crear?
+		<!--img class="Experiencia-icon" alt="Experiencia" src= /-->
 	</h2>
-	<img class="Experiencia-icon" alt="70x70" src="/img/canvas/experiencia.svg"/>
+	<div class="Experiencia-icon"></div>
 	<div class="Experiencia-item">
-		<div class="Experiencia-pregunta">¿Qué tipo de experiencia quiero que vivan mis alumnos?</div>
-		<!--textarea class="Experiencia-texto" name="P1" id="p1"></textarea-->
-		<div class="PostIt-contenedor">
-			<lk-post-it eliminar="false" post=exp.mazo.postIts[0] mazo=exp.mazo imagen="'carta'" class="PostIt">
+		<div class="PostIt">
+			<textarea class="PostIt-texto" name="tipo" id="tipo" cols="30" rows="10" placeholder="Indica aquí qué TIPO DE EXPERIENCIA quiero que vivan mis alumnos" ng-model="exp.mazo.postIts[0].nota"></textarea>
 		</div>
 	</div>
 	<div class="Experiencia-item">
-		<div class="Experiencia-pregunta">¿Qué piensa y qué siente el alumno?</div>
-		<!--textarea class="Experiencia-texto" name="P1" id="p1"></textarea-->
-		<div class="PostIt-contenedor">
-			<lk-post-it eliminar="false" post=exp.mazo.postIts[1] mazo=exp.mazo imagen="'carta'" class="PostIt">
+		<div class="PostIt">
+			<textarea class="PostIt-texto" name="tipo" id="tipo" cols="30" rows="10" placeholder="Indica qué PIENSA y qué SIENTE el alumno" ng-model="exp.mazo.postIts[1].nota"></textarea>
 		</div>
 	</div>
 	<div class="Experiencia-item">
-		<div class="Experiencia-pregunta">¿Qué quieres que vea tu alumno? Y ¿Qué quieres que escuche tu alumno?</div>
-		<!--textarea class="Experiencia-texto" name="P1" id="p1"></textarea-->
-		<div class="PostIt-contenedor">
-			<lk-post-it eliminar="false" post=exp.mazo.postIts[2] mazo=exp.mazo imagen="'carta'" class="PostIt">
+		<div class="PostIt">
+			<textarea class="PostIt-texto" name="tipo" id="tipo" cols="30" rows="10" placeholder="Indica aquí qué quieres que VEA o ESCUCHE tu alumno" ng-model="exp.mazo.postIts[2].nota"></textarea>
 		</div>
 	</div>
 	<div class="Experiencia-item">
-		<div class="Experiencia-pregunta">¿Qué es lo que quiere el alumno?</div>
-		<!--textarea class="Experiencia-texto" name="P1" id="p1"></textarea-->
-		<div class="PostIt-contenedor">
-			<lk-post-it eliminar="false" post=exp.mazo.postIts[3] mazo=exp.mazo imagen="'carta'" class="PostIt">
+		<div class="PostIt">
+			<textarea class="PostIt-texto" name="tipo" id="tipo" cols="30" rows="10" placeholder="Indica qué es LO QUE QUIERE el alumno" ng-model="exp.mazo.postIts[3].nota"></textarea>
 		</div>
 	</div>
 </div>

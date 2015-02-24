@@ -1,21 +1,23 @@
 //cartas.styl
 ancho = 250px
-fuente = 'Indie flower', Arial
+fuente = 'Indie flower', "Serif"
 color-fondo = #FFE271
 .PostIt-contenedor
 	text-align center
+	line-height ancho
 .PostIt
+	background-color color-fondo
 	box-shadow 0 2px 10px rgba(#000,0.26)
 	display inline-block
 	font-family fuente
 	font-weight bold
 	height ancho
-	margin .5em .2em 32px .3em
+	margin 0 //.5em .2em 32px .3em
 	padding 0 !important
 	position relative
 	text-align center
 	width ancho
-	figure
+/*	figure
 		background-color color-fondo
 		height 100%
 		left 0
@@ -29,7 +31,8 @@ color-fondo = #FFE271
 			box-shadow sombra
 			display none
 			width 100%
-			@css {
+*/
+				@css {
 				.PostIt:before {
 					content: "";
 					position: absolute;
@@ -41,19 +44,22 @@ color-fondo = #FFE271
 				}
 			}
 .PostIt-texto
-	background-color transparent
-	display block
-	height 78%
-	left 10%
-	position absolute
+	background transparent
+	border 0
 	cursor  pointer
-	top 12%
-	width 81%
+	display inline-block
+	font-family fuente
+	height ancho
+	left 0
+	padding 1em
+	position absolute
+	top 0
+	width ancho
 	z-index 1
 	&:focus
 		cursor auto
 		border-radius 0 !important
-		background-color white
+		background rgba( #fff, 0.5)
 	&.u-transparent
 		background transparent
 		border-radius 1em
@@ -89,3 +95,24 @@ color-fondo = #FFE271
 	@extends .u-fadein
 	@extends .u-raised
 
+color-placeholder= #444
+weight-placeholder = 600
+::-webkit-input-placeholder {
+	color: color-placeholder;
+	font-weight: weight-placeholder;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+ 	color: color-placeholder;  
+	font-weight: weight-placeholder;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: color-placeholder;  
+	font-weight: weight-placeholder;
+}
+
+:-ms-input-placeholder {  
+	color: color-placeholder;  
+	font-weight: weight-placeholder;
+}
