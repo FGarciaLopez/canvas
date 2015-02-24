@@ -29,6 +29,17 @@ color-fondo = #FFE271
 			box-shadow sombra
 			display none
 			width 100%
+			@css {
+				.PostIt:before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 100%;
+					width: 100%;
+					height: 16px;
+					background-image: url("/img/shadow.png");
+				}
+			}
 .PostIt-texto
 	background-color transparent
 	display block
@@ -77,3 +88,4 @@ color-fondo = #FFE271
 	@extends .u-button.u-success
 	@extends .u-fadein
 	@extends .u-raised
+

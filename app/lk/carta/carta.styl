@@ -21,10 +21,12 @@ carta-color-important( c)
 	position relative
 	width ancho
 	border-radius 2em
-	box-shadow 0 2px 10px rgba(#000,0.7)
-	&.u-seleccionable:hover
-		box-shadow 0 2px 5px rgba(#000,0.26)
-		cursor pointer
+	box-shadow 0 2px 5px rgba(#000,0.26)
+	&.u-seleccionable
+		box-shadow 0 2px 10px rgba(#000,0.7)
+		&:hover
+			box-shadow 0 2px 5px rgba(#000,0.26)
+			cursor pointer
 p
 	display block
 	font-family "Muli", "Helvetica Neue", Arial
@@ -74,8 +76,6 @@ figure
 		font-size 24px
 .u-seleccionable.u-deactivated
 	carta-color-important(primary-color-dark)
-	&:hover
-		carta-color-important(primary-color)
 	p
 		color black !important	
 	.Carta-btn
