@@ -1,9 +1,9 @@
 <div class="Menu">
-	<button class="Menu-item fa fa-navicon" ng-click="menu.toggle()"></button>
-	<button class="Menu-item fa fa-arrow-right" 
+	<button lk-button class="Menu-item fa fa-navicon" ng-click="menu.toggle()"></button>
+	<button lk-button class="Menu-item  fa fa-arrow-right" 
 		ng-class="{'u-hidden': menu.estaEnUltimo()}"
 		ng-click="menu.irSiguiente()"></button>
-	<button class="Menu-item fa fa-pencil" 
+	<button lk-button class="Menu-item fa fa-pencil" 
 		ng-class="{'u-hidden': !menu.estaActivoModoSeleccion(), 'u-selected': menu.estaEnModoSeleccion(), 'u-unselected': !menu.estaEnModoSeleccion()}" 
 		ng-click="menu.cambiaModoSeleccion()"></button>
 	<!--img class="Menu-item Menu-logo" ng-click="menu.goHome()" alt="Lúdiko" src="/img/icons/logo.svg" /-->

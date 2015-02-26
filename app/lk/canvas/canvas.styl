@@ -19,12 +19,12 @@ resalta( c)
 	box-shadow 0 2px 10px rgba(#000,0.7)
 	font-family fuente-normal
 	font-weight 600
-	margin 1em 2em 0 1em
+	margin 1em 2em 2em 1em
 
 .Canvas-item
 	border 0 //border .3em solid color-tablero
 	border-radius .5em
-	margin .3em 0
+	margin 0
 	padding 0
 	transition all .5s
 	box-shadow 0 2px 5px rgba(#000,0.7)
@@ -93,12 +93,14 @@ resalta( c)
 .Canvas-comportamientos
 	background bg-comportamientos//F9C85E
 	display inline-block
+	margin-top .6em
 	min-width 35%
 	&:hover
 		resalta( bg-comportamientos)
 .Canvas-row
 	display block
 	height 30%
+	margin-top 1em
 	position relative
 	width 100%
 .Canvas-motivadores
@@ -111,6 +113,7 @@ resalta( c)
 		resalta( bg-mecanicas)
 .Canvas-componentes
 	background-color bg-componentes//80A5C7
+	margin-bottom .3em
 	&:hover
 		resalta( bg-componentes)
 
@@ -118,8 +121,9 @@ resalta( c)
 	.Canvas
 		margin .5em .5em 0 .2em
 	.Canvas-col
-		width 49% !important
 		height 300px
+		margin-top .6em
+		width 49% !important
 	.Canvas-experiencia
 	.Canvas-comportamientos
 		width 100%

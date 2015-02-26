@@ -11,7 +11,9 @@ carta-color-important( c)
 .Carta-contenedor
 	//margin-left 1em
 	text-align center
+	overflow hidden
 .Carta
+	overflow hidden
 	transition .3s all
 	border-radius 2em
 	display inline-block
@@ -63,6 +65,10 @@ figure
 	z-index 3
 .Carta-btn
 	@extends .u-fadein
+	position absolute
+	right 1em
+	top -ancho
+	z-index 3
 	&.u-checked
 		background success-color
 		color white
@@ -74,9 +80,9 @@ figure
 		text-align center
 		width 2em
 		font-size 24px
+	&.u-unchecked
+		display none !important
 .u-seleccionable.u-deactivated
 	carta-color-important(primary-color-dark)
 	p
 		color black !important	
-	.Carta-btn
-		display none !important

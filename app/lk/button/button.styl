@@ -2,7 +2,10 @@
 //	position relative
 	padding 0
 	box-shadow 0 2px 5px rgba(#000,0.5)
-	transition all .4s
+	transition all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms
+	overflow hidden
+	position relative
+	//transition all .4s
 	&:active
 		transform translateY(1px)
 	&:hover
@@ -70,3 +73,18 @@
 			img
 				left 48px
 				animation toOn .5s
+
+.lk-ink
+	display block
+	position absolute
+	background white
+	border-radius 100%
+	transform scale(0)
+	z-indez 999
+	&.animate 
+		animation ripple 0.65s linear
+
+@keyframes ripple {
+	/*scale the element to 250% to safely cover the entire link and fade it out*/
+	100% {opacity: 0; transform: scale(1.5);}
+}

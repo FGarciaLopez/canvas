@@ -1,3 +1,16 @@
+<div class="PostIt-botonera">
+	<!-- BTN DESHACER -->
+	<div lk-button class="PostIt-btn u-info fa fa-undo" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.cancelar()"></div>
+
+	<!-- BTN GUARDAR -->
+	<div lk-button class="PostIt-btn u-button u-fadein u-success u-raised fa fa-check" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.guardar()">
+	</div>
+
+	<!-- BTN ELIMINAR -->
+	<div lk-button class="PostIt-btn u-button u-fadein u-danger u-raised fa fa-trash-o" ng-show="dpi.mostrarEliminar()" ng-hide="dpi.ocultarEliminar()" ng-click="dpi.eliminando=true" /></div>
+
+</div>
+
 <!-- TEXTO DE LA NOTA -->
 <div class="PostIt-texto u-transparent" ng-hide="dpi.estaSeleccionado()" ng-show="!dpi.estaSeleccionado()" ng-click="dpi.editar()">
 	{{post.nota}} 
@@ -6,18 +19,7 @@
 	<textarea id="{{post.id}}"class="PostIt-texto" name="nota" ng-model="dpi.postItEdit.nota" ng-hide="!dpi.estaSeleccionado()" ng-show="dpi.estaSeleccionado()" >
 	</textarea>
 </form>
-<div class="PostIt-botonera">
-	<!-- BTN DESHACER -->
-	<div class="PostIt-btn u-info fa fa-undo" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.cancelar()"></div>
 
-	<!-- BTN GUARDAR -->
-	<div class="PostIt-btn u-button u-fadein u-success u-raised fa fa-check" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.guardar()">
-	</div>
-
-	<!-- BTN ELIMINAR -->
-	<div class="PostIt-btn u-button u-fadein u-danger u-raised fa fa-trash-o" ng-show="dpi.mostrarEliminar()" ng-hide="dpi.ocultarEliminar()" ng-click="dpi.eliminando=true" /></div>
-
-</div>
 
 <div class="PostIt-msg u-bubble u-danger u-fadein" ng-show="dpi.eliminando" ng-hide="!dpi.eliminando">
 	<p class="PostIt-msgTxt">
@@ -32,9 +34,3 @@
 		</a></li>
 	</ul>
 </div>
-
-<!-- IMG POST-IT -->
-<figure>
-	<img class="PostIt-img" src="" />
-</figure>
-
