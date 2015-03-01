@@ -1,6 +1,6 @@
 <div class="PostIt-botonera">
 	<!-- BTN DESHACER -->
-	<div lk-button class="PostIt-btn u-info fa fa-undo" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.cancelar()"></div>
+	<div lk-button class="PostIt-btn u-button u-raised u-info fa fa-undo" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.cancelar()"></div>
 
 	<!-- BTN GUARDAR -->
 	<div lk-button class="PostIt-btn u-button u-fadein u-success u-raised fa fa-check" ng-show="dpi.estaSeleccionado()" ng-hide="!dpi.estaSeleccionado()" ng-click="dpi.guardar()">
@@ -20,17 +20,16 @@
 	</textarea>
 </form>
 
-
-<div class="PostIt-msg u-bubble u-danger u-fadein" ng-show="dpi.eliminando" ng-hide="!dpi.eliminando">
-	<p class="PostIt-msgTxt">
-		¿Quieres borrar? 
-	</p>
-	<ul>
-		<li><a class="btn u-danger fa fa-check" ng-click="dpi.eliminar()" >
-			<!--img src="/img/icons/check.svg" alt="BORRAR"-->
-		</a></li>
-		<li><a class="btn fa fa-cross" ng-click="dpi.eliminando=false" >
-			<!--img src="/img/icons/cross.svg" alt="NO"-->
-		</a></li>
-	</ul>
+<div class="PostIt-modal MsgModal" ng-show="dpi.eliminando" ng-hide="!dpi.eliminando">
+	<div class="MsgModal-msg">
+		¿Realmente quieres eliminarlo definitivamente? 
+		<ul>
+			<li><a class="MsgModal-btn u-button u-danger" ng-click="dpi.eliminar()">  
+				<i class="fa fa-remove"></i> Eliminar
+			</a></li>
+			<li><a class="MsgModal-btn u-button u-success" ng-click="dpi.eliminando=false"> 
+				<i class="fa fa-undo"></i> Cancelar
+			</a> </li>
+		</ul>
+	</div>
 </div>

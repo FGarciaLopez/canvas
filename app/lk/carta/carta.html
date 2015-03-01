@@ -1,7 +1,9 @@
 <!-- NOMBRE -->
 
 <!--figure class="Carta-botonera" ng-hide="!dc.estaModoSeleccion()" ng-show="dc.estaModoSeleccion()"-->
-<div lk-button class="Carta" ng-class="{ 'u-seleccionable': dc.estaModoSeleccion(), 'u-disabled': !dc.estaModoSeleccion(), 'u-deactivated': !dc.estaSeleccionada(), 'u-activated': dc.estaSeleccionada()}" ng-click="dc.conmutar()">
+<div class="Carta" ng-class="{ 'u-seleccionable': dc.estaModoSeleccion(), 'u-disabled': !dc.estaModoSeleccion(), 'u-deactivated': !dc.estaSeleccionada(), 'u-activated': dc.estaSeleccionada()}" ng-click="dc.conmutar()">
+	<div class="Carta-btn u-button u-raised fa fa-check" ng-show="dc.estaModoSeleccion()" ng-hide="!dc.estaModoSeleccion()" ng-class="{'u-checked': dc.estaSeleccionada(), 'u-unchecked': ! dc.estaSeleccionada()}">
+	</div>
 	<p class="Carta-nombre" >
 		{{carta.nombre}}
 	</p>
@@ -10,9 +12,7 @@
 		{{carta.descripcion}}
 	</p>
 
-	<figure class="u-fadein">
+	<figure lk-button class="u-fadein">
 		<img class="Carta-img" src="{{dc.getImagen()}}"/>
 	</figure>
-</div>
-<div class="Carta-btn fa u-button u-raised fa-check" ng-show="dc.estaModoSeleccion()" ng-hide="!dc.estaModoSeleccion()" ng-class="{'u-checked': dc.estaSeleccionada(), 'u-unchecked': ! dc.estaSeleccionada()}">
 </div>

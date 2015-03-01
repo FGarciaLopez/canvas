@@ -1,0 +1,52 @@
+arriba = 20%
+.MsgModal
+	box-shadow 0 2px 5px rgba(#000,0.5)
+	font-family fuente-normal
+	background rgba(0,0,0,.5)
+	display block
+	height 100%
+	left 0
+	position fixed
+	text-align center
+	top 0
+	width 100%
+	z-index 99
+.MsgModal-msg
+	animation caida 0.3s linear
+	background white
+	display inline-block
+	left 33%
+	padding 2em
+	position absolute
+	top arriba
+	width 33%
+	ul
+		margin-top 2em
+		display inline-block
+		li
+			display inline-block
+.MsgModal-btn
+	border-radius .3em
+	color white
+	display block
+	height 2em
+	line-height 1em
+	padding .5em
+	text-decoration none
+
+@media screen and (max-width: 600px) {
+  .MsgModal-msg {
+  	width 60%
+  	left 20%
+  }
+}
+
+
+@keyframes caida {
+  from { 
+  	top 0 
+  }
+  to { 
+  	top arriba 
+  }
+}

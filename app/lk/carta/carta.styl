@@ -11,9 +11,7 @@ carta-color-important( c)
 .Carta-contenedor
 	//margin-left 1em
 	text-align center
-	overflow hidden
 .Carta
-	overflow hidden
 	transition .3s all
 	border-radius 2em
 	display inline-block
@@ -48,26 +46,18 @@ p
 figure
 	height 100%
 	left 0
+	overflow hidden
 	position absolute
 	top 0
 	width 100%
 	z-index 2
 	img
 		width 100%
-.Carta-botonera
-	background transparent
-	height 48px !important
-	margin 2px 2px 0 0
-	min-width 40px
-	position absolute
-	right 0
-	top -1em
-	z-index 3
 .Carta-btn
 	@extends .u-fadein
-	position absolute
-	right 1em
-	top -ancho
+	position relative
+	right 0
+	top -1em
 	z-index 3
 	&.u-checked
 		background success-color
