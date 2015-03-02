@@ -44,6 +44,7 @@
               // Elimina el indicado o el último seleccionado
               function eliminar( pila, postIt) {
                      if(!postIt) {
+                            console.log("no hay postIt", postIt);
                             postIt = selected( pila);
                      }
                      var index = pila.postIts.indexOf( postIt);
@@ -55,7 +56,8 @@
 
               function guardar( pila, postIt) {
                      if( ! selected( pila)) { // Es uno nuevo ?
-                            add(pila, postIt);
+                            if (postIt)
+                                   add(pila, postIt);
                             return false;
                      } else {
                             selected( pila).nota = postIt.nota;

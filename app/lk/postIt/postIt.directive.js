@@ -44,6 +44,8 @@
 		dpi.eliminar = eliminar;
 		dpi.mostrarEliminar = mostrarEliminar;
 		dpi.ocultarEliminar = ocultarEliminar;
+		dpi.estaEliminando = estaEliminando;
+		dpi.cancelarEliminar = cancelarEliminar;
 
 		dpi.imagen = $scope.imagen;
 
@@ -65,8 +67,14 @@
 			if( $scope.eliminar == false) return true;
 			return dpi.haySeleccionado() || dpi.eliminando;
 		}
+		function cancelarEliminar() {
+			dpi.eliminando = false;
+		}
 		function guardar( ) { 
-			dpi.postItEdit = PostItService.guardar( $scope.mazo, dpi.postItEdit) }
+			dpi.postItEdit = PostItService.guardar( $scope.mazo, dpi.postItEdit) 
+		}
+
+		function estaEliminando() { return dpi.eliminando}
 
 		function eliminar( ) { PostItService.eliminar( $scope.mazo, $scope.post) }
 

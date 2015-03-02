@@ -20,16 +20,19 @@
 	</textarea>
 </form>
 
-<div class="PostIt-modal MsgModal" ng-show="dpi.eliminando" ng-hide="!dpi.eliminando">
-	<div class="MsgModal-msg">
+<!-- MENSAJE CONFIRMACIÓN PARA BORRAR-->
+<lk-msg-modal lk-activate="dpi.estaEliminando" lk-close="dpi.cancelarEliminar">
+	<lk-msg-content>
 		¿Realmente quieres eliminarlo definitivamente? 
-		<ul>
-			<li><a class="MsgModal-btn u-button u-danger" ng-click="dpi.eliminar()">  
-				<i class="fa fa-remove"></i> Eliminar
-			</a></li>
-			<li><a class="MsgModal-btn u-button u-success" ng-click="dpi.eliminando=false"> 
-				<i class="fa fa-undo"></i> Cancelar
-			</a> </li>
-		</ul>
-	</div>
-</div>
+	</lk-msg-content>
+	<lk-msg-menu>
+		<lk-msg-option class="u-danger" lk-click="dpi.eliminar">
+			<i class="fa fa-remove"></i> Eliminar
+		</lk-msg-option>
+		<!--li><a class="MsgModal-btn u-button u-danger" ng-click="dpi.eliminar()">  
+		</a></li-->
+		<lk-msg-option class="u-success" lk-click="dpi.cancelarEliminar"> 
+			<i class="fa fa-undo"></i> Cancelar
+		</lk-msg-option>
+	</lk-msg-menu>
+</lk-msg-modal>

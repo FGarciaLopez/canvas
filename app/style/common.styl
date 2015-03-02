@@ -7,6 +7,7 @@ u-mas-brillo( c, p)
 primary-color = #3af//666//1E8DD4// 00BCD4
 secondary-color =#8b8b8b//13DB7B
 action-color = #F06162 //FF5722//FF7A00
+text-color = #333
 
 primary-color-light = u-mas-brillo(primary-color,20%) // #B2EBF2 //B2EBF2
 primary-color-dark = u-mas-brillo(primary-color,-10%)//#0097A7
@@ -76,7 +77,7 @@ p
 .u-raised
 	border-radius 50%
 .u-fadein
-	animation fadein .5s
+	animation fadein .4s
 .u-icon
 	width ancho-icons
 
@@ -89,7 +90,7 @@ centrado_vertical()
 body
 	font-size 16px
 	margin 0
-	color #333
+	color text-color
 .u-contenedor	
 	margin-top 1em
 .u-titulo 

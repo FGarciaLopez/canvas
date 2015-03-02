@@ -15,8 +15,6 @@
 				if(this.className.indexOf('u-disabled')>0) {
 					return;
 				}
-
-				console.log("evento click", e, element);
 				// Si se hacen dos clicks seguidos para la animación anterior
 				ink.removeClass("animate");
 				// Pone el tamaño de .lk-ink
