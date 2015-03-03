@@ -14,7 +14,7 @@ var env = process.env.NODE_ENV || 'production'
 * Variables y configuración
 */
 config.app = express();
-config.port = process.env.PORT || 8080;
+config.port = process.env.PORT || 8081;
 var app = config.app;
 app.set("env", env);
 

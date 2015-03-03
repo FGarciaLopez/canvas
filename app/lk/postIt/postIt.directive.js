@@ -65,7 +65,7 @@
 		}
 		function ocultarEliminar() {
 			if( $scope.eliminar == false) return true;
-			return dpi.haySeleccionado() || dpi.eliminando;
+			return dpi.haySeleccionado(); //|| dpi.eliminando;
 		}
 		function cancelarEliminar() {
 			dpi.eliminando = false;

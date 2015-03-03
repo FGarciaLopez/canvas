@@ -15,24 +15,27 @@
 <div class="PostIt-texto u-transparent" ng-hide="dpi.estaSeleccionado()" ng-show="!dpi.estaSeleccionado()" ng-click="dpi.editar()">
 	{{post.nota}} 
 </div>
+
 <form>
 	<textarea id="{{post.id}}"class="PostIt-texto" name="nota" ng-model="dpi.postItEdit.nota" ng-hide="!dpi.estaSeleccionado()" ng-show="dpi.estaSeleccionado()" >
 	</textarea>
 </form>
 
 <!-- MENSAJE CONFIRMACIÓN PARA BORRAR-->
-<lk-msg-modal lk-activate="dpi.estaEliminando" lk-close="dpi.cancelarEliminar">
-	<lk-msg-content>
+<lk-dialog lk-activate="dpi.estaEliminando" lk-close="dpi.cancelarEliminar">
+
+	<lk-dialog-content>
 		¿Realmente quieres eliminarlo definitivamente? 
-	</lk-msg-content>
-	<lk-msg-menu>
-		<lk-msg-option class="u-danger" lk-click="dpi.eliminar">
-			<i class="fa fa-remove"></i> Eliminar
-		</lk-msg-option>
-		<!--li><a class="MsgModal-btn u-button u-danger" ng-click="dpi.eliminar()">  
-		</a></li-->
-		<lk-msg-option class="u-success" lk-click="dpi.cancelarEliminar"> 
-			<i class="fa fa-undo"></i> Cancelar
-		</lk-msg-option>
-	</lk-msg-menu>
-</lk-msg-modal>
+	</lk-dialog-content>
+
+	<lk-dialog-menu>
+
+		<lk-dialog-option class="u-danger" lk-click="dpi.eliminar">
+			<i class="fa fa-trash-o"></i> Eliminar
+		</lk-dialog-option>
+
+		<lk-dialog-option class="u-default" lk-click="dpi.cancelarEliminar"> 
+			<i class="fa fa-remove"></i> Cerrar
+		</lk-dialog-option>
+	</lk-dialog-menu>
+</lk-dialog-modal>
