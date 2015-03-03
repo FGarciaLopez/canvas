@@ -2,14 +2,14 @@
 (function() {
     angular
         .module('lkCanvas')
-        .directive('lkMsgModal', lkMsgModal)
-        .directive('lkMsgContent', lkMsgContent)
-        .directive('lkMsgMenu', lkMsgMenu)
-        .directive('lkMsgOption', lkMsgOption);
+        .directive('lkDialog', lkDialog)
+        .directive('lkDialogContent', lkDialogContent)
+        .directive('lkDialogMenu', lkDialogMenu)
+        .directive('lkDialogOption', lkDialogOption);
 
     /* @ngInject */
-    function lkMsgModal () {
-        // Usage:lk-msg-ok
+    function lkDialog () {
+        // Usage:lk-Dialog-ok
         //
   		var directive = {
 			restrict: 'E',
@@ -17,18 +17,18 @@
 				'activate': '=lkActivate',
 				'close': '=lkClose'
 			},
-			controller: lkMsgModalController,
+			controller: lkDialogController,
 			replace: true,
 			transclude: true,
-			templateUrl:  'lk/msg-modal/msg-modal.html',
+			templateUrl:  'lk/dialog/dialog.html',
 			controllerAs: 'lkm'
 		}
 		return directive;
     }
 
     /* @ngInject */
-    function lkMsgContent () {
-        // Usage:lk-msg-ok
+    function lkDialogContent () {
+        // Usage:lk-dialog-ok
         //
   		var directive = {
 			restrict: 'E',
@@ -36,14 +36,14 @@
 			},
 			replace: true,
 			transclude: true,
-			templateUrl:  'lk/msg-modal/msg-content.html'
+			templateUrl:  'lk/dialog/dialog-content.html'
 		}
 		return directive;
     }
 
     /* @ngInject */
-    function lkMsgMenu () {
-        // Usage:lk-msg-ok
+    function lkDialogMenu () {
+        // Usage:lk-dialog-ok
         //
   		var directive = {
 			restrict: 'E',
@@ -51,13 +51,13 @@
 			},
 			replace: true,
 			transclude: true,
-			templateUrl:  'lk/msg-modal/msg-menu.html'
+			templateUrl:  'lk/dialog/dialog-menu.html'
 		}
 		return directive;
     }
     /* @ngInject */
-    function lkMsgOption () {
-        // Usage:lk-msg-ok
+    function lkDialogOption () {
+        // Usage:lk-dialog-ok
         //
   		var directive = {
 			restrict: 'E',
@@ -69,7 +69,7 @@
 			replace: true,
 			transclude: true,
 			templateUrl:  function(elemnt, attrs) {
-				return 'lk/msg-modal/msg-option.html'	
+				return 'lk/dialog/dialog-option.html'	
 				var tipo;
 				if( typeof attrs.ok !== "undefined")
 					tipo = 'ok';
@@ -77,16 +77,16 @@
 					tipo = 'cancel'
 				else
 					return null;
-				return 'lk/msg-modal/msg-'+tipo+'.html'	
+				return 'lk/dialog/dialog-'+tipo+'.html'	
 			} ,
-			controller: lkMsgOptionController,
+			controller: lkDialogOptionController,
 			controllerAs: 'lkmm'
 		}
 		return directive;
     }
 
-	lkMsgModalController.$inject = ['$scope'];
-	function lkMsgModalController( $scope){ 
+	lkDialogController.$inject = ['$scope'];
+	function lkDialogController( $scope){ 
 		var lkm = this;
 		lkm.activate = $scope.activate;
 		lkm.close = $scope.close;
@@ -97,14 +97,13 @@
 
 	}
 
-	lkMsgOptionController.$inject = ['$scope'];
-	function lkMsgOptionController( $scope){ 
+	lkDialogOptionController.$inject = ['$scope'];
+	function lkDialogOptionController( $scope){ 
 		var lkmm = this;
 		lkmm.click = click;
 
 		function click( ) {
 			if($scope.click) {
-				console.log("click en ", $scope);
 				$scope.click();
 			}
 		}

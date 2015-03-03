@@ -1,7 +1,6 @@
 arriba = 20%
-.MsgModal-container
-	background rgba(0,0,0,.5)
-	box-shadow 0 2px 5px rgba(#000,0.5)
+.Dialog-container
+	background rgba(#999,.05)
 	display block
 	font-family fuente-normal
 	height 100%
@@ -12,9 +11,10 @@ arriba = 20%
 	width 100%
 	z-index 99
 
-.MsgModal
+.Dialog
 	animation caida 0.3s linear
 	background white
+	box-shadow 3px 20px 20px rgba(#666,0.5)
 	display inline-block
 	left 30%
 	padding 0 0
@@ -28,7 +28,7 @@ arriba = 20%
 		width 100%
 		li
 			display inline-block
-.MsgModal-close
+.Dialog-close
 	@extends .u-fadein
 	@extends .u-button
 	border none
@@ -44,27 +44,31 @@ arriba = 20%
 	top 0
 	margin .2em .2em 0 0
 	width 2em
-.MsgModal-msg
-	margin-top 4em
+.Dialog-msg
+	margin-top 2em
 	width 100%
-.MsgModal-btn
+.Dialog-btn
 	border-radius .3em
 	color white
 	display block
 	height 2em
 	line-height 1em
+	margin-left .5em
 	padding .5em
 	text-decoration none
 	
 li.u-danger
-	a.MsgModal-btn.u-button
+	a.Dialog-btn.u-button
 		@extends .u-button.u-danger
+li.u-default
+	a.Dialog-btn.u-button
+		@extends .u-button.u-default
 li.u-success
-	a.MsgModal-btn.u-button
+	a.Dialog-btn.u-button
 		@extends .u-button.u-success
 
 @media screen and (max-width: 600px) {
-  .MsgModal {
+  .Dialog {
   	width 80%
   	left 10%
   }
